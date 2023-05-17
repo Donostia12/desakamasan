@@ -8,8 +8,7 @@ use Session;
 class produk extends Controller
 {
   public function produk(){
-    $data['produk'] = view('admin.Menu.produk');
-    return view('admin.homeadmin')->with($data);
+    return view('admin.Menu.produk');
   }
 }
  

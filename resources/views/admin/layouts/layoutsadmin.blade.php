@@ -133,42 +133,9 @@
                     </div>
                     @endif
 
-                @if(@empty($Dtambah))
-                 
-                @else
-                    {!!$Dtambah!!}
-                @endif
 
+                @yield('content')
 
-
-                @if(@empty($produk))
-                 
-                @else
-                    {!!$produk!!}
-                @endif
-
-
-
-                @if(@empty($berita))
-                 
-                @else
-                    {!!$berita!!}
-                @endif
-
-
-                @if(@empty($profildesa))
-                 
-                @else
-                    {!!$profildesa!!}
-                @endif
-
-
-
-                @if(@empty($vdeareh))
-                 
-                @else
-                    {!!$vdaerah!!}
-                @endif
 
                 </main>
                 <footer class="py-4 bg-light mt-auto">

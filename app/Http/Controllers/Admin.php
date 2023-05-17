@@ -33,7 +33,7 @@ public function actlogin(Request $request)
     return redirect()->back()->with('salah', 'Username/password salah'); }
 
     public function home(){
-        return view('admin.homeadmin');
+        return view('admin.layouts.layoutsadmin');
     }
 
     public function out()
