@@ -15,8 +15,9 @@ return new class extends Migration
            $table->Increments('id');
            $table->string('nama_produk');
            $table->text('informasi_produk');
+           $table->string('image',255);
            $table->integer('harga_produk');  
-           $table->integer('map');
+           $table->string('map');
            $table->timestamps();
        });
     }

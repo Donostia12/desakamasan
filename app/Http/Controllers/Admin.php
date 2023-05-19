@@ -41,4 +41,11 @@ public function actlogin(Request $request)
         Auth::logout();
         return redirect('/login')->with('balik','berhasil logout');
     }
+    public function berita(){
+        return view('admin.Menu.berita');
+      }
+   
+    public function profildesa(){
+        return view('admin.Menu.profildesa');
+      }
 }

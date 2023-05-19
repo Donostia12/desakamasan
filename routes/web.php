@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin;
 use App\Http\Controllers\produk;
 use App\Http\Controllers\berita;
 use App\Http\Controllers\profildesa;
+use App\Http\controllers\produkcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,11 +25,11 @@ Route::get('/', function () {
 
 Route::get('/login', [Admin::class, 'vlogin'])->middleware('onlogin');
 
-
+Route::resource('Produk', produkController::class)->middleware('is_login');
 
 Route::get('home', [Admin::class, 'home'])->middleware('is_login');
-Route::get('Produk', [produk::class, 'produk'])->middleware('is_login');
-Route::get('profildesa', [profildesa::class, 'profildesa'])->middleware('is_login');
-Route::get('berita', [berita::class, 'berita'])->middleware('is_login');
+// Route::get('Produk', [Admin::class, 'produk']);
+Route::get('profildesa', [Admin::class, 'profildesa'])->middleware('is_login');
+Route::get('berita', [Admin::class, 'berita'])->middleware('is_login');
 Route::get('out', [Admin::class, 'out'])->name('out')->middleware('auth');
 Route::post('actlogin',[Admin::class,'actlogin']);
