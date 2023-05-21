@@ -10,7 +10,6 @@
 <div class="container flex ">
                         
 <form action="/Produk/{{$produk->id}}" method="post"
- 
 target="_self" enctype="multipart/form-data" role="form" data-toggle="validator" novalidate>
 @csrf
   @method('PUT')
