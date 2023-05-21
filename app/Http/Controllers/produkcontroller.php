@@ -36,9 +36,9 @@ class produkcontroller extends Controller
         produk::create([
         "nama_produk" => $request->nama_produk,
         "informasi_produk" => $request->informasi_produk,
-        "image"=> $image,
         "harga_produk" => $request->hargaproduk,
-        "map" => $request->map
+        "map" => $request->map,
+        "image"=> $image
         ]);
         return redirect('/Produk');
     

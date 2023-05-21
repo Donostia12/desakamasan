@@ -12,11 +12,11 @@
 <h2></h2>
 <div class="container flex ">
 
-    <form action="/Produk" method="post" target="_self" enctype="multipart/form-data" role="form"
-        data-toggle="validator" novalidate>
+  
+    <form action="/Produk" method="post"
+     target="_self" enctype="multipart/form-data" role="form" data-toggle="validator" novalidate>
         @csrf
-
-
+  
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-2">
@@ -186,7 +186,7 @@
                             <label> Harga Produk</label>
                            </div>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="harga_produk" readonly>
+                                <input type="text" class="form-control" id="harga_produk" readonly>
                             </div>
                         </div>
                     </div>
@@ -223,7 +223,7 @@
                 $('#id').val(data.id);
                 $('#image').attr('src', '/storage/images/' + data.image);
                 $('#informasi_produk').val(data.informasi_produk);
-                $('#harga_produk').val(data.harga_produk);
+                $('#harga_produk').val(data.harga_produk+' .Rp');
                 $('#map').attr('src', data.map);
 
             },
