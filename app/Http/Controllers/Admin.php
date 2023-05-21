@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
+use App\Models\produk;
 use App\Models\Madmin;
 class Admin extends Controller
 {
@@ -48,4 +49,8 @@ public function actlogin(Request $request)
     public function profildesa(){
         return view('admin.Menu.profildesa');
       }
+    public function detail($id){
+        $data = produk::find($id);
+        return response()->json($data);
+    }
 }

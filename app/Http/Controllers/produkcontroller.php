@@ -31,9 +31,12 @@ class produkcontroller extends Controller
     public function store(Request $request)
     {
 
+        $image = md5(time()).'DesaKamasan'.$request->file('image')->getClientOriginalName();
+        $path= $request->file('image')->storeAs('public/images', $image);
         produk::create([
         "nama_produk" => $request->nama_produk,
         "informasi_produk" => $request->informasi_produk,
+        "image"=> $image,
         "harga_produk" => $request->hargaproduk,
         "map" => $request->map
         ]);
@@ -52,24 +55,39 @@ class produkcontroller extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(produk $produk)
+    public function edit($id)
     {
-        
+        $produk = produk::find($id);
+        return view('admin.Menu.edit',[
+            "produk" =>$produk
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, produk $produk)
+    public function update(Request $request, $id)
     {
-        
+        $image = md5(time()).'DesaKamasan'.$request->file('image')->getClientOriginalName();
+        $path= $request->file('image')->storeAs('public/images', $image);
+        produk::where('id',$id)->update([
+            "nama_produk" => $request->nama_produk,
+            "informasi_produk" => $request->informasi_produk,
+            "harga_produk" => $request->hargaproduk,
+            "map" => $request->map,
+            "image" => $image
+            ]);
+            return redirect('/Produk');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(produk $produk)
+    public function destroy($id)
     {
-        //
+        produk::where('id',$id)->delete();
+        return redirect('/Produk');
     }
+
+   
 }

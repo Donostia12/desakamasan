@@ -7,10 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Halaman Admin</title>
-        <script
-  src="https://code.jquery.com/jquery-3.7.0.js"
-  integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-  crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="{{asset('assets/css/styles.css')}}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -133,10 +130,12 @@
                         <b>Tombol</b>  logout ada di sebelah kanan
                     </div>
                     @endif
-
+                    <br>
+                    <br>
+              
 
                 @yield('content')
-
+                
 
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -160,5 +159,6 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="{{asset('assets/js/datatables-simple-demo.js')}}"></script>
+
     </body>
 </html>

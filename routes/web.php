@@ -26,10 +26,11 @@ Route::get('/', function () {
 Route::get('/login', [Admin::class, 'vlogin'])->middleware('onlogin');
 
 Route::resource('Produk', produkController::class)->middleware('is_login');
-
+Route::get('/detail/{id}',[Admin::class,'detail']);
 Route::get('home', [Admin::class, 'home'])->middleware('is_login');
 // Route::get('Produk', [Admin::class, 'produk']);
 Route::get('profildesa', [Admin::class, 'profildesa'])->middleware('is_login');
 Route::get('berita', [Admin::class, 'berita'])->middleware('is_login');
 Route::get('out', [Admin::class, 'out'])->name('out')->middleware('auth');
 Route::post('actlogin',[Admin::class,'actlogin']);
+
