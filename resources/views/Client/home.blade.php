@@ -39,7 +39,7 @@
 <body>
 
   <!-- ======= Top Bar ======= -->
-  <section id="topbar" class="d-flex align-items-center">
+  {{-- <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
@@ -52,7 +52,7 @@
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
     </div>
-  </section>
+  </section> --}}
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
@@ -67,45 +67,34 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#home">Home</a></li>
-          <li class="dropdown"><a href="#"><span>About Desa</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="" onclick="return false;"><span>About Desa</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a class="nav-link scrollto" href="#profile">Profile Desa</a></li>
-              <li><a class="nav-link scrollto" href="">Tambah Berita</a></li>
-              <li class="dropdown"><a href="#"><span>Berita Desa</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href=""><span>Berita Desa</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Berita 1</a></li>
-                  <li><a href="#">Berita 2</a></li>
-                  <li><a href="#">Berita 3</a></li>
+                  <li><a href="">Berita 1</a></li>
+                  <li><a href="">Berita 2</a></li>
+                  <li><a href="">Berita 3</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Daerah Wisata</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a class="nav-link scrollto" href="#profile">Tambah Daerah Wisata</a></li>
-              <li class="dropdown"><a href="#"><span>Daerah Wisata</span> <i class="bi bi-chevron-right"></i></a>
+          <li class="dropdown"><a href="" onclick="return false;"><span>Daerah Wisata</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
-                  <li><a href="#">Wisata 1</a></li>
-                  <li><a href="#">Wisata 2</a></li>
-                  <li><a href="#">Wisata 3</a></li>
+                  <li><a href="">Wisata 1</a></li>
+                  <li><a href="">Wisata 2</a></li>
+                  <li><a href="">Wisata 3</a></li>
                 </ul>
-              </li>
-            </ul>
           </li>
           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Produk Desa</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="" onclick="return false;"><span>Produk Desa</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Tambah Lapak</a></li>
-              <li class="dropdown"><a href="#"><span>Lapak Desa Wisata</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
                   <li><a href="#">Warung A</a></li>
                   <li><a href="#">Warung B</a></li>
                   <li><a href="#">Warung C</a></li>
                   <li><a href="#">Toko A</a></li>
                   <li><a href="#">Toko B</a></li>
-                </ul>
-              </li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -120,7 +109,9 @@
   <section id="hero">
     <div class="hero-container" data-aos="fade-up">
       <h1>Welcome to Website Desa Kamasan</h1>
-      <h2>We are team of talented designers making websites with Bootstrap</h2>
+      <h3 style="width: 50%">Kamasan adalah desa yang berada di kecamatan Klungkung, Kabupaten Klungkung, provinsi Bali, Indonesia. 
+        Kamasan dikenal dalam dunia seni lukis tradisional Bali, karena berbagai lukisan tradisional Bali diilhami dari corak Kamasan, 
+        yang terinspirasi dari budaya Jawa.</h3>
       <a href="#about" class="btn-get-started scrollto">Get Started</a>
     </div>
   </section><!-- End Hero -->
@@ -133,14 +124,16 @@
 
         <div class="row">
           <div class="col-xl-6 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="zoom-in">
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            <iframe width="560" height="315" class="video-box" src="https://www.youtube.com/embed/sYrZKH-i59A?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
 
           <div class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
             <div class="box-heading" data-aos="fade-up">
-              <h4>About Desa Kamasan</h4>
-              <h3>Ini website desa Kamasan</h3>
-              <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
+              <h4>About Desa</h4>
+              <h3>Desa Kamasan</h3>
+              <p>Sebagai lukisan klasik Bali pertama, Lukisan Gaya Kamasan memiliki nilai sejarah yang luar biasa. Muncul sejak jaman kerajaan Bali hingga sekarang masih menjadi primadona orang-orang. 
+                Melalui cerita Bapak I Made Sesangka dan Ibu Ni Wayan Sri Wedari yang merupakan pelukis Lukisan Gaya Kamasan, 
+                kita akan mengetahui bagaimana Lukisan Gaya Kamasan bisa memiliki tempat di setiap bentuk kehidupan orang Bali, mulai dari keagamaan, sosial, hingga ekonomi.</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up">
