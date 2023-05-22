@@ -30,16 +30,27 @@ class produkcontroller extends Controller
      */
     public function store(Request $request)
     {
-
-        $image = md5(time()).'DesaKamasan'.$request->file('image')->getClientOriginalName();
-        $path= $request->file('image')->storeAs('public/images', $image);
-        produk::create([
-        "nama_produk" => $request->nama_produk,
-        "informasi_produk" => $request->informasi_produk,
-        "harga_produk" => $request->hargaproduk,
-        "map" => $request->map,
-        "image"=> $image
-        ]);
+        if ($request->hasFile('image')) {
+            $image = md5(time()).'DesaKamasan'.$request->file('image')->getClientOriginalName();
+            $path= $request->file('image')->storeAs('public/images', $image);
+            produk::create([
+            "nama_produk" => $request->nama_produk,
+            "informasi_produk" => $request->informasi_produk,
+            "harga_produk" => $request->hargaproduk,
+            "map" => $request->map,
+            "image"=> $image
+            ]);
+        }else {
+            
+            produk::create([
+            "nama_produk" => $request->nama_produk,
+            "informasi_produk" => $request->informasi_produk,
+            "harga_produk" => $request->hargaproduk,
+            "map" => $request->map,
+            "image"=> ''
+            ]);
+        }
+       
         return redirect('/Produk');
     
     }
@@ -68,15 +79,27 @@ class produkcontroller extends Controller
      */
     public function update(Request $request, $id)
     {
-        $image = md5(time()).'DesaKamasan'.$request->file('image')->getClientOriginalName();
-        $path= $request->file('image')->storeAs('public/images', $image);
-        produk::where('id',$id)->update([
-            "nama_produk" => $request->nama_produk,
-            "informasi_produk" => $request->informasi_produk,
-            "harga_produk" => $request->hargaproduk,
-            "map" => $request->map,
-            "image" => $image
-            ]);
+          if ($request->hasFile('image')) {
+              $image = md5(time()).'DesaKamasan'.$request->file('image')->getClientOriginalName();
+              $path= $request->file('image')->storeAs('public/images', $image);
+              produk::where('id',$id)->update([
+                  "nama_produk" => $request->nama_produk,
+                  "informasi_produk" => $request->informasi_produk,
+                  "harga_produk" => $request->hargaproduk,
+                  "map" => $request->map,
+                  "image" => $image
+                  ]);
+
+          }
+          else {
+            produk::where('id',$id)->update([
+                "nama_produk" => $request->nama_produk,
+                "informasi_produk" => $request->informasi_produk,
+                "harga_produk" => $request->hargaproduk,
+                "map" => $request->map,
+                
+                ]);
+          }
             return redirect('/Produk');
     }
 

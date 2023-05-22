@@ -12,11 +12,11 @@
 <h2></h2>
 <div class="container flex ">
 
-  
-    <form action="/Produk" method="post"
-     target="_self" enctype="multipart/form-data" role="form" data-toggle="validator" novalidate>
+
+    <form action="/Produk" method="post" target="_self" enctype="multipart/form-data" role="form"
+        data-toggle="validator" novalidate>
         @csrf
-  
+
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-2">
@@ -77,41 +77,45 @@
 
 
     <div class="table-responsive">
-        <table class="table">
+        <table class="table" id="table">
             <thead>
                 <tr>
                     <th>nama Produk</th>
                     <th>Informasi Produk</th>
                     <th>harga</th>
-                    <th>map</th>
                     <th>action</th>
                 </tr>
             </thead>
-
-            <tbody>
             <tbody>
                 @foreach ($produk as $A )
                 <tr>
                     <td>{{$A->nama_produk}}</td>
                     <td>{{$A->informasi_produk}}</td>
                     <td>{{$A->harga_produk}}</td>
-                    <td>{{$A->map}}</td>
-
-                    <td><a href="#" onclick="getpop({{$A->id}})">view </a></td>
-                    <td><a href="/Produk/{{$A->id}}/edit">edit</a></td>
-
                     <td>
-                        <form action="/Produk/{{$A->id}}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button> delete</button>
-                        </form>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#" onclick="getpop({{$A->id}})">view </a>
+                                </div>
+                                <div class="col-sm-6">
+
+                                    <a href="/Produk/{{$A->id}}/edit">edit</a>
+
+                                </div>
+
+                                <form action="/Produk/{{$A->id}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button> delete</button>
+                                </form>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 @endforeach
             </tbody>
-
-            </tbody>
+         
         </table>
     </div>
 
@@ -171,8 +175,8 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm-2">
-                            <label> Info</label>
-                           </div>
+                                <label> Info</label>
+                            </div>
                             <div class="col-sm-10">
                                 <textarea type="text" class="form-control" id="informasi_produk" name="informasi_produk"
                                     readonly></textarea>
@@ -183,8 +187,8 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm-2">
-                            <label> Harga Produk</label>
-                           </div>
+                                <label> Harga Produk</label>
+                            </div>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="harga_produk" readonly>
                             </div>
@@ -193,7 +197,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm-2"> <label> Maps</label>
-                          </div>
+                            </div>
                             <div class="col-sm-10">
                                 <iframe style="border:0; width: 100%; height: 270px;" id="map" src="" frameborder="0"
                                     allowfullscreen></iframe>
@@ -209,7 +213,6 @@
     </div>
 </div>
 
-
 <script>
     function getpop(id) {
         var isi = document.getElementById('iklan');
@@ -223,7 +226,7 @@
                 $('#id').val(data.id);
                 $('#image').attr('src', '/storage/images/' + data.image);
                 $('#informasi_produk').val(data.informasi_produk);
-                $('#harga_produk').val(data.harga_produk+' .Rp');
+                $('#harga_produk').val(data.harga_produk + ' .Rp');
                 $('#map').attr('src', data.map);
 
             },
@@ -260,7 +263,7 @@ ajax untuk delete --}}
             });
         }
     }
+    let table = new DataTable('#table');
 
 </script>
-
 @endsection
