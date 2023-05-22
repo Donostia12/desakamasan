@@ -139,7 +139,7 @@
           <div class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
             <div class="box-heading" data-aos="fade-up">
               <h4>About Desa Kamasan</h4>
-              <h3>Ini adalah website desa Kamasan</h3>
+              <h3>Ini website desa Kamasan</h3>
               <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
             </div>
 
