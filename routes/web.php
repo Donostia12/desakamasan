@@ -7,6 +7,7 @@ use App\Http\Controllers\produk;
 use App\Http\Controllers\berita;
 use App\Http\Controllers\profildesa;
 use App\Http\controllers\produkcontroller;
+use App\Http\controllers\home;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +20,7 @@ use App\Http\controllers\produkcontroller;
 |
 */
 
-Route::get('/', function () {
-     return view('Client/home');
-});
+Route::resource('/', home::class);
 
 Route::get('/login', [Admin::class, 'vlogin'])->middleware('onlogin');
 
