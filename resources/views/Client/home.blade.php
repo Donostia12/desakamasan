@@ -55,7 +55,7 @@
   </section> --}}
 
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center">
+  <header id="header" class="d-flex align-items-center">  
     <div class="container d-flex justify-content-between">
 
       <div class="logo">
@@ -66,10 +66,10 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li class="dropdown"><a href="" onclick="return false;"><span>About Desa</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a class="nav-link scrollto" href="#profile">Profile Desa</a></li>
+              <li><a class="nav-link scrollto" href="#about">Profile Desa</a></li>
               <li class="dropdown"><a href=""><span>Berita Desa</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="">Berita 1</a></li>
@@ -86,17 +86,8 @@
                   <li><a href="">Wisata 3</a></li>
                 </ul>
           </li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="" onclick="return false;"><span>Produk Desa</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-                  <li><a href="#">Warung A</a></li>
-                  <li><a href="#">Warung B</a></li>
-                  <li><a href="#">Warung C</a></li>
-                  <li><a href="#">Toko A</a></li>
-                  <li><a href="#">Toko B</a></li>
-            </ul>
-          </li>
+          <li class="nav-link scrollto"><a href="#produk"><span>Produk Desa</span></a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -119,7 +110,7 @@
   <main id="main">
 
     <!-- ======= Profile Desa Section ======= -->
-    <section id="profile" class="about">
+    <section id="about" class="about">
       <div class="container">
 
         <div class="row">
@@ -137,7 +128,7 @@
             </div>
 
             <div class="icon-box" data-aos="fade-up">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <div class="icon"><i class="bx bx-pencil"></i></div>
               <h4 class="title"><a href="">Lorem Ipsum</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
             </div>
@@ -149,7 +140,7 @@
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bx bx-atom"></i></div>
+              <div class="icon"><i class="bx bx-book"></i></div>
               <h4 class="title"><a href="">Dine Pad</a></h4>
               <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
             </div>
@@ -172,16 +163,16 @@
 
         <div class="row">
 
-          <div class="col-lg-4">
-            <div class="box" data-aos="fade-up">
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="box">
               <span>01</span>
               <h4>Lorem Ipsum</h4>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
             </div>
           </div>
 
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
               <span>02</span>
               <h4>Repellat Nihil</h4>
               <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
@@ -310,29 +301,29 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <section id="produk" class="portfolio">
       <div class="container">
 
         <div class="section-title" data-aos="zoom-in">
-          <h2>Portfolio</h2>
-          <h3>Check our <span>Portfolio</span></h3>
-          <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+          <h2>Produk/Lapak</h2>
+          <h3>Check our <span>Produk</span></h3>
+          <p>Disini menampilkan gambar dari produk yang ada di Desa Kamasan</p>
         </div>
 
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-10k">IDR 10K+</li>
+              <li data-filter=".filter-100k">IDR 100K+</li>
+              <li data-filter=".filter-500k">IDR 500K+</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-10k">
             <img src="{{ asset('assets-client/assets/img/portfolio/portfolio-1.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 1</h4>
@@ -342,7 +333,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-500k">
             <img src="{{ asset('assets-client/assets/img/portfolio/portfolio-2.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
@@ -352,7 +343,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-10k">
             <img src="{{ asset('assets-client/assets/img/portfolio/portfolio-3.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 2</h4>
@@ -362,7 +353,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-100k">
             <img src="{{ asset('assets-client/assets/img/portfolio/portfolio-4.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 2</h4>
@@ -372,7 +363,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-500k">
             <img src="{{ asset('assets-client/assets/img/portfolio/portfolio-5.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 2</h4>
@@ -382,7 +373,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-10k">
             <img src="{{ asset('assets-client/assets/img/portfolio/portfolio-6.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>App 3</h4>
@@ -392,7 +383,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-100k">
             <img src="{{ asset('assets-client/assets/img/portfolio/portfolio-7.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 1</h4>
@@ -402,7 +393,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-100k">
             <img src="{{ asset('assets-client/assets/img/portfolio/portfolio-8.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Card 3</h4>
@@ -412,7 +403,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-500k">
             <img src="{{ asset('assets-client/assets/img/portfolio/portfolio-9.jpg') }}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Web 3</h4>
