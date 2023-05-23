@@ -14,12 +14,11 @@ return new class extends Migration
         Schema::create('berita', function (Blueprint $table) {
             $table->Increments('id_berita');
             $table->string('judul_berita');
+            $table->string('image');
             $table->text('isi_berita');
             $table->timestamps();
         });
     }
-
-        
     /**
      * Reverse the migrations.
      */
