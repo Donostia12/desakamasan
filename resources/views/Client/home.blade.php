@@ -130,19 +130,19 @@
 
             <div class="icon-box" data-aos="fade-up">
               <div class="icon"><i class="bx bx-pencil"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <h4 class="title"><a href="">Lukisan Klasik</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <h4 class="title"><a href="">Produk Tradisional</a></h4>
               <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class="bx bx-book"></i></div>
-              <h4 class="title"><a href="">Dine Pad</a></h4>
+              <h4 class="title"><a href="">Budaya</a></h4>
               <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
             </div>
 
@@ -158,7 +158,7 @@
 
         <div class="section-title" data-aos="zoom-in">
           <h2>Why Us</h2>
-          <h3>Why you shoud <span>choose us</span>?</h3>
+          <h3>Why you should <span>choose us</span>?</h3>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
 
@@ -302,12 +302,12 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <section id="produk" class="portfolio">
       <div class="container">
 
         <div class="section-title" data-aos="zoom-in">
-          <h2>Portfolio</h2>
-          <h3>Check our <span>Portfolio</span></h3>
+          <h2>Produk Desa</h2>
+          <h3>Check our <span>Produk</span></h3>
           <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
         </div>
 
@@ -315,9 +315,9 @@
           <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-10k">IDR 10K+</li>
-              <li data-filter=".filter-100k">IDR 100K+</li>
-              <li data-filter=".filter-500k">IDR 500K+</li>
+              <li data-filter=".filter-kuliner">Kuliner</li>
+              <li data-filter=".filter-oleh">Oleh-oleh</li>
+              <li data-filter=".filter-jasa">Jasa</li>
             </ul>
           </div>
         </div>
@@ -326,7 +326,7 @@
 
           @foreach ($produk as $data)
               
-          <div class="col-lg-4 col-md-6 portfolio-item filter-10k">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-jasa">
             <img src="/storage/images/{{$data->image}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>{{$data->nama_produk}}</h4>
@@ -368,7 +368,7 @@
               </div>
               <div class="member-info">
                 <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <span>Back-end Developer</span>
               </div>
             </div>
           </div>
@@ -386,7 +386,7 @@
               </div>
               <div class="member-info">
                 <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
+                <span>Back-end Developer</span>
               </div>
             </div>
           </div>
@@ -404,7 +404,7 @@
               </div>
               <div class="member-info">
                 <h4>William Anderson</h4>
-                <span>CTO</span>
+                <span>Front-end Developer</span>
               </div>
             </div>
           </div>
@@ -422,7 +422,7 @@
               </div>
               <div class="member-info">
                 <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <span>Database Administrator</span>
               </div>
             </div>
           </div>
@@ -654,7 +654,7 @@
         </div>
 
         <div>
-          <iframe style="border:0; width: 100%; height: 270px;" id="map"src="" frameborder="0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6431.124574298514!2d115.40727259008086!3d-8.547358017360269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd21165b047c39b%3A0x5030bfbca832200!2sKamasan%2C%20Kec.%20Klungkung%2C%20Kabupaten%20Klungkung%2C%20Bali!5e0!3m2!1sid!2sid!4v1684982829668!5m2!1sid!2sid" width="100%" height="300" style="border:0; margin-bottom: 50px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <div class="row mt-5">
