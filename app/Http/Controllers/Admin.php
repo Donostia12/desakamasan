@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\berita;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -42,15 +44,10 @@ public function actlogin(Request $request)
         Auth::logout();
         return redirect('/login')->with('balik','berhasil logout');
     }
-    public function berita(){
-        return view('admin.Menu.berita');
-      }
-   
+
     public function profildesa(){
         return view('admin.Menu.profildesa');
-      }
-    public function detail($id){
-        $data = produk::find($id);
-        return response()->json($data);
     }
+
+    
 }

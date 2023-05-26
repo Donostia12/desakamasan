@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\produk;
 use App\Http\Controllers\berita;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\profildesa;
 use App\Http\controllers\produkcontroller;
 use App\Http\controllers\home;
@@ -25,11 +26,15 @@ Route::resource('/', home::class);
 Route::get('/login', [Admin::class, 'vlogin'])->middleware('onlogin');
 
 Route::resource('Produk', produkController::class)->middleware('is_login');
-Route::get('/detail/{id}',[Admin::class,'detail']);
+Route::get('/detail/{id}',[produkController::class,'detail']);
+
 Route::get('home', [Admin::class, 'home'])->middleware('is_login');
 // Route::get('Produk', [Admin::class, 'produk']);
 Route::get('profildesa', [Admin::class, 'profildesa'])->middleware('is_login');
-Route::get('berita', [Admin::class, 'berita'])->middleware('is_login');
+
+Route::resource('berita', BeritaController::class)->middleware('is_login');
+Route::get('/detail-berita/{id}',[BeritaController::class,'detail']);
+
 Route::get('out', [Admin::class, 'out'])->name('out')->middleware('auth');
 Route::post('actlogin',[Admin::class,'actlogin']);
 

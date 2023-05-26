@@ -79,6 +79,7 @@ class produkcontroller extends Controller
      */
     public function update(Request $request, $id)
     {
+        $produk = produk::where('id',$id)->first();
           if ($request->hasFile('image')) {
               $image = md5(time()).'DesaKamasan'.$request->file('image')->getClientOriginalName();
               $path= $request->file('image')->storeAs('public/images', $image);
@@ -89,7 +90,7 @@ class produkcontroller extends Controller
                   "map" => $request->map,
                   "image" => $image
                   ]);
-
+                unlink(storage_path('app/public/images/'.$produk->image));
           }
           else {
             produk::where('id',$id)->update([
@@ -108,8 +109,15 @@ class produkcontroller extends Controller
      */
     public function destroy($id)
     {
+        $produk = produk::where('id',$id)->first();
+        unlink(storage_path('app/public/images/'.$produk->image));
         produk::where('id',$id)->delete();
         return redirect('/Produk');
+    }
+
+    public function detail($id){
+        $data = produk::find($id);
+        return response()->json($data);
     }
 
    

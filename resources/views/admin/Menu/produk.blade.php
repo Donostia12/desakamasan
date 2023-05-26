@@ -220,7 +220,7 @@
         $('#detail').html(iklan);
         $.ajax({
             type: "GET",
-            url: "/detail/" + id,
+            url: '/detail/' + id,
             success: function (data) {
                 $('#nama_produk').val(data.nama_produk);
                 $('#id').val(data.id);
@@ -228,6 +228,7 @@
                 $('#informasi_produk').val(data.informasi_produk);
                 $('#harga_produk').val(data.harga_produk + ' .Rp');
                 $('#map').attr('src', data.map);
+                console.log(data);
 
             },
             error: function (xhr, status, error) {
