@@ -22,6 +22,7 @@ use App\Http\controllers\home;
 */
 
 Route::resource('/', home::class);
+Route::get('home/{id}', [home::class, 'detail']);
 
 Route::get('/login', [Admin::class, 'vlogin'])->middleware('onlogin');
 

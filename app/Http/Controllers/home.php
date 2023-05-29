@@ -44,9 +44,12 @@ class home extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function detail(string $id)
     {
-        //
+        $produk = produk::find($id);
+        return view('Client.Detailproduk',[
+            "produk" =>$produk
+        ]);
     }
 
     /**

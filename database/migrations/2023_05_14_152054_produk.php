@@ -17,11 +17,11 @@ return new class extends Migration
            $table->text('informasi_produk');
            $table->string('image',255)->nullable();
            $table->integer('harga_produk');  
+           $table->string('kategori');
            $table->text('map');
            $table->timestamps();
        });
     }
-
     /**
      * Reverse the migrations.
      */

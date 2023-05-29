@@ -37,6 +37,7 @@ class produkcontroller extends Controller
             "nama_produk" => $request->nama_produk,
             "informasi_produk" => $request->informasi_produk,
             "harga_produk" => $request->hargaproduk,
+            "kategori" =>$request->kategori,
             "map" => $request->map,
             "image"=> $image
             ]);
@@ -46,6 +47,7 @@ class produkcontroller extends Controller
             "nama_produk" => $request->nama_produk,
             "informasi_produk" => $request->informasi_produk,
             "harga_produk" => $request->hargaproduk,
+            "kategori" =>$request->kategori,
             "map" => $request->map,
             "image"=> ''
             ]);
@@ -69,7 +71,7 @@ class produkcontroller extends Controller
     public function edit($id)
     {
         $produk = produk::find($id);
-        return view('admin.Menu.edit',[
+        return view('admin.Menu.editproduk',[
             "produk" =>$produk
         ]);
     }
@@ -87,8 +89,10 @@ class produkcontroller extends Controller
                   "nama_produk" => $request->nama_produk,
                   "informasi_produk" => $request->informasi_produk,
                   "harga_produk" => $request->hargaproduk,
+                  "kategori" =>$request->kategori,
                   "map" => $request->map,
                   "image" => $image
+
                   ]);
                 unlink(storage_path('app/public/images/'.$produk->image));
           }
@@ -97,6 +101,7 @@ class produkcontroller extends Controller
                 "nama_produk" => $request->nama_produk,
                 "informasi_produk" => $request->informasi_produk,
                 "harga_produk" => $request->hargaproduk,
+                "kategori" =>$request->kategori,
                 "map" => $request->map,
                 
                 ]);

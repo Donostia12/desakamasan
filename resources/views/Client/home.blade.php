@@ -300,7 +300,6 @@
 
       </div>
     </section><!-- End Services Section -->
-
     <!-- ======= Portfolio Section ======= -->
     <section id="produk" class="portfolio">
       <div class="container">
@@ -317,7 +316,7 @@
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-kuliner">Kuliner</li>
               <li data-filter=".filter-oleh">Oleh-oleh</li>
-              <li data-filter=".filter-jasa">Jasa</li>
+              <li data-filter=".filter-Jasa">Jasa</li>
             </ul>
           </div>
         </div>
@@ -326,13 +325,13 @@
 
           @foreach ($produk as $data)
               
-          <div class="col-lg-4 col-md-6 portfolio-item filter-jasa">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{$data->kategori}}">
             <img src="/storage/images/{{$data->image}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>{{$data->nama_produk}}</h4>
               <p>{{$data->harga_produk}}</p>
               <a href="/storage/images/{{$data->image}}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{$data->nama_produk}}"><i class="bx bx-plus"></i></a>
-              <a href="" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="/home/{{$data->id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
           @endforeach
@@ -510,7 +509,7 @@
 
       </div>
     </section><!-- End Testimonials Section -->
-
+    
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container">

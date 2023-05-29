@@ -49,6 +49,22 @@ target="_self" enctype="multipart/form-data" role="form" data-toggle="validator"
     <div class="form-group">
         <div class="row">
             <div class="col-sm-2">
+                <label>Kategori</label>
+            </div>
+            <div class="col-sm-10">
+                <select name="kategori" id="" class="form-control" >
+                 <option value="{{$produk->kategori}}">Pilih Kategori</option>
+                 <option value="kuliner">Kuliner</option>
+                 <option value="oleh">Oleh - Oleh</option>
+                 <option value="Jasa">Jasa</option>
+                </select>
+                
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-2">
                 <label>Map</label>
             </div>
             <div class="col-sm-10">

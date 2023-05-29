@@ -62,6 +62,21 @@
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-2">
+                    <label>Kategori</label>
+                </div>
+                <div class="col-sm-10">
+                    <select name="kategori"  class="form-control">
+                        <option value="">Pilih Kategori</option>
+                        <option value="kuliner">kuliner</option>    
+                        <option value="oleh">Oleh-Oleh</option>
+                        <option value="Jasa">Jasa</option>
+                      </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
                     <label>Gambar</label>
                 </div>
                 <div class="col-sm-10">
@@ -185,15 +200,20 @@
                         </div>
                     </div>
                     <div class="form-group">
+                    
+                           
+            
                         <div class="row">
-                            <div class="col-sm-2">
-                                <label> Harga Produk</label>
-                            </div>
-                            <div class="col-sm-10">
+                           <center> <label> Harga & kategori</label></center>
+                            <div class="col-sm-6">
                                 <input type="text" class="form-control" id="harga_produk" readonly>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="kategori" readonly>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm-2"> <label> Maps</label>
@@ -227,6 +247,7 @@
                 $('#image').attr('src', '/storage/images/' + data.image);
                 $('#informasi_produk').val(data.informasi_produk);
                 $('#harga_produk').val(data.harga_produk + ' .Rp');
+                $('#kategori').val(data.kategori);
                 $('#map').attr('src', data.map);
                 console.log(data);
 
