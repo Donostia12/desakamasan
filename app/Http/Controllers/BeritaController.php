@@ -54,7 +54,7 @@ class BeritaController extends Controller
             ]);
         }
        
-        return redirect()->route('berita.index');
+        return redirect()->route('berita.index')->with('success', 'Berita berhasil ditambah!');
     }
 
     /**
@@ -84,24 +84,25 @@ class BeritaController extends Controller
             'judul_berita'=>['required', 'string', 'max:255'],
             'isi_berita'=>['required', 'string', 'max:255'],
         ]);
-
-        if ($request->hasFile('image')) {
-            $image = md5(time()).'Berita'.$request->file('image')->getClientOriginalName();
-            $request->file('image')->storeAs('public/images', $image);
-            berita::where('id_berita',$id)->update([
-                "judul_berita" => $request->judul_berita,
-                "isi_berita" => $request->isi_berita,
-                "image"=> $image
-                ]);
-            unlink(storage_path('app/public/images/'.$berita->image));
-        }
-        else {
-          berita::where('id_berita',$id)->update([
-                "judul_berita" => $request->judul_berita,
-                "isi_berita" => $request->isi_berita
-              ]);
-        }
-          return redirect()->route('berita.index');
+        
+            if ($request->hasFile('image')) {
+                $image = md5(time()).'Berita'.$request->file('image')->getClientOriginalName();
+                $request->file('image')->storeAs('public/images', $image);
+                berita::where('id_berita',$id)->update([
+                    "judul_berita" => $request->judul_berita,
+                    "isi_berita" => $request->isi_berita,
+                    "image"=> $image
+                    ]);
+                unlink(storage_path('app/public/images/'.$berita->image));
+            }
+            else {
+              berita::where('id_berita',$id)->update([
+                    "judul_berita" => $request->judul_berita,
+                    "isi_berita" => $request->isi_berita
+                  ]);
+            }
+            return redirect()->route('berita.index')->with('success', 'Berita berhasil diedit!');
+        
     }
 
     /**
@@ -112,7 +113,7 @@ class BeritaController extends Controller
         $berita = berita::where('id_berita',$id)->first();
         unlink(storage_path('app/public/images/'.$berita->image));
         berita::where('id_berita',$id)->delete();
-        return redirect()->route('berita.index');
+        return redirect()->route('berita.index')->with('success', 'Berita berhasil dihapus!');
     }
 
     public function detail($id){
