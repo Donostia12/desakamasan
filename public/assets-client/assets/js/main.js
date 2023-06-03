@@ -250,3 +250,39 @@
   new PureCounter();
 
 })()
+
+// Tanggal dan Waktu
+
+    // Fungsi untuk mengupdate dan menampilkan tanggal dan waktu
+    function updateDateTime() {
+      var element = document.getElementById("tanggal-waktu");
+      var now = new Date();
+      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var formattedDate = now.toLocaleDateString('id-ID', options);
+
+      var hour = now.getHours();
+      var meridiem;
+
+      switch (true) {
+        case hour >= 0 && hour < 11:
+          meridiem = 'Pagi';
+          break;
+        case hour >= 11 && hour < 15:
+          meridiem = 'Siang';
+          break;
+        case hour >= 15 && hour <= 18:
+          meridiem = 'Sore';
+          break;
+        default:
+          meridiem = 'Malam';
+      } 
+
+      var minutes = now.getMinutes().toString().padStart(2, '0');
+      var formattedTime = hour % 12 + ':' + minutes + ' ' + meridiem;
+      var dateTime = formattedDate + " --- " + formattedTime;
+      element.innerHTML = dateTime;
+  }
+
+    // Panggil fungsi updateDateTime() setiap detik
+    setInterval(updateDateTime, 1000);
+
