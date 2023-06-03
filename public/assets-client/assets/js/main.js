@@ -257,7 +257,7 @@
     function updateDateTime() {
       var element = document.getElementById("tanggal-waktu");
       var now = new Date();
-      var options = { year: 'numeric', month: 'long', day: 'numeric' };
+      var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
       var formattedDate = now.toLocaleDateString('id-ID', options);
 
       var hour = now.getHours();

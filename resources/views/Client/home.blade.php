@@ -664,11 +664,11 @@
                 <div class="faq-list" style="text-align: justify">
                     <ul>
                         <li data-aos="fade-up">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapsed"
                                 data-bs-target="#faq-list-1">Bagaimana sejarah awal mula nama <b>'Kamasan'</b>?<i
                                     class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
-                            <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                            <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
                                 <p>
                                     Kamasan atau “Ka-emas-an” adalah nama yang cukup tua untuk komunitas orang-orang
                                     yang mempunyai pekerjaan dalam bidang memande yaitu Pande Mas sesuai dengan nama

@@ -1792,7 +1792,7 @@ section {
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -1889,3 +1889,5 @@ section {
   right: 0;
   width: 0;
  }
+
+ /* Button 1 */
