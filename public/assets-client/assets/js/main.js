@@ -278,7 +278,7 @@
       } 
 
       var minutes = now.getMinutes().toString().padStart(2, '0');
-      var formattedTime = hour % 12 + ':' + minutes + ' ' + meridiem;
+      var formattedTime = hour % 24 + ':' + minutes + ' ' + meridiem;
       var dateTime = formattedDate + " --- " + formattedTime;
       element.innerHTML = dateTime;
   }

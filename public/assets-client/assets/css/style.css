@@ -1890,4 +1890,76 @@ section {
   width: 0;
  }
 
- /* Button 1 */
+ .col-md-9 hr {
+  width: 100%;
+  color: #fff;
+ }
+
+ .sect-news {
+  margin-bottom: 1%;
+ }
+
+ .thumbnail img {
+  border-radius: 8px;
+  margin-bottom: 10px;
+ }
+
+ .isi-berita p{
+  text-align: justify !important;
+ }
+
+ .post-meta {
+  margin-bottom: 3%;
+ }
+
+ .category-title {
+  margin-bottom: 6%;
+ }
+
+ /* Button popular */
+ .aside-block {
+  margin-bottom: 30px;
+}
+ .aside-block .custom-popular {
+  display: inline-flex;
+  margin-bottom: 100px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.20);
+  padding: 14px 8px;
+  border-radius: 12px;
+}
+
+.aside-block .custom-popular .nav-item button {
+  color: #75a239;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.aside-block .custom-popular .nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 92px;
+  color: #75a239;
+  cursor: pointer;
+}
+
+.aside-block .custom-popular .nav-item button.active {
+  background-color: #d3eeaf;
+  position: relative;
+  width: 100px;
+  border-radius: 24px;
+  color: #75a239;
+  box-shadow: inset 3px 3px 5px #b3ca95;
+  font-weight: 700;
+  font-size: 13px;
+  transition: font-size 0.5 ease-in;
+}
+
+.aside-block .custom-popular .nav-link {
+  background-color: #fff;
+  border-radius: 24px;
+}
