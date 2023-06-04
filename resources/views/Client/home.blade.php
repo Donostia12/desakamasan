@@ -93,9 +93,9 @@
                             <li><a href="">Wisata 3</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li class="nav-link scrollto"><a href="#produk"><span>Produk Desa</span></a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                    <li><a class="nav-link scrollto" href="#peta">Location</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -1048,14 +1048,13 @@
         </section><!-- End F.A.Q Section -->
 
         <!-- ======= Maps Section ======= -->
-        <section id="contact" class="contact">
+        <section id="peta" class="contact">
             <div class="container">
 
                 <div class="section-title" data-aos="zoom-in">
-                    <h2>Contact</h2>
-                    <h3>Check our <span>Contact</span> Details</h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
-                        atque vitae autem.</p>
+                    <h2>Peta Desa</h2>
+                    <h3>Check our <span>Location</span> Details</h3>
+                    <p>Ini adalah peta yang menunjukkan lokasi Desa Wisata dan sekitarnya</p>
                 </div>
 
                 <div>
