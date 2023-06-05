@@ -641,8 +641,7 @@
                 <div class="section-title" data-aos="zoom-in">
                     <h2>Produk Desa</h2>
                     <h3>Check our <span>Produk</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
-                        atque vitae autem.</p>
+                    <p>berikut terdapat berbagai Kuliner, Jasa, maupun Oleh-oleh khas Desa Kamasan</p>
                 </div>
 
                 <div class="row">
@@ -1137,7 +1136,7 @@
 
                 <div class="row  justify-content-center">
                     <div class="col-lg-6">
-                        <h3>Remember</h3>
+                        <h3>Desa Wisata Kamasan</h3>
                         <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe
                             commodi placeat.</p>
                     </div>
