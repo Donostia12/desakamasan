@@ -82,14 +82,7 @@
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a class="nav-link scrollto" href="#about">Profile Desa</a></li>
-                            <li class="dropdown"><a href=""><span>Berita Desa</span> <i
-                                        class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="">Berita 1</a></li>
-                                    <li><a href="">Berita 2</a></li>
-                                    <li><a href="">Berita 3</a></li>
-                                </ul>
-                            </li>
+                            <li><a class="nav-link scrollto" href="#berita">Berita Desa</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a href="" onclick="return false;"><span>Daerah Wisata</span> <i
@@ -100,9 +93,9 @@
                             <li><a href="">Wisata 3</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li class="nav-link scrollto"><a href="#produk"><span>Produk Desa</span></a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                    <li><a class="nav-link scrollto" href="#peta">Location</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -228,70 +221,377 @@
 
                 </div>
 
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+            <div class="container" data-aos="zoom-in">
+
+                <div class="text-center">
+                    <h3>Call To Action</h3>
+                    <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.</p>
+                    <a class="cta-btn" href="#">Call To Action</a>
+                </div>
+
             </div>
-        </section>
+        </section><!-- End Cta Section -->
+
         <!-- ======= Services Section ======= -->
         <section id="services" class="services">
             <div class="container">
-
                 <div class="section-title" data-aos="zoom-in">
-                    <h2>Services</h2>
-                    <h3>Our Awesome <span>Services</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
-                        atque vitae autem.</p>
+                    <h2>Berita</h2>
+                    <h3><span>Berita</span> Desa Kamasan</h3>
+                    <p>Baca dan ketahui berbagai informasi terupdate yang ada di Desa Kamasan!</p>
                 </div>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9" data-aos="fade-up">
+                                <h3 class="category-title">Category: Business</h3>
 
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="icon-box" data-aos="zoom-in">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4><a href="">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                                {{-- Gambar, Judul, tanggal, dan isi berita, --}}
+                                <div class="d-md-flex post-entry-2 sect-news">
+                                    <a href="single-post.html" class="me-4 thumbnail">
+                                        <img src="{{ asset('assets-client\assets\img\FH\FH5.png') }}" alt=""
+                                            class="img-fluid">
+                                    </a>
+                                    <div>
+                                        <div class="post-meta"><span class="date">Culture</span> <span
+                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                                        <h3><a href="single-post.html">What is the son of Football Coach John
+                                                Gruden, Deuce Gruden doing Now?</a></h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                                            placeat exercitationem magni voluptates dolore. Tenetur fugiat
+                                            voluptates quas, nobis error deserunt aliquam temporibus sapiente,
+                                            laudantium dolorum itaque libero eos deleniti?</p>
+                                    </div>
+                                </div><hr>
+
+                                <div class="d-md-flex post-entry-2 sect-news">
+                                    <a href="single-post.html" class="me-4 thumbnail">
+                                        <img src="{{ asset('assets-client\assets\img\FH\FH5d.png') }}" alt=""
+                                            class="img-fluid">
+                                    </a>
+                                    <div>
+                                        <div class="post-meta"><span class="date">Culture</span> <span
+                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                                        <h3><a href="single-post.html">What is the son of Football Coach John
+                                                Gruden, Deuce Gruden doing Now?</a></h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                                            placeat exercitationem magni voluptates dolore. Tenetur fugiat
+                                            voluptates quas, nobis error deserunt aliquam temporibus sapiente,
+                                            laudantium dolorum itaque libero eos deleniti?</p>
+                                    </div>
+                                </div><hr>
+
+                                <div class="d-md-flex post-entry-2 sect-news">
+                                    <a href="single-post.html" class="me-4 thumbnail">
+                                        <img src="{{ asset('assets-client\assets\img\FH\FH5a.png') }}" alt=""
+                                            class="img-fluid">
+                                    </a>
+                                    <div>
+                                        <div class="post-meta"><span class="date">Culture</span> <span
+                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                                        <h3><a href="single-post.html">What is the son of Football Coach John
+                                                Gruden, Deuce Gruden doing Now?</a></h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                                            placeat exercitationem magni voluptates dolore. Tenetur fugiat
+                                            voluptates quas, nobis error deserunt aliquam temporibus sapiente,
+                                            laudantium dolorum itaque libero eos deleniti?</p>
+                                    </div>
+                                </div><hr>
+
+                                <div class="d-md-flex post-entry-2 sect-news">
+                                    <a href="single-post.html" class="me-4 thumbnail">
+                                        <img src="{{ asset('assets-client\assets\img\FH\FH5c.png') }}" alt=""
+                                            class="img-fluid">
+                                    </a>
+                                    <div>
+                                        <div class="post-meta"><span class="date">Culture</span> <span
+                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                                        <h3><a href="single-post.html">What is the son of Football Coach John
+                                                Gruden, Deuce Gruden doing Now?</a></h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                                            placeat exercitationem magni voluptates dolore. Tenetur fugiat
+                                            voluptates quas, nobis error deserunt aliquam temporibus sapiente,
+                                            laudantium dolorum itaque libero eos deleniti?</p>
+                                    </div>
+                                </div><hr>
+
+                                <div class="d-md-flex post-entry-2 sect-news">
+                                    <a href="single-post.html" class="me-4 thumbnail">
+                                        <img src="{{ asset('assets-client\assets\img\FH\FH5b.png') }}" alt=""
+                                            class="img-fluid">
+                                    </a>
+                                    <div>
+                                        <div class="post-meta"><span class="date">Culture</span> <span
+                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
+                                        <h3><a href="single-post.html">What is the son of Football Coach John
+                                                Gruden, Deuce Gruden doing Now?</a></h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+                                            placeat exercitationem magni voluptates dolore. Tenetur fugiat
+                                            voluptates quas, nobis error deserunt aliquam temporibus sapiente,
+                                            laudantium dolorum itaque libero eos deleniti?</p>
+                                    </div>
+                                </div><hr>
+
+                                {{-- Ini untuk Pagination --}}
+                                <div class="text-start py-4">
+                                    <div class="custom-pagination">
+                                        <a href="#" class="prev">Previous</a>
+                                        <a href="#" class="active">1</a>
+                                        <a href="#">2</a>
+                                        <a href="#">3</a>
+                                        <a href="#">4</a>
+                                        <a href="#">5</a>
+                                        <a href="#" class="next">Next</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <!-- ======= Sidebar ======= -->
+                                <div class="aside-block">
+                                    <ul class="nav nav-pills custom-popular mb-4" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="pills-popular-tab"
+                                                data-bs-toggle="pill" data-bs-target="#pills-popular" type="button"
+                                                role="tab" aria-controls="pills-popular"
+                                                aria-selected="true">Popular</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-trending-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-trending" type="button" role="tab"
+                                                aria-controls="pills-trending" aria-selected="false">Trending</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="pills-latest-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-latest" type="button" role="tab"
+                                                aria-controls="pills-latest" aria-selected="false">Terbaru</button>
+                                        </li>
+                                    </ul>
+
+                                    <div class="tab-content" id="pills-tabContent">
+
+                                        <!-- Popular -->
+                                        <div class="tab-pane fade show active" id="pills-popular" role="tabpanel"
+                                            aria-labelledby="pills-popular-tab">
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Sport</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">111 How to Avoid Distraction and
+                                                        Stay Focused During Video Calls?</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">17 Pictures of Medium Length
+                                                        Hair in Layers That Will Inspire Your New Haircut</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Culture</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">9-up-down
+                                                        Hairstyles for Long and Medium Hair</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy:
+                                                        A Working Mom’s Guide</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Business</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">The Best Homemade Masks for
+                                                        Face (keep the Pimples Away)</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every
+                                                        Working Mom Should Know</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+                                        </div> <!-- End Popular -->
+
+                                        <!-- Trending -->
+                                        <div class="tab-pane fade" id="pills-trending" role="tabpanel"
+                                            aria-labelledby="pills-trending-tab">
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">222 Pictures of Medium Length
+                                                        Hair in Layers That Will Inspire Your New Haircut</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Culture</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">9-up-down
+                                                        Hairstyles for Long and Medium Hair</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy:
+                                                        A Working Mom’s Guide</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Sport</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">How to Avoid Distraction and
+                                                        Stay Focused During Video Calls?</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Business</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">The Best Homemade Masks for
+                                                        Face (keep the Pimples Away)</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every
+                                                        Working Mom Should Know</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+                                        </div> <!-- End Trending -->
+
+                                        <!-- Latest -->
+                                        <div class="tab-pane fade" id="pills-latest" role="tabpanel"
+                                            aria-labelledby="pills-latest-tab">
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">333 Life Insurance And Pregnancy:
+                                                        A Working Mom’s Guide</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Business</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">The Best Homemade Masks for
+                                                        Face (keep the Pimples Away)</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every
+                                                        Working Mom Should Know</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Sport</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">How to Avoid Distraction and
+                                                        Stay Focused During Video Calls?</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">17 Pictures of Medium Length
+                                                        Hair in Layers That Will Inspire Your New Haircut</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                            <div class="post-entry-1 border-bottom">
+                                                <div class="post-meta"><span class="date">Culture</span> <span
+                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                </div>
+                                                <h2 class="mb-2"><a href="#">9-up-down
+                                                        Hairstyles for Long and Medium Hair</a></h2>
+                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                            </div>
+
+                                        </div> <!-- End Latest -->
+
+                                    </div>
+                                </div>
+
+                                <div class="aside-block">
+                                    <h3 class="aside-title">Video</h3>
+                                    <div class="video-post">
+                                        <iframe width="auto" height="200px" class=""
+                                            src="https://www.youtube.com/embed/kvXy7u21nu4"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                        {{-- <a href="https://youtu.be/kvXy7u21nu4" class="glightbox link-video">
+                                            <span class="bi-play-fill"></span>
+                                            <img src="assets/img/post-landscape-5.jpg" alt=""
+                                                class="img-fluid">
+                                        </a> --}}
+                                    </div>
+                                </div><!-- End Video -->
+
+                                <div class="aside-block">
+                                    <h3 class="aside-title">Categories</h3>
+                                    <ul class="aside-links list-unstyled">
+                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>
+                                                Business</a></li>
+                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>
+                                                Culture</a></li>
+                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Sport</a>
+                                        </li>
+                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Food</a>
+                                        </li>
+                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>
+                                                Politics</a></li>
+                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>
+                                                Celebrity</a></li>
+                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>
+                                                Startups</a></li>
+                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Travel</a>
+                                        </li>
+                                    </ul>
+                                </div><!-- End Categories -->
+                            </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">Sed ut perspiciatis</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4><a href="">Magni Dolores</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4><a href="">Nemo Enim</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="icon"><i class="bx bx-slideshow"></i></div>
-                            <h4><a href="">Dele cardo</a></h4>
-                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                        <div class="icon-box" data-aos="zoom-in" data-aos-delay="500">
-                            <div class="icon"><i class="bx bx-arch"></i></div>
-                            <h4><a href="">Divera don</a></h4>
-                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-                        </div>
-                    </div>
-
-                </div>
-
+                </section>
             </div>
         </section><!-- End Services Section -->
         <!-- ======= Portfolio Section ======= -->
@@ -301,8 +601,7 @@
                 <div class="section-title" data-aos="zoom-in">
                     <h2>Produk Desa</h2>
                     <h3>Check our <span>Produk</span></h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
-                        atque vitae autem.</p>
+                    <p>berikut terdapat berbagai Kuliner, Jasa, maupun Oleh-oleh khas Desa Kamasan</p>
                 </div>
 
                 <div class="row">
@@ -491,9 +790,9 @@
                 <div class="faq-list" style="text-align: justify">
                     <ul>
                         <li data-aos="fade-up">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapsed"
-                                data-bs-target="#faq-list-1">Bagaimana sejarah awal mula nama <b>'Kamasan'</b>?<i
-                                    class="bx bx-chevron-down icon-show"></i><i
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
+                                class="collapsed" data-bs-target="#faq-list-1">Bagaimana sejarah awal mula nama
+                                <b>'Kamasan'</b>?<i class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
                                 <p>
@@ -513,16 +812,26 @@
 
                         <li data-aos="fade-up" data-aos-delay="100">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-2" class="collapsed">Dimana letak <b>Desa Kamasan</b> dan bagaimana cara menuju kesana?<i class="bx bx-chevron-down icon-show"></i><i
+                                data-bs-target="#faq-list-2" class="collapsed">Dimana letak <b>Desa Kamasan</b> dan
+                                bagaimana cara menuju kesana?<i class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                                 <p>
-                                  Secara geografis Desa Kamasan termasuk desa dataran rendah dekat dengan pantai Klotok atau pantai Jumpai ± 3 km. Untuk menuju lokasi Desa Kamasan sebenarnya bisa ditempuh melalui beberapa jalur, tiga diantaranya sebagai berikut:<br>
-                                  <ol>
-                                    <li style="margin-bottom: -35px;">Jalur Barat dari tengah-tengah kota kabupaten ke arah selatan sepanjang 1,5 km berbelok ke kiri langsung sampai banjar Sangging yang merupakan pusat sentra pengrajin seni lukis wayang Kamasan. Ke selatan sedikit lagi sampai ke banjar Pande Mas, pusat ukiran emas dan perak.</li>
-                                    <li style="margin-bottom: -35px;">Jalur utara dari kota kabupaten Klungkung agak di bagian timur ke arah selatan melalui belokan-belokan jalan sampai di banjar Siku.</li>
-                                    <li style="">Jalur selatan dari tengah-tengah kota Kabupaten Klungkung ke arah selatan sepanjang 3 km melalui desa-desa Tojan dan Gelgel sampai ke banjar Pande, pusat kerajinan ukiran tradisional bahan peluru.</li>
-                                  </ol>                       
+                                    Secara geografis Desa Kamasan termasuk desa dataran rendah dekat dengan pantai
+                                    Klotok atau pantai Jumpai ± 3 km. Untuk menuju lokasi Desa Kamasan sebenarnya bisa
+                                    ditempuh melalui beberapa jalur, tiga diantaranya sebagai berikut:<br>
+                                <ol>
+                                    <li style="margin-bottom: -35px;">Jalur Barat dari tengah-tengah kota kabupaten ke
+                                        arah selatan sepanjang 1,5 km berbelok ke kiri langsung sampai banjar Sangging
+                                        yang merupakan pusat sentra pengrajin seni lukis wayang Kamasan. Ke selatan
+                                        sedikit lagi sampai ke banjar Pande Mas, pusat ukiran emas dan perak.</li>
+                                    <li style="margin-bottom: -35px;">Jalur utara dari kota kabupaten Klungkung agak di
+                                        bagian timur ke arah selatan melalui belokan-belokan jalan sampai di banjar
+                                        Siku.</li>
+                                    <li style="">Jalur selatan dari tengah-tengah kota Kabupaten Klungkung ke
+                                        arah selatan sepanjang 3 km melalui desa-desa Tojan dan Gelgel sampai ke banjar
+                                        Pande, pusat kerajinan ukiran tradisional bahan peluru.</li>
+                                </ol>
                                 </p>
                             </div>
                         </li>
@@ -535,14 +844,13 @@
         </section><!-- End F.A.Q Section -->
 
         <!-- ======= Maps Section ======= -->
-        <section id="contact" class="contact">
+        <section id="peta" class="contact">
             <div class="container">
 
                 <div class="section-title" data-aos="zoom-in">
-                    <h2>Contact</h2>
-                    <h3>Check our <span>Contact</span> Details</h3>
-                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas
-                        atque vitae autem.</p>
+                    <h2>Peta Desa</h2>
+                    <h3>Check our <span>Location</span> Details</h3>
+                    <p>Ini adalah peta yang menunjukkan lokasi Desa Wisata dan sekitarnya</p>
                 </div>
 
                 <div>
@@ -625,7 +933,7 @@
 
                 <div class="row  justify-content-center">
                     <div class="col-lg-6">
-                        <h3>Remember</h3>
+                        <h3>Desa Wisata Kamasan</h3>
                         <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe
                             commodi placeat.</p>
                     </div>
@@ -653,14 +961,14 @@
 
         <div class="container footer-bottom clearfix">
             <div class="copyright">
-                &copy; Copyright <strong><span>Remember</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>Desa Kamasan</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Designed by <a href="https://bootstrapmade.com/">PBL - Kelompok 1</a>
             </div>
         </div>
     </footer><!-- End Footer -->
