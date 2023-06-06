@@ -58,18 +58,8 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="berita">Tambah berita</a>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#Berita" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Berita
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="Berita" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="#">berita 1</a>
-                                            <a class="nav-link" href="#">berita 2</a>
-                                            <a class="nav-link" href="#">berita 3</a>
-                                        </nav>
-                                    </div>
+                                    <a class="nav-link" href="{{route('berita.index')}}">Tambah berita</a>
+                                    <a class="nav-link" href="{{route('pengurus.index')}}">Pengurus Desa</a>
                                     <a class="nav-link" href="profildesa">Profil Desa</a>
                                 </nav>
                             </div>
@@ -82,18 +72,7 @@
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link" href="Produk">Tambah lapak</a>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Lapak Desa wisata
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                  
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="#">Warung A</a>
-                                            <a class="nav-link" href="#">Warung B</a>
-                                            <a class="nav-link" href="#">Warung C</a>
-                                        </nav>
-                                    </div>
+                                    
                                 </nav>
                             </div>
                             
@@ -109,10 +88,7 @@
                                         Daerah wisata
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="daerah" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                    <a class="nav-link" href="401.html">dearah 1</a>
-                                    <a class="nav-link" href="404.html">daerah 2</a>
-                                    <a class="nav-link" href="500.html">daerah 3</a>
+                                    
                                 </nav>
                             </div>
                             
@@ -137,7 +113,6 @@
               
 
                 @yield('content')
-                
 
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -159,7 +134,5 @@
         <script src="{{ asset('assets/js/datatables.js') }}"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
-       
-       
     </body>
 </html>

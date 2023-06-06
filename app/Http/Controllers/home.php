@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\produk;
 use App\Models\profildesa;
+use App\Models\pengurus;
 use Illuminate\Http\Request;
 
 class home extends Controller
@@ -14,7 +15,8 @@ class home extends Controller
     {
         $profil = profildesa::get();
         $produk = produk::get();
-       return view('Client.home', compact('produk','profil'));
+        $pengurus = pengurus::get();
+       return view('Client.home', compact('produk','profil','pengurus'));
     }
 
     /**

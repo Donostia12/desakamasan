@@ -9,6 +9,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\profildesa;
 use App\Http\controllers\produkcontroller;
 use App\Http\controllers\home;
+use App\Http\controllers\penguruscontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ use App\Http\controllers\home;
 Route::resource('/', home::class);
 Route::get('home/{id}', [home::class, 'detail']);
 
+Route::resource('/pengurus', penguruscontroller::class);
 Route::get('/login', [Admin::class, 'vlogin'])->middleware('onlogin');
 
 Route::resource('Produk', produkController::class)->middleware('is_login');
