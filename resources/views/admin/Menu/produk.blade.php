@@ -139,23 +139,24 @@
                                             <td>{{$A->informasi_produk}}</td>
                                             <td>{{$A->harga_produk}}</td>
                                             <td>
-                                                <div class="form-group">
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <a href="#" onclick="getpop({{$A->id}})">view </a>
-                                                        </div>
-                                                        <div class="col-sm-6">
-
-                                                            <a href="/Produk/{{$A->id}}/edit">edit</a>
-
-                                                        </div>
-
-                                                        <form action="/Produk/{{$A->id}}" method="POST">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button> delete</button>
-                                                        </form>
-                                                    </div>
+                                                <div class="dropdown">
+                                                    <button id="toa" class="btn btn-primary" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                    <a href="#" class="dropdown-item" onclick="getpop({{$A->id}})"><i class="bi bi-search"></i> View</a>
+                                                    
+                                    
+                                                    <a href="{{ route('Produk.edit',$A->id) }}" class="dropdown-item"><i class="bi bi-pencil-square"></i> Edit</a>
+                                                    
+                                                    
+                                                    <form action="{{route('Produk.destroy',$A->id)}}" method="post">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <button class="dropdown-item"><i class="bi bi-trash"></i> Hapus</button>
+                                                      </form>                                                   
+                                                      
+                                                </div>
                                                 </div>
                                             </td>
                                         </tr>

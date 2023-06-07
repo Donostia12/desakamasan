@@ -187,39 +187,7 @@
         
         
         <!-- ======= Cta Section ======= -->
-        <section id="cta" class="cta">
-            <div class="container" data-aos="zoom-in">
-                
-                <div class="text-center">
-                    <h3>Main</h3>
-                </div>
-                
-            </div>
-        </section><!-- End Cta Section -->
-        
-        <hr>
-        <br>
-        <section id="why-us" class="why-us">
-            <div class="container">
-
-                <div class="section-title" data-aos="zoom-in">
-                 
-                    <h3>Berita <span>Terkini</span></h3>
-                    <p>tempat berita.</p>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-4" data-aos="fade-up">
-                        <div class="box">
-                            <span>01</span>
-                            <h4>Lorem Ipsum</h4>
-                            <p>Letakan disini</p>
-                        </div>
-                    </div>
-
-
-                </div>
+       
 
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">
