@@ -33,7 +33,7 @@ class BeritaController extends Controller
     {
         $request->validate([
             'judul_berita'=>['required', 'string', 'max:255'],
-            'isi_berita'=>['required', 'string', 'max:255'],
+            'isi_berita'=>['required', 'string'],
             'image'=>['required']
         ]);
 
@@ -82,7 +82,7 @@ class BeritaController extends Controller
         $berita = berita::where('id_berita',$id)->first();
         $request->validate([
             'judul_berita'=>['required', 'string', 'max:255'],
-            'isi_berita'=>['required', 'string', 'max:255'],
+            'isi_berita'=>['required', 'string'],
         ]);
         
             if ($request->hasFile('image')) {

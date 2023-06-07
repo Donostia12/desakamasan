@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\berita;
 use App\Models\produk;
 use App\Models\profildesa;
 use App\Models\pengurus;
@@ -16,7 +18,8 @@ class home extends Controller
         $profil = profildesa::get();
         $produk = produk::get();
         $pengurus = pengurus::get();
-       return view('Client.home', compact('produk','profil','pengurus'));
+        $berita = berita::orderBy('created_at','desc')->paginate(5);
+       return view('Client.home', compact('produk','profil','pengurus','berita'));
     }
 
     /**

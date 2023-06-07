@@ -216,93 +216,24 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-9" data-aos="fade-up">
-                                <h3 class="category-title">Category: Business</h3>
 
-                                {{-- Gambar, Judul, tanggal, dan isi berita, --}}
-                                <div class="d-md-flex post-entry-2 sect-news">
-                                    <a href="single-post.html" class="me-4 thumbnail">
-                                        <img src="{{ asset('assets-client\assets\img\FH\FH5.png') }}" alt=""
-                                            class="img-fluid">
-                                    </a>
-                                    <div>
-                                        <div class="post-meta"><span class="date">Culture</span> <span
-                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                                        <h3><a href="single-post.html">What is the son of Football Coach John
-                                                Gruden, Deuce Gruden doing Now?</a></h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-                                            placeat exercitationem magni voluptates dolore. Tenetur fugiat
-                                            voluptates quas, nobis error deserunt aliquam temporibus sapiente,
-                                            laudantium dolorum itaque libero eos deleniti?</p>
-                                    </div>
-                                </div><hr>
+                                @foreach ($berita as $item)
+                                    {{-- Gambar, Judul, tanggal, dan isi berita, --}}
+                                    <div class="d-md-flex post-entry-2 sect-news">
+                                        <a href="single-post.html" class="me-4 thumbnail">
+                                            <img src="{{ asset('storage/images/'.$item->image) }}" alt=""
+                                                class="img-fluid">
+                                        </a>
+                                        <div>
+                                            <div class="post-meta"><span>{{ date('d M Y H:i:s',strtotime($item->created_at)) }}</span></div>
+                                            <h3><a href="single-post.html">{{$item->judul_berita}}</a></h3>
+                                            <p>{{substr($item->isi_berita,0,330)}}...</p>
+                                        </div>
+                                    </div><hr>
+                                @endforeach
+                                
 
-                                <div class="d-md-flex post-entry-2 sect-news">
-                                    <a href="single-post.html" class="me-4 thumbnail">
-                                        <img src="{{ asset('assets-client\assets\img\FH\FH5d.png') }}" alt=""
-                                            class="img-fluid">
-                                    </a>
-                                    <div>
-                                        <div class="post-meta"><span class="date">Culture</span> <span
-                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                                        <h3><a href="single-post.html">What is the son of Football Coach John
-                                                Gruden, Deuce Gruden doing Now?</a></h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-                                            placeat exercitationem magni voluptates dolore. Tenetur fugiat
-                                            voluptates quas, nobis error deserunt aliquam temporibus sapiente,
-                                            laudantium dolorum itaque libero eos deleniti?</p>
-                                    </div>
-                                </div><hr>
-
-                                <div class="d-md-flex post-entry-2 sect-news">
-                                    <a href="single-post.html" class="me-4 thumbnail">
-                                        <img src="{{ asset('assets-client\assets\img\FH\FH5a.png') }}" alt=""
-                                            class="img-fluid">
-                                    </a>
-                                    <div>
-                                        <div class="post-meta"><span class="date">Culture</span> <span
-                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                                        <h3><a href="single-post.html">What is the son of Football Coach John
-                                                Gruden, Deuce Gruden doing Now?</a></h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-                                            placeat exercitationem magni voluptates dolore. Tenetur fugiat
-                                            voluptates quas, nobis error deserunt aliquam temporibus sapiente,
-                                            laudantium dolorum itaque libero eos deleniti?</p>
-                                    </div>
-                                </div><hr>
-
-                                <div class="d-md-flex post-entry-2 sect-news">
-                                    <a href="single-post.html" class="me-4 thumbnail">
-                                        <img src="{{ asset('assets-client\assets\img\FH\FH5c.png') }}" alt=""
-                                            class="img-fluid">
-                                    </a>
-                                    <div>
-                                        <div class="post-meta"><span class="date">Culture</span> <span
-                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                                        <h3><a href="single-post.html">What is the son of Football Coach John
-                                                Gruden, Deuce Gruden doing Now?</a></h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-                                            placeat exercitationem magni voluptates dolore. Tenetur fugiat
-                                            voluptates quas, nobis error deserunt aliquam temporibus sapiente,
-                                            laudantium dolorum itaque libero eos deleniti?</p>
-                                    </div>
-                                </div><hr>
-
-                                <div class="d-md-flex post-entry-2 sect-news">
-                                    <a href="single-post.html" class="me-4 thumbnail">
-                                        <img src="{{ asset('assets-client\assets\img\FH\FH5b.png') }}" alt=""
-                                            class="img-fluid">
-                                    </a>
-                                    <div>
-                                        <div class="post-meta"><span class="date">Culture</span> <span
-                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-                                        <h3><a href="single-post.html">What is the son of Football Coach John
-                                                Gruden, Deuce Gruden doing Now?</a></h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-                                            placeat exercitationem magni voluptates dolore. Tenetur fugiat
-                                            voluptates quas, nobis error deserunt aliquam temporibus sapiente,
-                                            laudantium dolorum itaque libero eos deleniti?</p>
-                                    </div>
-                                </div><hr>
+                                
 
                                 {{-- Ini untuk Pagination --}}
                                 <div class="text-start py-4">
@@ -460,59 +391,17 @@
                                         <!-- Latest -->
                                         <div class="tab-pane fade" id="pills-latest" role="tabpanel"
                                             aria-labelledby="pills-latest-tab">
+                                            @foreach ($berita as $item)
                                             <div class="post-entry-1 border-bottom">
-                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                <div class="post-meta"><span>{{ date('d M Y H:i:s',strtotime($item->created_at)) }}</span>
                                                 </div>
-                                                <h2 class="mb-2"><a href="#">333 Life Insurance And Pregnancy:
-                                                        A Working Mom’s Guide</a></h2>
-                                                <span class="author mb-3 d-block">Jenny Wilson</span>
+                                                <h2 class="mb-2"><a href="#">{{$item->judul_berita}}</a></h2>
+                                                <span class="author mb-3 d-block">Admin</span>
                                             </div>
+                                            @endforeach
+                                            
 
-                                            <div class="post-entry-1 border-bottom">
-                                                <div class="post-meta"><span class="date">Business</span> <span
-                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                </div>
-                                                <h2 class="mb-2"><a href="#">The Best Homemade Masks for
-                                                        Face (keep the Pimples Away)</a></h2>
-                                                <span class="author mb-3 d-block">Jenny Wilson</span>
-                                            </div>
-
-                                            <div class="post-entry-1 border-bottom">
-                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                </div>
-                                                <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every
-                                                        Working Mom Should Know</a></h2>
-                                                <span class="author mb-3 d-block">Jenny Wilson</span>
-                                            </div>
-
-                                            <div class="post-entry-1 border-bottom">
-                                                <div class="post-meta"><span class="date">Sport</span> <span
-                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                </div>
-                                                <h2 class="mb-2"><a href="#">How to Avoid Distraction and
-                                                        Stay Focused During Video Calls?</a></h2>
-                                                <span class="author mb-3 d-block">Jenny Wilson</span>
-                                            </div>
-
-                                            <div class="post-entry-1 border-bottom">
-                                                <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                </div>
-                                                <h2 class="mb-2"><a href="#">17 Pictures of Medium Length
-                                                        Hair in Layers That Will Inspire Your New Haircut</a></h2>
-                                                <span class="author mb-3 d-block">Jenny Wilson</span>
-                                            </div>
-
-                                            <div class="post-entry-1 border-bottom">
-                                                <div class="post-meta"><span class="date">Culture</span> <span
-                                                        class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                </div>
-                                                <h2 class="mb-2"><a href="#">9-up-down
-                                                        Hairstyles for Long and Medium Hair</a></h2>
-                                                <span class="author mb-3 d-block">Jenny Wilson</span>
-                                            </div>
+                                            
 
                                         </div> <!-- End Latest -->
 

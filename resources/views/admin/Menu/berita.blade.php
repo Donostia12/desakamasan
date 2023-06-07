@@ -93,7 +93,7 @@
                                 @foreach ($berita as $item)
                                     <tr>
                                         <td>{{$item->judul_berita}}</td>
-                                        <td>{{$item->isi_berita}}</td>
+                                        <td>{{substr($item->isi_berita,0,70)}}...</td>
                                         
                                         <td>
                                             <div class="dropdown">
