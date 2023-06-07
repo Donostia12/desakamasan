@@ -72,4 +72,10 @@ class home extends Controller
     {
         //
     }
+
+    public function detailberita(string $id)
+    {
+        $berita = berita::where('id_berita',$id)->first();
+        return view('Client.detailberita',compact('berita'));
+    }
 }

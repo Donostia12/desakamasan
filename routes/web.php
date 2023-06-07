@@ -25,6 +25,8 @@ use App\Http\controllers\penguruscontroller;
 Route::resource('/', home::class);
 Route::get('home/{id}', [home::class, 'detail']);
 
+Route::get('detailberita/{id}', [home::class, 'detailberita']);
+
 Route::resource('/pengurus', penguruscontroller::class);
 Route::get('/login', [Admin::class, 'vlogin'])->middleware('onlogin');
 
