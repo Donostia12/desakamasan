@@ -172,40 +172,8 @@
 
                             <div id="detail"></div>
                             {{-- ini Popup untuk Produk --}}
-                            <style>
-                                .popup {
-                                    position: fixed;
-                                    top: 50%;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-                                    width: 400px;
-                                    background-color: #f9f9f9;
-                                    border-radius: 8px;
-                                    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-                                    padding: 20px;
-                                    border: 1px solid #ccc;
-                                }
-
-                                .popup-content {
-                                    margin-bottom: 20px;
-                                }
-
-                                .popup-header {
-                                    font-size: 20px;
-                                    font-weight: bold;
-                                    margin-bottom: 10px;
-                                }
-
-                                .popup-body {
-                                    font-size: 16px;
-                                }
-
-                                .popup-footer {
-                                    text-align: right;
-                                }
-
-                            </style>
-
+                         
+{{-- 
                             <div style="display: none">
                                 <div id="iklan">
                                     <div class="popup">
@@ -297,30 +265,66 @@
                                 $('#detail').empty();
                             }
 
-                        </script>
+                        </script> --}}
 
-                        {{-- 
-ajax untuk delete --}}
-                        <script>
-                            function hapus(id) {
-                                if (confirm("yakin mau di delete?")) {
-                                    $.ajax({
-                                        url: "/delete/" + id,
-                                        type: "DELETE",
-                                        data: {
-                                            "id": id,
-                                            "_token": "{{ csrf_token() }}"
-                                        },
-                                        success: function () {
-                                            location.reload(true);
-                                        },
-                                        error: function (data) {
-                                            console.log('Error:', data);
-                                        }
-                                    });
-                                }
-                            }
-                            let table = new DataTable('#table');
 
-                        </script>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" style="overflow-y: scroll; max-height: 700px" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detail-Produk</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <img  id="image" src="" alt="" srcset="">
+        
+            <div class="modal-body">
+                <p>Nama Produk</p>
+                <input type="text" class="form-control" id="nama-produk" readonly>
+                <p>Informasi Produk</p>
+                <input type="text" class="form-control" id="informasi-produksi" readonly>
+                <p>Harga Produk</p>
+                <input type="text" class="form-control" id="harga-produk" readonly>
+                <p>Kategori</p>
+                <input type="text" class="form-control" id="kategori" readonly>
+                
+
+            </div>
+            <div class="">
+                <iframe style="border:0; width: 100%; height: 270px;" id="map"
+                    src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function getpop(id) {
+      
+        $('#myModal').modal('show');
+        $.ajax({
+            type: "GET",
+            url: "/detailproduk/" + id,
+            success: function (data) {
+                $('#nama-produk').val(data.nama_produk);
+                $('#image').attr('src', '/storage/images/' + data.image);
+                $('#informasi-produk').val(data.informasi_produk);
+                $('#harga-produk').val(data.harga_produk);
+                $('#kategori').val(data.kategori);
+                $('#map').attr('src', data.map);
+              console.log(data.jabatan);
+            },
+            error: function (xhr, status, error) {
+                console.log(data);
+            }
+        });
+    }
+
+</script>
                         @endsection

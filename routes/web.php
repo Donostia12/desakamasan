@@ -25,13 +25,13 @@ use App\Http\controllers\penguruscontroller;
 Route::resource('/', home::class);
 Route::get('home/{id}', [home::class, 'detail']);
 
-Route::get('detailberita/{id}', [home::class, 'detailberita']);
+Route::get('detailpengurus/{id}', [penguruscontroller::class, 'detail']);
 
 Route::resource('/pengurus', penguruscontroller::class);
 Route::get('/login', [Admin::class, 'vlogin'])->middleware('onlogin');
 
 Route::resource('Produk', produkController::class)->middleware('is_login');
-Route::get('/detail/{id}',[produkController::class,'detail']);
+Route::get('/detailproduk/{id}',[produkController::class,'detail']);
 
 Route::get('home', [Admin::class, 'home'])->middleware('is_login');
 // Route::get('Produk', [Admin::class, 'produk']);

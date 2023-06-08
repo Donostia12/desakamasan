@@ -121,8 +121,9 @@ class penguruscontroller extends Controller
         return redirect()->route('pengurus.index')->with('success', 'Berita berhasil dihapus!');
     }
 
+
     public function detail($id){
-        $data = berita::where('id_berita',$id)->first();
+        $data = pengurus::find($id);
         return response()->json($data);
     }
 }
