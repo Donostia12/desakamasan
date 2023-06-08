@@ -12,11 +12,15 @@
                 Kamasan dikenal dalam dunia seni lukis tradisional Bali, karena berbagai lukisan tradisional Bali
                 diilhami dari corak Kamasan,
                 yang terinspirasi dari budaya Jawa.</h3>
-            <a href="#about" class="btn-hero scrollto">
-                <span>
-                    Get Started
-                </span>
+            <a href="#about">
+                <button class="learn-more scrollto">
+                    <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text">Get Started</span>
+                </button>
             </a>
+            
         </div>
     </section><!-- End Hero -->
 
