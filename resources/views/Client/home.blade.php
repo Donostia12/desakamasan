@@ -363,6 +363,7 @@
                                         <div class="text-content">
                                             <h4>Nama Daerah Wisata 2</h4>
                                             <span>Disini deskripsi singkat</span>
+                                            <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -375,6 +376,7 @@
                                         <div class="text-content">
                                             <h4>Nama Daerah Wisata 3</h4>
                                             <span>Disini deskripsi singkat</span>
+                                            <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -387,6 +389,7 @@
                                         <div class="text-content">
                                             <h4>Nama Daerah Wisata 4</h4>
                                             <span>Disini deskripsi singkat</span>
+                                            <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
                                         </div>
                                     </div>
                                 </div>
