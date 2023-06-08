@@ -95,9 +95,9 @@
                 <table class="table" id="table1">
                     <thead>
                         <tr>
-                            <th>Nama Pengurus</th>
+                            <th>Nama Daerah Wisata</th>
                             <th>Deksripsi</th>
-                            <th>Maps</th>
+                           
                         
                             <th>Action</th>
                         </tr>
@@ -107,7 +107,6 @@
                         <tr>
                             <td>{{$item->nama}}</td>
                             <td>{{$item->deskripsi}}</td>
-                            <td>{{$item->maps}}</td>
 
                             <td>
                                 <div class="dropdown">
@@ -146,15 +145,14 @@
 
 
     <!-- Pop-up -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" style="overflow-y: scroll; max-height: 100%">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" style="max-height: 100%;">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Detail-Daereah-Wisata</h5>
+                    <h5 class="modal-title">Detail Daerah Wisata</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <img id="image" src="" alt="" srcset="">
-
+                    <img id="image" src="" alt="" srcset="" style="padding: 5%; border-radius: 32px;">
                 <div class="modal-body">
                     <p>Nama</p>
                     <input type="text" class="form-control" id="nama" readonly>
@@ -163,11 +161,11 @@
                     <textarea type="text" class="form-control" id="deskripsi" readonly></textarea>
 
                     <p> maps</p>
+                    <div class="">
+                        <iframe style="border:0; width: 100%; height: 270px;" id="map"
+                            src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
 
-                </div>
-                <div class="">
-                    <iframe style="border:0; width: 100%; height: 270px;" id="map"
-                        src="" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

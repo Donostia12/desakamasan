@@ -2,7 +2,6 @@
 
 
 @section('content')
-
     <!-- ======= Hero Section ======= -->
     <section id="hero">
         <div class="hero-container" data-aos="fade-up">
@@ -15,12 +14,12 @@
             <a href="#about">
                 <button class="learn-more scrollto">
                     <span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
+                        <span class="icon arrow"></span>
                     </span>
                     <span class="button-text">Get Started</span>
                 </button>
             </a>
-            
+
         </div>
     </section><!-- End Hero -->
 
@@ -86,12 +85,12 @@
         </section><!-- End About Section -->
 
         <!-- ======= Why Us Section ======= -->
-        
+
         <!-- ======= Counts Section ======= -->
-        
-        
+
+
         <!-- ======= Cta Section ======= -->
-       
+
 
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">
@@ -124,21 +123,22 @@
                                 @foreach ($berita as $item)
                                     {{-- Gambar, Judul, tanggal, dan isi berita, --}}
                                     <div class="d-md-flex post-entry-2 sect-news">
-                                        <a href="{{ url('detailberita/'.$item->id_berita) }}" class="me-4 thumbnail">
-                                            <img src="{{ asset('storage/images/'.$item->image) }}" alt=""
+                                        <a href="{{ url('detailberita/' . $item->id_berita) }}" class="me-4 thumbnail">
+                                            <img src="{{ asset('storage/images/' . $item->image) }}" alt=""
                                                 class="img-fluid">
                                         </a>
                                         <div>
-                                            <div class="post-meta"><span>{{ date('d M Y H:i:s',strtotime($item->created_at)) }}</span></div>
-                                            <h3><a href="{{ url('detailberita/'.$item->id_berita) }}">{{$item->judul_berita}}</a></h3>
-                                            <p>{{substr($item->isi_berita,0,330)}}...</p>
+                                            <div class="post-meta"><span
+                                                    class="date">{{ date('d M Y H:i:s', strtotime($item->created_at)) }}</span>
+                                            </div>
+                                            <h3><a
+                                                href="{{ url('detailberita/' . $item->id_berita) }}">{{ $item->judul_berita }}</a>
+                                        </h3>
+                                            <p>{{ substr($item->isi_berita, 0, 250) }}...</p>
                                         </div>
-                                    </div><hr>
+                                    </div>
+                                    <hr>
                                 @endforeach
-                                
-
-                                
-
                                 {{-- Ini untuk Pagination --}}
                                 <div class="text-start py-4">
                                     <div class="custom-pagination">
@@ -158,10 +158,9 @@
                                 <div class="aside-block">
                                     <ul class="nav nav-pills custom-popular mb-4" id="pills-tab" role="tablist">
                                         <li class="nav-item" role="presentation">
-                                            <button class="nav-link active" id="pills-popular-tab"
-                                                data-bs-toggle="pill" data-bs-target="#pills-popular" type="button"
-                                                role="tab" aria-controls="pills-popular"
-                                                aria-selected="true">Popular</button>
+                                            <button class="nav-link active" id="pills-popular-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-popular" type="button" role="tab"
+                                                aria-controls="pills-popular" aria-selected="true">Popular</button>
                                         </li>
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="pills-trending-tab" data-bs-toggle="pill"
@@ -296,16 +295,18 @@
                                         <div class="tab-pane fade" id="pills-latest" role="tabpanel"
                                             aria-labelledby="pills-latest-tab">
                                             @foreach ($berita as $item)
-                                            <div class="post-entry-1 border-bottom">
-                                                <div class="post-meta"><span>{{ date('d M Y H:i:s',strtotime($item->created_at)) }}</span>
+                                                <div class="post-entry-1 border-bottom">
+                                                    <div class="post-meta">
+                                                        <span>{{ date('d M Y H:i:s', strtotime($item->created_at)) }}</span>
+                                                    </div>
+                                                    <h2 class="mb-2"><a href="#">{{ $item->judul_berita }}</a>
+                                                    </h2>
+                                                    <span class="author mb-3 d-block">Admin</span>
                                                 </div>
-                                                <h2 class="mb-2"><a href="#">{{$item->judul_berita}}</a></h2>
-                                                <span class="author mb-3 d-block">Admin</span>
-                                            </div>
                                             @endforeach
-                                            
 
-                                            
+
+
 
                                         </div> <!-- End Latest -->
 
@@ -316,8 +317,8 @@
                                     <h3 class="aside-title">Video</h3>
                                     <div class="video-post">
                                         <iframe width="auto" height="200px" class=""
-                                            src="https://www.youtube.com/embed/kvXy7u21nu4"
-                                            title="YouTube video player" frameborder="0"
+                                            src="https://www.youtube.com/embed/kvXy7u21nu4" title="YouTube video player"
+                                            frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             allowfullscreen></iframe>
                                         {{-- <a href="https://youtu.be/kvXy7u21nu4" class="glightbox link-video">
@@ -327,28 +328,6 @@
                                         </a> --}}
                                     </div>
                                 </div><!-- End Video -->
-
-                                <div class="aside-block">
-                                    <h3 class="aside-title">Categories</h3>
-                                    <ul class="aside-links list-unstyled">
-                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>
-                                                Business</a></li>
-                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>
-                                                Culture</a></li>
-                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Sport</a>
-                                        </li>
-                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Food</a>
-                                        </li>
-                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>
-                                                Politics</a></li>
-                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>
-                                                Celebrity</a></li>
-                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i>
-                                                Startups</a></li>
-                                        <li><a href="category.html"><i class="bi bi-chevron-right"></i> Travel</a>
-                                        </li>
-                                    </ul>
-                                </div><!-- End Categories -->
                             </div>
                         </div>
                     </div>
@@ -405,34 +384,30 @@
 
                 <div class="section-title" data-aos="zoom-in">
                     <h2>Team</h2>
-                    <h3>Pengurus  <span>Desa-Kamasan</span></h3>
+                    <h3>Pengurus <span>Desa-Kamasan</span></h3>
                     <p>posisi dan pengurus desa</p>
                 </div>
 
                 <div class="row">
 
                     @foreach ($pengurus as $data)
-                        
-                 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up">
-                            <div class="member-img">
-                                <img src="/storage/images/{{$data->image}}" class="img-fluid"
-                                    alt="">
-                                <div class="social">
-                                    <a href="https://wa.me/{{$data->whatsapp}}"><i class="bi bi-whatsapp"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                            <div class="member" data-aos="fade-up">
+                                <div class="member-img">
+                                    <img src="/storage/images/{{ $data->image }}" class="img-fluid" alt="">
+                                    <div class="social">
+                                        <a href="https://wa.me/{{ $data->whatsapp }}"><i class="bi bi-whatsapp"></i></a>
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                        <a href=""><i class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $data->nama }}</h4>
+                                    <span>{{ $data->jabatan }}</span>
                                 </div>
                             </div>
-                            <div class="member-info">
-                                <h4>{{$data->nama}}</h4>
-                                <span>{{$data->jabatan}}</span>
-                            </div>
                         </div>
-                    </div>
-
                     @endforeach
 
                 </div>
@@ -535,7 +510,7 @@
         </section><!-- End Testimonials Section -->
 
         <!-- ======= Pricing Section ======= -->
-       
+
 
         <!-- ======= F.A.Q Section ======= -->
         <section id="faq" class="faq">
@@ -551,8 +526,8 @@
                 <div class="faq-list" style="text-align: justify">
                     <ul>
                         <li data-aos="fade-up">
-                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                class="collapsed" data-bs-target="#faq-list-1">Bagaimana sejarah awal mula nama
+                            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapsed"
+                                data-bs-target="#faq-list-1">Bagaimana sejarah awal mula nama
                                 <b>'Kamasan'</b>?<i class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
@@ -597,7 +572,7 @@
                             </div>
                         </li>
 
-                     
+
                     </ul>
                 </div>
 
@@ -684,5 +659,4 @@
         </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
-
 @endsection

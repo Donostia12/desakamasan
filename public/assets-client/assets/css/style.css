@@ -1962,25 +1962,23 @@ section {
  }
 
  .sect-news h3{
-  margin-bottom: 2%;
+  margin-top: 2%;
   font-size: 24px;
  }
 
  .sect-news p{
+  margin-top: 2%;
   font-size: 16px;
+  max-width: 600px;
+  width: 100%;
  }
 
  .thumbnail img {
   border-radius: 8px;
   margin-bottom: 10px;
- }
-
- .isi-berita p{
-  font-size: 18px;
- }
-
- .isi-berita p{
-  font-size: 18px;
+  max-width: 450px;
+  min-width: 450px;
+  width: 100%;
  }
 
  .category-title {
