@@ -10,7 +10,7 @@ use App\Http\Controllers\profildesa;
 use App\Http\controllers\produkcontroller;
 use App\Http\controllers\home;
 use App\Http\controllers\penguruscontroller;
-
+use App\Http\controllers\daerahwisatacontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +24,9 @@ use App\Http\controllers\penguruscontroller;
 
 Route::resource('/', home::class);
 Route::get('home/{id}', [home::class, 'detail']);
+
+Route::resource('/daerahwisata', daerahwisatacontroller::class);
+Route::get('detailwisata/{id}', [daerahwisatacontroller::class, 'detail']);
 
 Route::get('detailpengurus/{id}', [penguruscontroller::class, 'detail']);
 

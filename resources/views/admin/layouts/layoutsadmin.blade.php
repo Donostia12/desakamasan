@@ -62,7 +62,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{route('berita.index')}}">Tambah berita</a>
                                     <a class="nav-link" href="{{route('pengurus.index')}}">Pengurus Desa</a>
-                                    <a class="nav-link" href="profildesa">Profil Desa</a>
+                                    
                                 </nav>
                             </div>
 
@@ -73,7 +73,7 @@
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link" href="Produk">Tambah lapak</a>
+                                    <a class="nav-link" href="{{route('Produk.index')}}">Tambah lapak</a>
                                     
                                 </nav>
                             </div>
@@ -85,11 +85,7 @@
                             </a>
                             <div class="collapse" id="wisata" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Tambah Daerah Wisata</a>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#daerah" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Daerah wisata
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
+                                    <a class="nav-link" href="{{route('daerahwisata.index')}}">Tambah Daerah Wisata</a>
                                     
                                 </nav>
                             </div>
@@ -120,7 +116,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Suncry@Dns</div>
+                            <div class="text-muted">Copyright &copy; donos--Suncrydevelopers</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;

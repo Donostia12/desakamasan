@@ -170,107 +170,7 @@
                             </div>
                             </section>
 
-                            <div id="detail"></div>
-                            {{-- ini Popup untuk Produk --}}
-                         
-{{-- 
-                            <div style="display: none">
-                                <div id="iklan">
-                                    <div class="popup">
-
-                                        <form action="#" method="post">
-
-                                            <input type="hidden" id="id" name="id" />
-                                            <center><img id="image" src="" height="auto" width="150" alt=""></center>
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    <label> Nama Produk</label>
-                                                    <div class="col-sm-2"></div>
-                                                    <div class="col-sm-10 ">
-                                                        <input type="text" class="form-control" id="nama_produk"
-                                                            name="nama_produk" readonly>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <label> Info</label>
-                                                    </div>
-                                                    <div class="col-sm-10">
-                                                        <textarea type="text" class="form-control" id="informasi_produk"
-                                                            name="informasi_produk" readonly></textarea>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-
-
-
-                                                <div class="row">
-                                                    <center> <label> Harga & kategori</label></center>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" class="form-control" id="harga_produk"
-                                                            readonly>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" class="form-control" id="kategori" readonly>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    <div class="col-sm-2"> <label> Maps</label>
-                                                    </div>
-                                                    <div class="col-sm-10">
-                                                        <iframe style="border:0; width: 100%; height: 270px;" id="map"
-                                                            src="" frameborder="0" allowfullscreen></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <button class="btn btn-danger" onclick='closePopup()'>Tutup</button>
-                                    </div>
-                                </div>
-                                </form>
-
-                            </div>
-                        </div>
-
-                        <script>
-                            function getpop(id) {
-                                var isi = document.getElementById('iklan');
-                                var iklan = isi.innerHTML;
-                                $('#detail').html(iklan);
-                                $.ajax({
-                                    type: "GET",
-                                    url: '/detail/' + id,
-                                    success: function (data) {
-                                        $('#nama_produk').val(data.nama_produk);
-                                        $('#id').val(data.id);
-                                        $('#image').attr('src', '/storage/images/' + data.image);
-                                        $('#informasi_produk').val(data.informasi_produk);
-                                        $('#harga_produk').val(data.harga_produk + ' .Rp');
-                                        $('#kategori').val(data.kategori);
-                                        $('#map').attr('src', data.map);
-
-
-                                    },
-                                });
-                            }
-
-                            function closePopup() {
-                                $('#detail').empty();
-                            }
-
-                        </script> --}}
-
-
-
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" style="overflow-y: scroll; max-height: 700px" >
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" style="overflow-y: scroll; max-height: 100%" >
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -283,7 +183,7 @@
                 <p>Nama Produk</p>
                 <input type="text" class="form-control" id="nama-produk" readonly>
                 <p>Informasi Produk</p>
-                <input type="text" class="form-control" id="informasi-produksi" readonly>
+                <input type="text" class="form-control" id="informasi-produk" readonly>
                 <p>Harga Produk</p>
                 <input type="text" class="form-control" id="harga-produk" readonly>
                 <p>Kategori</p>
