@@ -132,8 +132,8 @@
                                                     class="date">{{ date('d M Y H:i:s', strtotime($item->created_at)) }}</span>
                                             </div>
                                             <h3><a
-                                                href="{{ url('detailberita/' . $item->id_berita) }}">{{ $item->judul_berita }}</a>
-                                        </h3>
+                                                    href="{{ url('detailberita/' . $item->id_berita) }}">{{ $item->judul_berita }}</a>
+                                            </h3>
                                             <p>{{ substr($item->isi_berita, 0, 250) }}...</p>
                                         </div>
                                     </div>
@@ -304,15 +304,9 @@
                                                     <span class="author mb-3 d-block">Admin</span>
                                                 </div>
                                             @endforeach
-
-
-
-
                                         </div> <!-- End Latest -->
-
                                     </div>
                                 </div>
-
                                 <div class="aside-block">
                                     <h3 class="aside-title">Video</h3>
                                     <div class="video-post">
@@ -334,6 +328,74 @@
                 </section>
             </div>
         </section><!-- End Services Section -->
+
+        <section id="dawis">
+            <div class="section-title" data-aos="zoom-in">
+                <h2>Daerah Wisata</h2>
+                <h3>Tempat <span>Wisata</span> Desa Kamasan</h3>
+                <p>Berbagai tempat Wisata tersebar di Desa Kamasan yang wajib dikunjungi para wisatawan</p>
+            </div>
+
+            <div class="parallax-content projects-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="owl-testimonials" class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="testimonials-item">
+                                        <a href="{{ asset('assets-client/assets/img/FH/FH5.png') }}"
+                                            data-lightbox="image-1"><img
+                                                src="{{ asset('assets-client/assets/img/FH/FH5.png') }}"
+                                                alt=""></a>
+                                        <div class="text-content">
+                                            <h4>Nama Daerah Wisata 1</h4>
+                                            <span>Disini deskripsi singkat</span>
+                                            <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonials-item">
+                                        <a href="{{ asset('assets-client/assets/img/FH/FH5d.png') }}"
+                                            data-lightbox="image-1"><img
+                                                src="{{ asset('assets-client/assets/img/FH/FH5d.png') }}"
+                                                alt=""></a>
+                                        <div class="text-content">
+                                            <h4>Nama Daerah Wisata 2</h4>
+                                            <span>Disini deskripsi singkat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonials-item">
+                                        <a href="{{ asset('assets-client/assets/img/FH/FH5a.png') }}"
+                                            data-lightbox="image-1"><img
+                                                src="{{ asset('assets-client/assets/img/FH/FH5a.png') }}"
+                                                alt=""></a>
+                                        <div class="text-content">
+                                            <h4>Nama Daerah Wisata 3</h4>
+                                            <span>Disini deskripsi singkat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="testimonials-item">
+                                        <a href="{{ asset('assets-client/assets/img/FH/FH5c.png') }}"
+                                            data-lightbox="image-1"><img
+                                                src="{{ asset('assets-client/assets/img/FH/FH5c.png') }}"
+                                                alt=""></a>
+                                        <div class="text-content">
+                                            <h4>Nama Daerah Wisata 4</h4>
+                                            <span>Disini deskripsi singkat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- ======= Portfolio Section ======= -->
         <section id="produk" class="portfolio">
             <div class="container">

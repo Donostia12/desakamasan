@@ -28,6 +28,8 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets-client/assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets-client/assets/css/owl-carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets-client/assets/css/templatemo-main.css') }}" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: Remember
@@ -85,15 +87,8 @@
                             <li><a class="nav-link scrollto" href="#berita">Berita Desa</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="" onclick="return false;"><span>Daerah Wisata</span> <i
-                                class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="">Wisata 1</a></li>
-                            <li><a href="">Wisata 2</a></li>
-                            <li><a href="">Wisata 3</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-link scrollto"><a href="#produk"><span>Produk Desa</span></a></li>
+                    <li><a class="nav-link scrollto" href="#dawis">Daerah Wisata</a></li>
+                    <li><a class="nav-link scrollto" href="#produk"><span>Produk Desa</span></a></li>
                     <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li><a class="nav-link scrollto" href="#peta">Location</a></li>
                 </ul>
@@ -165,9 +160,14 @@
     <script src="{{ asset('assets-client/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets-client/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets-client/assets/vendor/php-email-form/validate.js') }}"></script>
+    {{-- <script src="{{ asset('assets-client/assets/vendor/bootstrap.min.js') }}"></script> --}}
+    <script src="{{ asset('assets-client/assets/vendor/jquery-1.11.2.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets-client/assets/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets-client/assets/vendor/npm.js') }}"></script> --}}
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets-client/assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets-client/assets/js/plugins.js') }}"></script>
 
 </body>
 
