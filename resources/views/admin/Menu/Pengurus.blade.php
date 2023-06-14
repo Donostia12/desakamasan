@@ -51,28 +51,28 @@
                                             <div class="form-group">
                                                 <label for="jabatan">Jabatan</label>
                                                 <input type="text"  class="form-control"
-                                                    name="jabatan" placeholder="Jabatan yang di emban">
+                                                    name="jabatan" placeholder="Jabatan yang diemban">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="whatsapp">No Whatsapp</label>
                                                 <input type="text"  class="form-control"
-                                                    name="whatsapp" placeholder="Masukan No whatsapp">
+                                                    name="whatsapp" placeholder="Masukkan No whatsapp">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="email">Email</label>
                                                 <input type="text" class="form-control"
-                                                    name="email" placeholder="Masukan Email">
+                                                    name="email" placeholder="Masukkan Email">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="gambar">Foto Pengurus</label>
                                                 <input type="file"  class="form-control"
-                                                    name="image" placeholder="Masukan Foto Profil Pengurus">
+                                                    name="image" placeholder="Upload Foto Profil Pengurus">
                                             </div>
                                         </div>
                                         <div class="col-12 mt-3">
@@ -94,7 +94,7 @@
     <section class="section">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Tambah pengurus</h4>
+                <h4 class="card-title">Daftar Pengurus Desa</h4>
             </div>
             <div class="card-body">
                 <!-- table bordered -->
@@ -104,7 +104,7 @@
                                 <th>Nama Pengurus</th>
                                 <th>Jabatan</th>
                                 <th>No Whatsapp</th>
-                                <th>email</th>
+                                <th>Email</th>
                                 <th>Action</th>
                             </tr>
                         </thead>

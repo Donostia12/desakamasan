@@ -107,7 +107,7 @@
                                                     <h3><a
                                                             href="{{ url('detailberita/' . $item->id_berita) }}">{{ $item->judul_berita }}</a>
                                                     </h3>
-                                                    <p>{!! substr($item->isi_berita, 0, 250) !!}</p>
+                                                    <p>{!! substr($item->isi_berita, 0, 350) !!}...</p>
                                                 </div>
                                             </div>
                                             <hr>
@@ -305,7 +305,7 @@
                     </div>
 
                     <div class="parallax-content projects-content">
-                        <div class="container">
+                        <div class="daerah-container">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div id="owl-testimonials" class="owl-carousel owl-theme">

@@ -1094,6 +1094,7 @@ section {
 .portfolio {
   margin-top: -5%;
   padding-bottom: 40px;
+  
 }
 
 .portfolio #portfolio-flters {
@@ -1131,11 +1132,16 @@ section {
 .portfolio .portfolio-item {
   margin-bottom: 30px;
   overflow: hidden;
+  width: 25%;
+  height: 200px;
 }
 
 .portfolio .portfolio-item img {
   position: relative;
   top: 0;
+  object-fit: cover;
+  background-size: cover;
+  
   transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -1273,7 +1279,11 @@ section {
 }
 
 .team .member .member-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
   position: relative;
+  display: flex;
   overflow: hidden;
 }
 
@@ -2089,6 +2099,9 @@ section {
 
  .sect-news {
   margin-bottom: 1%;
+  display: flex;
+  align-items: center;
+  align-content: center;
  }
 
  .sect-news h3{
@@ -2099,15 +2112,15 @@ section {
  .sect-news p{
   margin-top: 2%;
   font-size: 16px;
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
  }
 
  .thumbnail img {
   border-radius: 8px;
   margin-bottom: 10px;
-  max-width: 450px;
-  min-width: 450px;
+  max-width: 420px;
+  min-width: 420px;
   width: 100%;
  }
 
