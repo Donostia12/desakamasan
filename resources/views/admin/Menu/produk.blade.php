@@ -123,7 +123,7 @@
                                         <tr>
                                             <td>{{$A->nama_produk}}</td>
                                             <td>{!! substr($A->informasi_produk,0,50) !!}</td>
-                                            <td>{{$A->harga_produk}}</td>
+                                            <td>Rp.{{number_format($A->harga_produk,2,",",".")}}</td>
                                             <td>
                                                 <div class="dropdown">
                                                     <button id="toa" class="btn btn-primary" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

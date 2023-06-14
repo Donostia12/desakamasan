@@ -80,7 +80,7 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li class="dropdown"><a href="" onclick="return false;"><span>About Desa</span> <i
+                    <li class="dropdown"><a href="" onclick="return false;"><span>Tentang Desa</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
                             <li><a class="nav-link scrollto" href="#about">Profile Desa</a></li>
@@ -89,8 +89,8 @@
                     </li>
                     <li><a class="nav-link scrollto" href="#dawis">Daerah Wisata</a></li>
                     <li><a class="nav-link scrollto" href="#produk"><span>Produk Desa</span></a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li><a class="nav-link scrollto" href="#peta">Location</a></li>
+                    <li><a class="nav-link scrollto" href="#team">Pengurus</a></li>
+                    <li><a class="nav-link scrollto" href="#peta">Lokasi Desa</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
