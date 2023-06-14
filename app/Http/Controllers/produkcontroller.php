@@ -22,7 +22,6 @@ class produkcontroller extends Controller
     public function create()
     {
 
-        return view('admin.Menu.Vtambahproduk');
     }
 
     /**

@@ -48,7 +48,7 @@ class daerahwisatacontroller extends Controller
             daerahwisata::create([
                 "nama" => $request->nama,
                 "deskripsi" => $request->deskripsi,
-                "image"=> $image,
+                "image"=> '',
                 "maps"=>$request->maps
             ]);
         }
@@ -69,15 +69,44 @@ class daerahwisatacontroller extends Controller
      */
     public function edit(string $id)
     {
-        
-    }
+        $daerahwisata = daerahwisata::find($id);
+        return view('admin.Menu.editdaerahwisata',[
+            "daerahwisata" =>$daerahwisata
+        ]); 
+    }  
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
-        
+        $daerahwisata = daerahwisata::find($id);
+        $request->validate([
+            'nama'=>['required', 'string', 'max:255'],
+            'deskripsi'=>['required', 'string'],
+            'maps'=>['required'],
+        ]);
+
+        if ($request->hasFile('image')) {
+            $image = md5(time()).'daerah'.$request->file('image')->getClientOriginalName();
+            $path= $request->file('image')->storeAs('public/images', $image);
+            daerahwisata::where('id',$id)->update([
+            "nama" => $request->nama,
+            "deskripsi" => $request->deskripsi,
+            "image"=> $image,
+            "maps"=>$request->maps
+            ]);
+            unlink(storage_path('app/public/images/'.$daerahwisata->image));
+        }else {
+            
+            daerahwisata::where('id',$id)->update([
+                "nama" => $request->nama,
+                "deskripsi" => $request->deskripsi,
+                "image"=> '',
+                "maps"=>$request->maps
+            ]);
+        }
+        return redirect()->route('daerahwisata.index')->with('success', 'Daerah Wisata berhasil diedit!');
     }
 
     /**

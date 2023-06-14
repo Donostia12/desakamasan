@@ -43,7 +43,7 @@
                 <p>{{ date('d M Y H:i:s',strtotime($berita->created_at)) }}</p>
                 <h2>{{ $berita->judul_berita }}</h2>
                 <p>
-                 {{ $berita->isi_berita }}
+                 {!! $berita->isi_berita !!}
                 </p>
               </div>
             </div>

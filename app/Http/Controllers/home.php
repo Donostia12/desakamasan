@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\berita;
+use App\Models\daerahwisata;
 use App\Models\produk;
 use App\Models\profildesa;
 use App\Models\pengurus;
@@ -22,8 +23,9 @@ class home extends Controller
         $profildesa = profildesa::where('id_profildesa',1)->first();
         $produk = produk::get();
         $pengurus = pengurus::get();
+        $daerahwisata = daerahwisata::all();
         $berita = berita::orderBy('created_at','desc')->paginate(5);
-       return view('Client.home', compact('produk','pengurus','berita','profildesa','menubuilder'));
+       return view('Client.home', compact('produk','pengurus','berita','profildesa','menubuilder','daerahwisata'));
     }
 
     /**
@@ -81,5 +83,11 @@ class home extends Controller
     {
         $berita = berita::where('id_berita',$id)->first();
         return view('Client.detailberita',compact('berita'));
+    }
+
+    public function detaildaerahwisata(string $id)
+    {
+        $daerahwisata = daerahwisata::where('id',$id)->first();
+        return view('Client.detaildaerahwisata',compact('daerahwisata'));
     }
 }

@@ -105,7 +105,7 @@
                                         <h3><a
                                                 href="{{ url('detailberita/' . $item->id_berita) }}">{{ $item->judul_berita }}</a>
                                         </h3>
-                                        <p>{{ substr($item->isi_berita, 0, 250) }}...</p>
+                                        <p>{!! substr($item->isi_berita, 0, 250) !!}</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -302,54 +302,21 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div id="owl-testimonials" class="owl-carousel owl-theme">
+                            @foreach ($daerahwisata as $item)
                             <div class="item">
                                 <div class="testimonials-item">
-                                    <a href="{{ asset('assets-client/assets/img/FH/FH5.png') }}"
+                                    <a href="{{ url('detaildaerahwisata/' . $item->id) }}"
                                         data-lightbox="image-1"><img
-                                            src="{{ asset('assets-client/assets/img/FH/FH5.png') }}" alt=""></a>
+                                            src="{{ asset('storage/images/' . $item->image) }}" alt=""></a>
                                     <div class="text-content">
-                                        <h4>Nama Daerah Wisata 1</h4>
-                                        <span>Disini deskripsi singkat</span>
-                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
+                                        <h4>{{ $item->nama }}</h4>
+                                        <span>{!! substr($item->deskripsi,0,50) !!}</span>
+                                        <div class="icon"><a href="{{ url('detaildaerahwisata/' . $item->id) }}"><i class="bx bx-right-arrow-alt"></i></a></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="testimonials-item">
-                                    <a href="{{ asset('assets-client/assets/img/FH/FH5d.png') }}"
-                                        data-lightbox="image-1"><img
-                                            src="{{ asset('assets-client/assets/img/FH/FH5d.png') }}" alt=""></a>
-                                    <div class="text-content">
-                                        <h4>Nama Daerah Wisata 2</h4>
-                                        <span>Disini deskripsi singkat</span>
-                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testimonials-item">
-                                    <a href="{{ asset('assets-client/assets/img/FH/FH5a.png') }}"
-                                        data-lightbox="image-1"><img
-                                            src="{{ asset('assets-client/assets/img/FH/FH5a.png') }}" alt=""></a>
-                                    <div class="text-content">
-                                        <h4>Nama Daerah Wisata 3</h4>
-                                        <span>Disini deskripsi singkat</span>
-                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="testimonials-item">
-                                    <a href="{{ asset('assets-client/assets/img/FH/FH5c.png') }}"
-                                        data-lightbox="image-1"><img
-                                            src="{{ asset('assets-client/assets/img/FH/FH5c.png') }}" alt=""></a>
-                                    <div class="text-content">
-                                        <h4>Nama Daerah Wisata 4</h4>
-                                        <span>Disini deskripsi singkat</span>
-                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                            
                         </div>
                     </div>
                 </div>

@@ -33,7 +33,7 @@
                     </div>
                     <div class="card-content">
                         <div class="card-body">
-                            <form action="/Produk" method="post" target="_self" enctype="multipart/form-data"
+                            <form action="{{ route('Produk.index') }}" method="post" target="_self" enctype="multipart/form-data"
                                 role="form" data-toggle="validator" novalidate>
                                 @csrf
 

@@ -26,6 +26,8 @@ use App\Http\controllers\menubuildercontroller;
 
 Route::resource('/', home::class);
 Route::get('home/{id}', [home::class, 'detail']);
+Route::get('detailberita/{id}', [home::class, 'detailberita']);
+Route::get('detaildaerahwisata/{id}', [home::class, 'detaildaerahwisata']);
 
 Route::resource('daerahwisata', daerahwisatacontroller::class);
 Route::get('detailwisata/{id}', [daerahwisatacontroller::class, 'detail']);
@@ -48,3 +50,5 @@ Route::get('/detail-berita/{id}',[BeritaController::class,'detail']);
 Route::get('out', [Admin::class, 'out'])->name('out')->middleware('auth');
 Route::post('actlogin',[Admin::class,'actlogin']);
 
+Route::resource('menubuilder', menubuildercontroller::class)->middleware('is_login');
+Route::resource('profil', profildesacontroller::class)->middleware('is_login');
