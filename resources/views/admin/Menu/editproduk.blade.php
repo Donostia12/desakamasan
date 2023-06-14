@@ -22,78 +22,59 @@
                                 @csrf
                                 @method('PUT')
 
-                                <div class="form-group">
+                                <div class="form-body">
                                     <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Nama Produk</label>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="nama_produk">Nama Produk</label>
+                                                <input type="text" name="nama_produk" id="" class="form-control" placeholder="Masukkan nama produk" value="{{ $produk->nama_produk }}">
+                                            </div>
                                         </div>
-                                        <div class="col-sm-10">
-                                            <input type="text" name="nama_produk" value="{{$produk->nama_produk}}"
-                                                class="form-control">
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="wysiwyg" class="form-label">Informasi Produk</label>
+                                                <textarea class="ckeditor form-control" id="wysiwyg"  rows="3" name="informasi_produk">{!! $produk->informasi_produk !!}</textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="harga_produk">Harga Produk</label>
+                                                <input type="number" name="hargaproduk" id="" class="form-control" placeholder="Masukkan harga produk" value="{{ $produk->harga_produk }}">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="map">Map</label>
+                                                <textarea type="text" name="map" class="form-control">{{ $produk->map }}</textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="kategori">Kategori</label>
+                                                <select name="kategori" class="form-control">
+                                                    <option value="">Pilih Kategori</option>
+                                                    <option value="kuliner" {{ ($produk->kategori == 'kuliner') ? 'selected' : '' }}>kuliner</option>
+                                                    <option value="oleh-oleh" {{ ($produk->kategori == 'oleh-oleh') ? 'selected' : '' }}>Oleh-Oleh</option>
+                                                    <option value="jasa" {{ ($produk->kategori == 'jasa') ? 'selected' : '' }}>Jasa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="image">Gambar</label>
+                                                <input type="file" name="image" class="form-control">
+                                            </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Informasi Produk</label>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <textarea type="text" name="informasi_produk" value=""
-                                                class="form-control">{{$produk->informasi_produk}}</textarea>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Harga Produk</label>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <input type="number" name="hargaproduk" value="{{$produk->harga_produk}}"
-                                                class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Kategori</label>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <select name="kategori" id="" class="form-control">
-                                                <option value="{{$produk->kategori}}">Pilih Kategori</option>
-                                                <option value="kuliner">Kuliner</option>
-                                                <option value="oleh">Oleh - Oleh</option>
-                                                <option value="Jasa">Jasa</option>
-                                            </select>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Map</label>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <textarea type="text" name="map"
-                                                class="form-control">{{$produk->map}}</textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Gambar</label>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <input type="file" name="image">
-                                        </div>
-                                    </div>
-                                </div>
+                                <br>
                                 <button type="submit" class="btn btn-primary">input</button>
 
                                 <a class="btn btn-danger" href="/Produk">kembali</a>

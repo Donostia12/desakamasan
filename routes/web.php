@@ -26,12 +26,8 @@ use App\Http\controllers\menubuildercontroller;
 
 Route::resource('/', home::class);
 Route::get('home/{id}', [home::class, 'detail']);
-Route::resource('/profil', profildesacontroller::class);
 
-Route::resource('/menubuilder', menubuildercontroller::class);
-
-
-Route::resource('/daerahwisata', daerahwisatacontroller::class);
+Route::resource('daerahwisata', daerahwisatacontroller::class);
 Route::get('detailwisata/{id}', [daerahwisatacontroller::class, 'detail']);
 
 Route::get('detailpengurus/{id}', [penguruscontroller::class, 'detail']);

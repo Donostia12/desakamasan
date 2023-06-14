@@ -50,9 +50,8 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="jabatan">Deskripsi</label>
-                                                <input type="text" class="form-control" name="deskripsi"
-                                                    placeholder="Deskripsi Daerah">
+                                                <label for="wysiwyg" class="form-label">Deskripsi</label>
+                                                <textarea class="ckeditor form-control" id="wysiwyg"  rows="3" name="deskripsi"></textarea>
                                             </div>
                                         </div>
 
@@ -106,7 +105,7 @@
                         @foreach ($daerahwisata as $item)
                         <tr>
                             <td>{{$item->nama}}</td>
-                            <td>{{$item->deskripsi}}</td>
+                            <td>{!! $item->deskripsi !!}</td>
 
                             <td>
                                 <div class="dropdown">
@@ -186,7 +185,7 @@
                     $('#nama').val(data.nama);
                     $('#image').attr('src', '/storage/images/' + data.image);
                     $('#map').attr('src', data.maps);
-                    $('#deskripsi').val(data.deskripsi);
+                    $('#deskripsi').val($(data.deskripsi).text());
                 
                     console.log(data.jabatan);
                 },

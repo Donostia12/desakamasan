@@ -141,5 +141,6 @@
 
         <script src="{{asset('assets/js/scripts.js')}}"></script>
         <script src="{{ asset('assets/js/datatables.js') }}"></script>
+        <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script>
     </body>
 </html>

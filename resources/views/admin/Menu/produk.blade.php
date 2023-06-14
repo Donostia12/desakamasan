@@ -37,75 +37,61 @@
                                 role="form" data-toggle="validator" novalidate>
                                 @csrf
 
-                                <div class="form-group">
+                                <div class="form-body">
                                     <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Nama Produk</label>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="nama_produk">Nama Produk</label>
+                                                <input type="text" name="nama_produk" id="" class="form-control" placeholder="Masukkan nama produk">
+                                            </div>
                                         </div>
-                                        <div class="col-sm-10">
-                                            <input type="text" name="nama_produk" id="" class="form-control">
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="wysiwyg" class="form-label">Informasi Produk</label>
+                                                <textarea class="ckeditor form-control" id="wysiwyg"  rows="3" name="informasi_produk"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="harga_produk">Harga Produk</label>
+                                                <input type="number" name="hargaproduk" id="" class="form-control" placeholder="Masukkan harga produk">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="map">Map</label>
+                                                <textarea type="text" name="map" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="kategori">Kategori</label>
+                                                <select name="kategori" class="form-control">
+                                                    <option value="">Pilih Kategori</option>
+                                                    <option value="kuliner">kuliner</option>
+                                                    <option value="oleh-oleh">Oleh-Oleh</option>
+                                                    <option value="jasa">Jasa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="image">Gambar</label>
+                                                <input type="file" name="image" class="form-control">
+                                            </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Informasi Produk</label>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <textarea type="text" name="informasi_produk"
-                                                class="form-control"></textarea>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Harga Produk</label>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <input type="number" name="hargaproduk" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Map</label>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <textarea type="text" name="map" class="form-control"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Kategori</label>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <select name="kategori" class="form-control">
-                                                <option value="">Pilih Kategori</option>
-                                                <option value="kuliner">kuliner</option>
-                                                <option value="oleh">Oleh-Oleh</option>
-                                                <option value="Jasa">Jasa</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-2">
-                                            <label>Gambar</label>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <input type="file" name="image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary">input</button>
+                                <br>
+                                
+                                <button type="submit" class="btn btn-primary">Simpan</button>
 
                             </form>
                         </div>
@@ -126,17 +112,17 @@
                                 <table class="table" id="table">
                                     <thead>
                                         <tr>
-                                            <th>nama Produk</th>
+                                            <th>Nama Produk</th>
                                             <th>Informasi Produk</th>
-                                            <th>harga</th>
-                                            <th>action</th>
+                                            <th>Harga</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($produk as $A )
                                         <tr>
                                             <td>{{$A->nama_produk}}</td>
-                                            <td>{{$A->informasi_produk}}</td>
+                                            <td>{!! substr($A->informasi_produk,0,50) !!}</td>
                                             <td>{{$A->harga_produk}}</td>
                                             <td>
                                                 <div class="dropdown">
@@ -198,7 +184,7 @@
             
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-primary">Simpan</button>
+                
             </div>
         </div>
     </div>
@@ -214,7 +200,7 @@
             success: function (data) {
                 $('#nama-produk').val(data.nama_produk);
                 $('#image').attr('src', '/storage/images/' + data.image);
-                $('#informasi-produk').val(data.informasi_produk);
+                $('#informasi-produk').val($(data.informasi_produk).text());
                 $('#harga-produk').val(data.harga_produk);
                 $('#kategori').val(data.kategori);
                 $('#map').attr('src', data.map);

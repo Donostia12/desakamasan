@@ -34,8 +34,8 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <label for="isi" class="form-label">Isi Berita</label>
-                                            <textarea class="form-control" id="isi" rows="3" name="isi_berita">{{$berita->isi_berita}}</textarea>
+                                            <label for="wysiwyg" class="form-label">Isi Berita</label>
+                                            <textarea class="ckeditor form-control" id="wysiwyg" rows="3" name="isi_berita">{!! $berita->isi_berita !!}</textarea>
                                         </div>
                                     </div>
                                     <div class="col-12">

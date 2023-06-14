@@ -47,8 +47,8 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="isi" class="form-label">Isi Berita</label>
-                                                <textarea class="form-control" id="isi" rows="3" name="isi_berita"></textarea>
+                                                <label for="wysiwyg" class="form-label">Isi Berita</label>
+                                                <textarea class="ckeditor form-control" id="wysiwyg"  rows="3" name="isi_berita"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -93,7 +93,7 @@
                                 @foreach ($berita as $item)
                                     <tr>
                                         <td>{{$item->judul_berita}}</td>
-                                        <td>{{substr($item->isi_berita,0,70)}}...</td>
+                                        <td>{!! substr($item->isi_berita,0,50) !!}</td>
                                         
                                         <td>
                                             <div class="dropdown">
@@ -186,7 +186,7 @@
                                 <label> Isi </label>
                             </div>
                             <div class="col-sm-10">
-                                <textarea type="text" class="form-control" id="isi_berita" name="isi_berita"
+                                <textarea class="form-control" id="isi_berita" name="isi_berita"
                                     readonly></textarea>
                             </div>
 
@@ -213,8 +213,7 @@
                 $('#judul_berita').val(data.judul_berita);
                 $('#id').val(data.id_berita);
                 $('#image').attr('src', '/storage/images/' + data.image);
-                $('#isi_berita').val(data.isi_berita);
-                console.log(data);
+                $('#isi_berita').val($(data.isi_berita).text());
             },
             error: function (xhr, status, error) {
                 console.log(xhr.responseText);
