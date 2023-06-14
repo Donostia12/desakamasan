@@ -44,45 +44,48 @@ https://templatemo.com/tm-526-vanilla
     font-style: normal;
     font-size: 17px;
     font-weight: 500;
-    
 }
 
 .projects-content .item .text-content .icon {
-  float: none;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center; 
-  margin-top: -25%;
-  margin-left: 73%;
-  width: 44px;
-  height: 44px;
-  border: 4px solid #d6e8bf;
-  border-radius: 50px;
-  transition: 0.5s;
-  backdrop-filter: blur(3px);
+    float: none;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-top: -25%;
+    margin-left: 73%;
+    width: 44px;
+    height: 44px;
+    border: 4px solid #d6e8bf;
+    border-radius: 50px;
+    transition: 0.5s;
+    backdrop-filter: blur(3px);
 }
 
 .projects-content .item .text-content .icon i {
-  color: #d6e8bf;
-  margin-top: 15%;
-  margin-right: 5%;
-  font-size: 32px;
+    color: #d6e8bf;
+    margin-top: 15%;
+    margin-right: 5%;
+    font-size: 32px;
 }
 
-.projects-content .item .text-content .icon:hover i{
-  color: #fff;
+.projects-content .item .text-content .icon:hover i {
+    color: #fff;
 }
 
-.projects-content .item .text-content .icon:hover{
-  background: #8fc04e;
-  border-color: #8fc04e;
+.projects-content .item .text-content .icon:hover {
+    background: #8fc04e;
+    border-color: #8fc04e;
+    box-shadow: 11px 11px 22px #b3ca95, -11px -11px 22px #f3ffc9;
 }
 
 .owl-pagination {
     margin-top: 40px;
     opacity: 1;
     display: inline-block;
+    background-color: rgb(255, 255, 255, 0.3);
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
 }
 
 .owl-page span {
@@ -90,6 +93,8 @@ https://templatemo.com/tm-526-vanilla
     width: 18px;
     height: 18px;
     margin: 0px 5px;
+    margin-top: 5px;
+    margin-bottom: px;
     filter: alpha(opacity=50);
     opacity: 0.5;
     -webkit-border-radius: 20px;

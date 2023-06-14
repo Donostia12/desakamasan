@@ -5,14 +5,14 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero">
     <div class="hero-container" data-aos="fade-up">
-        <h1>Welcome to Website Desa Kamasan</h1>
+        <h1>Selamat Datang di Website Desa Wisata Kamasan</h1>
         <h3 style="width: 50%">{{$profildesa->welcome}}.</h3>
         <a href="#about">
             <button class="learn-more scrollto">
                 <span class="circle" aria-hidden="true">
                     <span class="icon arrow"></span>
                 </span>
-                <span class="button-text">Get Started</span>
+                <span class="button-text">Mulai Jelajah</span>
             </button>
         </a>
 
@@ -38,7 +38,7 @@
                 <div class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5"
                     style="text-align: justify">
                     <div class="box-heading" data-aos="fade-up">
-                        <h4>About Desa</h4>
+                        <h4>Tentang Desa</h4>
                         <h3>Desa Kamasan</h3>
                         <p>{{$profildesa->isi_profil}}</p>
                     </div>
@@ -63,7 +63,7 @@
 
             <div class="text-center">
                 <h3>Menu</h3>
-                <p> Desa Kamasan</p>
+                <p>Desa Kamasan</p>
                 <a class="cta-btn" href="#">Menu</a>
             </div>
 
@@ -312,6 +312,81 @@
                                         <h4>{{ $item->nama }}</h4>
                                         <span>{!! substr($item->deskripsi,0,50) !!}</span>
                                         <div class="icon"><a href="{{ url('detaildaerahwisata/' . $item->id) }}"><i class="bx bx-right-arrow-alt"></i></a></div>
+                                        <h4>Nama Daerah Wisata 1</h4>
+                                        <span>Disini deskripsi singkat</span>
+                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="{{ asset('assets-client/assets/img/FH/FH5.png') }}"
+                                        data-lightbox="image-1"><img
+                                            src="{{ asset('assets-client/assets/img/FH/FH5.png') }}" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Nama Daerah Wisata 1</h4>
+                                        <span>Disini deskripsi singkat</span>
+                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="{{ asset('assets-client/assets/img/FH/FH5.png') }}"
+                                        data-lightbox="image-1"><img
+                                            src="{{ asset('assets-client/assets/img/FH/FH5.png') }}" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Nama Daerah Wisata 1</h4>
+                                        <span>Disini deskripsi singkat</span>
+                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="{{ asset('assets-client/assets/img/FH/FH5.png') }}"
+                                        data-lightbox="image-1"><img
+                                            src="{{ asset('assets-client/assets/img/FH/FH5.png') }}" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Nama Daerah Wisata 1</h4>
+                                        <span>Disini deskripsi singkat</span>
+                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="{{ asset('assets-client/assets/img/FH/FH5d.png') }}"
+                                        data-lightbox="image-1"><img
+                                            src="{{ asset('assets-client/assets/img/FH/FH5d.png') }}" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Nama Daerah Wisata 2</h4>
+                                        <span>Disini deskripsi singkat</span>
+                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="{{ asset('assets-client/assets/img/FH/FH5a.png') }}"
+                                        data-lightbox="image-1"><img
+                                            src="{{ asset('assets-client/assets/img/FH/FH5a.png') }}" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Nama Daerah Wisata 3</h4>
+                                        <span>Disini deskripsi singkat</span>
+                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimonials-item">
+                                    <a href="{{ asset('assets-client/assets/img/FH/FH5c.png') }}"
+                                        data-lightbox="image-1"><img
+                                            src="{{ asset('assets-client/assets/img/FH/FH5c.png') }}" alt=""></a>
+                                    <div class="text-content">
+                                        <h4>Nama Daerah Wisata 4</h4>
+                                        <span>Disini deskripsi singkat</span>
+                                        <div class="icon"><a href="#"><i class="bx bx-right-arrow-alt"></i></a></div>
                                     </div>
                                 </div>
                             </div>
