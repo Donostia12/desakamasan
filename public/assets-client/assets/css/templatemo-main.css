@@ -17,6 +17,7 @@ https://templatemo.com/tm-526-vanilla
 #hero .baner-content {
     background: rgba(0, 0, 0, 0.4);
     background-image: url(../../../images/hero1.png);
+    transition: opacity 1s ease-in-out;
 }
 
 .projects-content {

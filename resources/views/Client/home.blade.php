@@ -3,7 +3,131 @@
 
 @section('content')
     <!-- ======= Hero Section ======= -->
-    <section id="hero">
+    <main class="main-content">
+        <section class="slideshow" id="hero">
+            <div class="slideshow-inner">
+                <div class="slides">
+                    <div class="slide is-active ">
+                        <div class="slide-content">
+                            <div class="caption">
+                                <div class="title2">
+                                    <h1>Selamat Datang!</h1>
+                                    <h3>di Website Desa Wisata Kamasan</h3>
+                                </div>
+                                <div class="text2">
+                                    <p>{{ $profildesa->welcome }}</p>
+                                </div>
+                                <a href="#about" class="btn2">
+                                    <span class="btn-inner">Ayo Jelajahi</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img src="{{ asset('images/bg-view.png') }}" alt="" class="image2" />
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="caption">
+                                <div class="title2">
+                                    <h1>Berbagai Lukisan Khas Desa Kamasan</h1>
+                                </div>
+                                <div class="text2">
+                                    <p>Lukisan khas Desa Kamasan merupakan seni lukis tradisional yang berasal dari Bali,
+                                        Indonesia. Desa Kamasan terletak di Kabupaten Klungkung, Bali, dan dikenal sebagai
+                                        pusat pengembangan seni lukis Kamasan. Lukisan-lukisan ini memiliki ciri khas yang
+                                        unik dan mendalam dalam mengekspresikan nilai-nilai dan cerita dari mitologi Hindu
+                                        serta epik Ramayana dan Mahabharata.
+                                    </p>
+                                </div>
+                                <a href="#about" class="btn2">
+                                    <span class="btn-inner">Ayo Jelajahi</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img src="{{ asset('images/lukisan1.png') }}" alt="" class="image2" />
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="caption">
+                                <div class="title2">
+                                    <h1>Kerajinan Topeng Kayu</h1>
+                                </div>
+                                <div class="text2">
+                                    <p>Desa Kamasan juga terkenal dengan pembuatan topeng kayu yang indah. Topeng-topeng ini
+                                        digunakan dalam berbagai pertunjukan tari dan upacara adat di Bali. Mereka diukir
+                                        secara teliti dengan detail yang rumit dan dicat dengan warna-warna cerah.
+                                    </p>
+                                </div>
+                                <a href="#about" class="btn2">
+                                    <span class="btn-inner">Ayo Jelajahi</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img src="{{ asset('images/pelukis1.png') }}" alt="" class="image2" />
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="caption">
+                                <div class="title2">
+                                    <h1>Perkembangan Terkini Desa Kamasan</h1>
+                                </div>
+                                <div class="text2">
+                                    <p>Desa Kamasan terus melestarikan seni dan budaya Bali, termasuk seni lukis Kamasan.
+                                        Lukisan-lukisan Kamasan yang menggambarkan cerita-cerita epik Hindu seperti Ramayana
+                                        dan Mahabharata masih diproduksi oleh seniman-seniman lokal di desa ini.
+                                        Lukisan-lukisan ini menjadi bagian penting dari warisan budaya Bali dan menjadi daya
+                                        tarik wisatawan yang tertarik dengan seni tradisional Bali.
+
+                                        Desa Kamasan juga terus mengembangkan kerajinan tangan lainnya, seperti ukiran kayu,
+                                        anyaman, tenun, dan keramik. Pengrajin di desa ini menjaga kualitas seni dan
+                                        kerajinan Bali, sambil menciptakan karya-karya yang sesuai dengan kebutuhan pasar
+                                        modern.
+                                    </p>
+                                </div>
+                                <a href="#about" class="btn2">
+                                    <span class="btn-inner">Ayo Jelajahi</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <img src="{{ asset('images/pelukis2.png') }}" alt="" class="image2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="arrows2">
+                    <div class="arrow2 prev">
+                        <span class="svg svg-arrow2-left">
+                            <svg version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px"
+                                height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve">
+                                <path
+                                    d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z" />
+                            </svg>
+                            <span class="alt sr-only"></span>
+                        </span>
+                    </div>
+                    <div class="arrow2 next">
+                        <span class="svg svg-arrow2-right">
+                            <svg version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px"
+                                height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve">
+                                <path
+                                    d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z" />
+                            </svg>
+                            <span class="alt sr-only"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {{-- <section id="hero">
         <div class="parallax-content baner-content">
             <div class="hero-container" data-aos="fade-up">
                 <h1>Selamat Datang di Website Desa Wisata Kamasan</h1>
@@ -18,11 +142,10 @@
                 </a>
             </div>
         </div>
-    </section><!-- End Hero -->
+    </section><!-- End Hero --> --}}
+
 
     <main id="main">
-
-
         <!-- ======= Profile Desa Section ======= -->
         <section id="about" class="about">
             <div class="container">
@@ -97,8 +220,8 @@
                                             <div class="d-md-flex post-entry-2 sect-news">
                                                 <a href="{{ url('detailberita/' . $item->id_berita) }}"
                                                     class="me-4 thumbnail">
-                                                    <img src="{{ asset('storage/images/' . $item->image) }}" alt=""
-                                                        class="img-fluid">
+                                                    <img src="{{ asset('storage/images/' . $item->image) }}"
+                                                        alt="" class="img-fluid">
                                                 </a>
                                                 <div>
                                                     <div class="post-meta"><span
@@ -132,14 +255,14 @@
                                             <ul class="nav nav-pills custom-popular mb-4" id="pills-tab" role="tablist">
                                                 <li class="nav-item" role="presentation">
                                                     <button class="nav-link active" id="pills-popular-tab"
-                                                        data-bs-toggle="pill" data-bs-target="#pills-popular" type="button"
-                                                        role="tab" aria-controls="pills-popular"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-popular"
+                                                        type="button" role="tab" aria-controls="pills-popular"
                                                         aria-selected="true">Popular</button>
                                                 </li>
                                                 <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="pills-trending-tab" data-bs-toggle="pill"
-                                                        data-bs-target="#pills-trending" type="button" role="tab"
-                                                        aria-controls="pills-trending"
+                                                    <button class="nav-link" id="pills-trending-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-trending"
+                                                        type="button" role="tab" aria-controls="pills-trending"
                                                         aria-selected="false">Trending</button>
                                                 </li>
                                                 <li class="nav-item" role="presentation">
@@ -427,7 +550,7 @@
             </div>
         </div>
         <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
+        <section id="testimonials" class="parallax-content testimonials">
             <div class="container">
 
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -483,8 +606,7 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img"
-                                    alt="">
+                                <img src="" class="testimonial-img" alt="">
                                 <h3>Matt Brandon</h3>
                                 <h4>Freelancer</h4>
                                 <p>

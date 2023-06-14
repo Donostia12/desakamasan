@@ -27,6 +27,8 @@
     <link href="{{ asset('assets-client/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- Template Main CSS File -->
+    
+    <link href="{{ asset('assets-client/assets/css/slideshow.css') }}" rel="stylesheet">
     <link href="{{ asset('assets-client/assets/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('assets-client/assets/css/owl-carousel.css') }}" rel="stylesheet">
     <link href="{{ asset('assets-client/assets/css/templatemo-main.css') }}" rel="stylesheet">
@@ -64,7 +66,7 @@
             <img src="{{ asset('images/logoKamasan1.png') }}" alt="Logo Desa" class="logo-desa">
             <div class="logo">
                 <div class="judul-nav">
-                    <h1 class="text-light"><a href="#home">Desa Wisata Kamasan</a></h1>
+                    <h1 class="text-light"><a href="#hero">Desa Wisata Kamasan</a></h1>
                     <a class="date" onclick="return false;">
                         <span class="top-key"></span>
                         <span class="text">
@@ -154,6 +156,9 @@
             class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+
     <script src="{{ asset('assets-client/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
     <script src="{{ asset('assets-client/assets/vendor/aos/aos.js') }}"></script>
     <script src="{{ asset('assets-client/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -167,6 +172,7 @@
     {{-- <script src="{{ asset('assets-client/assets/vendor/npm.js') }}"></script> --}}
 
     <!-- Template Main JS File -->
+    <script src="{{ asset('assets-client/assets/js/slide.js') }}"></script>
     <script src="{{ asset('assets-client/assets/js/main.js') }}"></script>
     <script src="{{ asset('assets-client/assets/js/plugins.js') }}"></script>
 
