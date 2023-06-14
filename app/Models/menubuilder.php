@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class profildesa extends Model
+class menubuilder extends Model
 {
     use HasFactory;
-    protected $table ="profildesa";
+    protected $table = 'menubuilder';
     protected $fillable = [
-        'isi_profil',
-        'welcome',
-        'video'
+    'k1',
+    'k2',
+    'k3',
+    'k4'
     ];
 }

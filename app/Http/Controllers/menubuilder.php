@@ -1,29 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\berita;
-use App\Models\produk;
-use App\Models\profildesa;
-use App\Models\pengurus;
 use App\Models\menubuilder;
 use Illuminate\Http\Request;
 
-
-class home extends Controller
+class menubuilder extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-
-        $menubuilder = menubuilder::where('id',1)->first();
-        $profildesa = profildesa::where('id_profildesa',1)->first();
-        $produk = produk::get();
-        $pengurus = pengurus::get();
-        $berita = berita::orderBy('created_at','desc')->paginate(5);
-       return view('Client.home', compact('produk','pengurus','berita','profildesa','menubuilder'));
+        $menu = menubuilder::where('id',1)->first();
+        return view('admin.Menu.menubuilder', compact('menu'));
     }
 
     /**
@@ -53,12 +42,9 @@ class home extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function detail(string $id)
+    public function edit(string $id)
     {
-        $produk = produk::find($id);
-        return view('Client.Detailproduk',[
-            "produk" =>$produk
-        ]);
+        //
     }
 
     /**
@@ -75,11 +61,5 @@ class home extends Controller
     public function destroy(string $id)
     {
         //
-    }
-
-    public function detailberita(string $id)
-    {
-        $berita = berita::where('id_berita',$id)->first();
-        return view('Client.detailberita',compact('berita'));
     }
 }

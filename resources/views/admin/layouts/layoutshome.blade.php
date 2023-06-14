@@ -25,7 +25,7 @@
     <link href="{{ asset('assets-client/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets-client/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets-client/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets-client/assets/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('assets-client/assets/css/owl-carousel.css') }}" rel="stylesheet">

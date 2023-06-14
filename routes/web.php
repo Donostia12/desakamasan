@@ -11,6 +11,8 @@ use App\Http\controllers\produkcontroller;
 use App\Http\controllers\home;
 use App\Http\controllers\penguruscontroller;
 use App\Http\controllers\daerahwisatacontroller;
+use App\Http\controllers\profildesacontroller;
+use App\Http\controllers\menubuildercontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +26,10 @@ use App\Http\controllers\daerahwisatacontroller;
 
 Route::resource('/', home::class);
 Route::get('home/{id}', [home::class, 'detail']);
+Route::resource('/profil', profildesacontroller::class);
+
+Route::resource('/menubuilder', menubuildercontroller::class);
+
 
 Route::resource('/daerahwisata', daerahwisatacontroller::class);
 Route::get('detailwisata/{id}', [daerahwisatacontroller::class, 'detail']);
