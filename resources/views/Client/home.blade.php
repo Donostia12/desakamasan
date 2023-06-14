@@ -558,8 +558,6 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img"
-                                    alt="">
                                 <h3>Saul Goodman</h3>
                                 <h4>Ceo &amp; Founder</h4>
                                 <p>
@@ -574,8 +572,6 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img"
-                                    alt="">
                                 <h3>Sara Wilsson</h3>
                                 <h4>Designer</h4>
                                 <p>
@@ -590,8 +586,6 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img"
-                                    alt="">
                                 <h3>Jena Karlis</h3>
                                 <h4>Store Owner</h4>
                                 <p>
@@ -606,7 +600,6 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-                                <img src="" class="testimonial-img" alt="">
                                 <h3>Matt Brandon</h3>
                                 <h4>Freelancer</h4>
                                 <p>
@@ -621,8 +614,6 @@
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img"
-                                    alt="">
                                 <h3>John Larson</h3>
                                 <h4>Entrepreneur</h4>
                                 <p>
@@ -634,11 +625,9 @@
                                 </p>
                             </div>
                         </div><!-- End testimonial item -->
-
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
-
             </div>
         </section><!-- End Testimonials Section -->
 
@@ -648,14 +637,12 @@
         <!-- ======= F.A.Q Section ======= -->
         <section id="faq" class="faq">
             <div class="container">
-
                 <div class="section-title" data-aos="zoom-in">
                     <h2>F.A.Q</h2>
                     <h3><span>Persoalan</span> yang sering ditanyakan</h3>
                     <p>Berikut adalah beberapa persoalan yang sering ditanyakan pengunjung mengenai Desa Wisata Kamasan
                     </p>
                 </div>
-
                 <div class="faq-list" style="text-align: justify">
                     <ul>
                         <li data-aos="fade-up">
