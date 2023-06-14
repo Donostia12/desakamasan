@@ -61,18 +61,19 @@
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex align-items-center">
         <div class="container d-flex justify-content-between">
-
+            <img src="{{ asset('images/logoKamasan1.png') }}" alt="Logo Desa" class="logo-desa">
             <div class="logo">
-                <h1 class="text-light"><a href="#home">Desa Wisata Kamasan</a></h1>
-                <a class="date" onclick="return false;">
-                    <span class="top-key"></span>
-                    <span class="text">
-                        <div id="tanggal-waktu"></div>
-                    </span>
-                    <span class="bottom-key-1"></span>
-                    <span class="bottom-key-2"></span>
-                </a>
-
+                <div class="judul-nav">
+                    <h1 class="text-light"><a href="#home">Desa Wisata Kamasan</a></h1>
+                    <a class="date" onclick="return false;">
+                        <span class="top-key"></span>
+                        <span class="text">
+                            <div id="tanggal-waktu"></div>
+                        </span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </a>
+                </div>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             </div>
@@ -118,8 +119,8 @@
                 <div class="row footer-newsletter justify-content-center">
                     <div class="col-lg-6">
                         <form action="" method="post">
-                            <input type="email" name="email" placeholder="Enter your Email"><input
-                                type="submit" value="Subscribe">
+                            <input type="email" name="email" placeholder="Enter your Email"><input type="submit"
+                                value="Subscribe">
                         </form>
                     </div>
                 </div>

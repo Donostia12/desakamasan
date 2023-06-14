@@ -10,12 +10,18 @@ https://templatemo.com/tm-526-vanilla
     width: 100%;
     min-height: 90vh;
     background-size: cover;
-    margin-bottom: 10%;
+    background-repeat: repeat;
+    /* background-repeat: ; */
+}
+
+#hero .baner-content {
+    background: rgba(0, 0, 0, 0.4);
+    background-image: url(../../../images/hero1.png);
 }
 
 .projects-content {
     padding-top: 20vh;
-    background-image: url(../img/about1-cut.png);
+    background-image: url(../../../images/lukisan1.png);
 }
 
 .projects-content .item img {
