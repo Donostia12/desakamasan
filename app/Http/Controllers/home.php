@@ -90,4 +90,7 @@ class home extends Controller
         $daerahwisata = daerahwisata::where('id',$id)->first();
         return view('Client.detaildaerahwisata',compact('daerahwisata'));
     }
+    public function galari(){
+        return view('Client.galeri');
+    }
 }

@@ -22,12 +22,15 @@ https://templatemo.com/tm-526-vanilla
 
 .projects-content {
     padding-top: 20vh;
+    padding-bottom: 20vh;
     background-image: url(../../../images/bg-view4-crop.png);
     background-position: center;
 }
 
 .projects-content .item img {
+    object-fit: cover;
     width: 100%;
+    height: 40vh;
     border-radius: 8px 8px 0 0;
 }
 

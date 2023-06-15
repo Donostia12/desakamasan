@@ -26,6 +26,7 @@ use App\Http\controllers\menubuildercontroller;
 
 Route::resource('/', home::class);
 Route::get('home/{id}', [home::class, 'detail']);
+Route::get('/galeri',[home::class, 'galari']);
 Route::get('detailberita/{id}', [home::class, 'detailberita']);
 Route::get('detaildaerahwisata/{id}', [home::class, 'detaildaerahwisata']);
 
