@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets-client/assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets-client/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -19,19 +19,19 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets-client/assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets-client/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets-client/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets-client/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets-client/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets-client/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- Template Main CSS File -->
     
-    <link href="{{ asset('assets-client/assets/css/slideshow.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets-client/assets/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets-client/assets/css/owl-carousel.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets-client/assets/css/templatemo-main.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/slideshow.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/owl-carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/templatemo-main.css') }}" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: Remember
@@ -159,22 +159,19 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
 
-    <script src="{{ asset('assets-client/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-    <script src="{{ asset('assets-client/assets/vendor/aos/aos.js') }}"></script>
-    <script src="{{ asset('assets-client/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets-client/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('assets-client/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets-client/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('assets-client/assets/vendor/php-email-form/validate.js') }}"></script>
-    {{-- <script src="{{ asset('assets-client/assets/vendor/bootstrap.min.js') }}"></script> --}}
-    <script src="{{ asset('assets-client/assets/vendor/jquery-1.11.2.min.js') }}"></script>
-    {{-- <script src="{{ asset('assets-client/assets/vendor/modernizr-2.8.3-respond-1.4.2.min.js') }}"></script> --}}
-    {{-- <script src="{{ asset('assets-client/assets/vendor/npm.js') }}"></script> --}}
+    <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery-1.11.2.min.js') }}"></script>
 
     <!-- Template Main JS File -->
-    <script src="{{ asset('assets-client/assets/js/slide.js') }}"></script>
-    <script src="{{ asset('assets-client/assets/js/main.js') }}"></script>
-    <script src="{{ asset('assets-client/assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('assets/js/slide.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/plugins.js') }}"></script>
 
 </body>
 
