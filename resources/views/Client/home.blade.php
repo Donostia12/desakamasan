@@ -13,7 +13,7 @@
                             <div class="caption">
                                 <div class="title2">
                                     <h1>Selamat Datang!</h1>
-                                    <h3>di Website Desa Wisata Kamasan</h3>
+                                    <h3>di Website <span>Desa Wisata Kamasan</span></h3>
                                 </div>
                                 <div class="text2">
                                     <p>{{ $profildesa->welcome }}</p>
@@ -473,7 +473,7 @@
                         <div class="section-title" data-aos="zoom-in">
                             <h2>Produk Desa</h2>
                             <h3>Cek <span>Produk</span> Desa Kamasan Disini!</h3>
-                            <p>berikut terdapat berbagai Kuliner, Jasa, maupun Oleh-oleh khas Desa Kamasan</p>
+                            <p>Berikut terdapat berbagai Kuliner, Jasa, maupun Oleh-oleh khas yang bisa kalian dapatkan dan kunjungi di Desa Kamasan!</p>
                         </div>
 
                         <div class="row">

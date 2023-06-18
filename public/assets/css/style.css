@@ -642,6 +642,11 @@ h6 {
   font-size: 18px;
 }
 
+#hero h3 > span {
+  color: #8a703f;
+  background-color: #ffedca;
+}
+
 /* #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
@@ -1636,7 +1641,7 @@ section {
 # F.A.Q
 --------------------------------------------------------------*/
 .faq {
-  background: #f5faf0;
+  background: #fbf3e6;
 }
 
 .faq .section-title h2 {
@@ -1769,6 +1774,12 @@ section {
 .contact .info .phone:hover i {
   background: #8a703f;
   color: #fff;
+}
+
+.php-email-form {
+  background-color: #fbf3e6 !important;
+  border-radius: 20px;
+  padding: 20px 20px;
 }
 
 .contact .php-email-form {
