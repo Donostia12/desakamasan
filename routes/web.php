@@ -13,6 +13,8 @@ use App\Http\controllers\penguruscontroller;
 use App\Http\controllers\daerahwisatacontroller;
 use App\Http\controllers\profildesacontroller;
 use App\Http\controllers\menubuildercontroller;
+use App\Http\controllers\reviewcontroller;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,16 +29,19 @@ use App\Http\controllers\menubuildercontroller;
 Route::resource('/', home::class);
 Route::get('home/{id}', [home::class, 'detail']);
 Route::get('/galeri',[home::class, 'galari']);
+
+Route::resource('review',reviewcontroller::class);
+
 Route::get('detailberita/{id}', [home::class, 'detailberita']);
 Route::get('detaildaerahwisata/{id}', [home::class, 'detaildaerahwisata']);
 
 Route::resource('daerahwisata', daerahwisatacontroller::class);
 Route::get('detailwisata/{id}', [daerahwisatacontroller::class, 'detail']);
-
 Route::get('detailpengurus/{id}', [penguruscontroller::class, 'detail']);
 
 Route::resource('/pengurus', penguruscontroller::class);
 Route::get('/login', [Admin::class, 'vlogin'])->middleware('onlogin');
+Route::get('/reload',[Admin::class,'reload']);
 
 Route::resource('Produk', produkController::class)->middleware('is_login');
 Route::get('/detailproduk/{id}',[produkController::class,'detail']);
@@ -46,8 +51,8 @@ Route::get('home', [Admin::class, 'home'])->middleware('is_login');
 Route::get('profildesa', [Admin::class, 'profildesa'])->middleware('is_login');
 
 Route::resource('berita', BeritaController::class)->middleware('is_login');
-Route::get('/detail-berita/{id}',[BeritaController::class,'detail']);
 
+Route::get('/detail-berita/{id}',[BeritaController::class,'detail']);
 Route::get('out', [Admin::class, 'out'])->name('out')->middleware('auth');
 Route::post('actlogin',[Admin::class,'actlogin']);
 
