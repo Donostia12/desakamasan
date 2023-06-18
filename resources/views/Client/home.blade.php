@@ -741,11 +741,11 @@
                                 <h4>Call:</h4>
                                 <p>(0366) 22938</p>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
-                    
+
                     <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
                         <div id='review'></div>
 
@@ -753,11 +753,11 @@
                             <h2>Komentar</h2>
                             <p>Berikan Komentar, pengalaman, dan pendapat kalian saat berwisata di Desa Kamasan!</p>
                         </div>
-                    
-                    <form action="{{ route('review.index') }}" method="post" target="_self" enctype="multipart/form-data"
-                    role="form" data-toggle="validator" novalidate>
-                    @csrf          
-                
+
+                        <form action="{{ route('review.index') }}" method="post" target="_self"
+                            enctype="multipart/form-data" role="form" data-toggle="validator" novalidate class="php-email-form">
+                            @csrf
+
                             {{-- <div class="row">
                             <div class="col-md-6 form-group">
                                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
@@ -772,35 +772,42 @@
                             <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
                                 required>
                         </div> --}}
+                        <div class="row">
+
+                        </div>
                             <div class="form-group mt-3">
                                 <input type="text" class="form-control" name="nama" id="nama"
                                     placeholder="Nama anda" required>
                             </div>
                             <div class="form-group mt-3">
-                                <textarea class="ckeditor form-control" id="wysiwyg"  name="review" rows="5" placeholder="Komentar" required></textarea>
+                                <textarea class="ckeditor form-control" id="wysiwyg" name="review" rows="5" placeholder="Komentar"
+                                    required></textarea>
                             </div>
                             <div class="form-group">
                                 <div class="captcha">
                                     <span>{!! captcha_img('math') !!}</span>
-                                    <button type="button" class="btn btn-danger reload" id="reload">
+                                    <button type="button" class="btn btn-secondary reload" id="reload">
                                         &#x21bb;
                                     </button>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="captcha" class="form-control" placeholder="Captcha" required>
+                                    <input type="text" name="captcha" class="form-control"
+                                        placeholder="Hasil Captcha" required>
                                 </div>
                                 @error('captcha')
-                                    <span class="text-danger">captcha tidak valid</span>
+                                    <span class="text-danger">Captcha tidak valid</span>
                                 @enderror
-                              </div>
-                            <div class="text-center"><button type="submit">Kirim Komentar</button></div>
+                            </div>
+                            <div class="text-center" >
+                                <button type="submit">Kirim Komentar</button>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
-            @if(session('script'))
-        {!! session('script') !!}
-    @endif
+            @if (session('script'))
+                {!! session('script') !!}
+            @endif
         </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
@@ -829,25 +836,28 @@
 
         $('#k4').html(take);
     </script>
-    	<script>
-            $('#reload').click(function(){
-                $.ajax({
-                    type: 'GET',
-                    url: 'reload',
-                    success:function(data){
-                        $('.captcha span').html(data.captcha);
-                    }
-                })
-            }) 
-        </script>
+    <script>
+        $('#reload').click(function() {
+            $.ajax({
+                type: 'GET',
+                url: 'reload',
+                success: function(data) {
+                    $('.captcha span').html(data.captcha);
+                }
+            })
+        })
+    </script>
 
 
-        <script>
-          function scrollToReview() {
-    const reviewElement = document.getElementById('review');
-    if (reviewElement) {
-        reviewElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-}
-        </script>
+    <script>
+        function scrollToReview() {
+            const reviewElement = document.getElementById('review');
+            if (reviewElement) {
+                reviewElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    </script>
 @endsection

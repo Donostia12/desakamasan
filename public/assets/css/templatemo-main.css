@@ -48,7 +48,7 @@ https://templatemo.com/tm-526-vanilla
     margin-top: 0px;
     font-size: 19px;
     font-weight: 700;
-    color: #8fc04e;
+    color: #8a703f;
 }
 
 .projects-content .item .text-content span {
@@ -67,14 +67,14 @@ https://templatemo.com/tm-526-vanilla
     margin-left: 73%;
     width: 44px;
     height: 44px;
-    border: 4px solid #d6e8bf;
+    border: 4px solid #e5cc9d;
     border-radius: 50px;
-    transition: 0.5s;
+    transition: 0.2s;
     backdrop-filter: blur(3px);
 }
 
 .projects-content .item .text-content .icon i {
-    color: #d6e8bf;
+    color: #e5cc9d;
     margin-top: 15%;
     margin-right: 5%;
     font-size: 32px;
@@ -85,9 +85,9 @@ https://templatemo.com/tm-526-vanilla
 }
 
 .projects-content .item .text-content .icon:hover {
-    background: #8fc04e;
-    border-color: #8fc04e;
-    box-shadow: 11px 11px 22px #b3ca95, -11px -11px 22px #f3ffc9;
+    background: #8a703f;
+    border-color: #8a703f;
+    box-shadow: 5px 5px 6px #d7c29a;
 }
 
 .owl-pagination {
