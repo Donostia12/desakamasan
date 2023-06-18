@@ -183,7 +183,7 @@
 
 
         <!-- ======= Cta Section ======= -->
-        <section id="cta" class="cta">
+        <section id="cta" class="parallax-content cta">
             <div class="container" data-aos="zoom-in">
 
                 <div class="text-center">
@@ -485,9 +485,9 @@
                                         <p>{{ $data->harga_produk }}</p>
                                         <a href="/storage/images/{{ $data->image }}" data-gallery="portfolioGallery"
                                             class="portfolio-lightbox preview-link" title="{{ $data->nama_produk }}"><i
-                                                class="bx bx-plus"></i></a>
+                                                class="bx bx-search"></i></a>
                                         <a href="/home/{{ $data->id }}" class="details-link" title="More Details"><i
-                                                class="bx bx-link"></i></a>
+                                                class="bx bx-info-circle"></i></a>
                                     </div>
                                 </div>
                             @endforeach

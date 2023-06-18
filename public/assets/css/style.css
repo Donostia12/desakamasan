@@ -9,8 +9,38 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@font-face {
+  font-family: "willful";
+  src: url("font/Willful.ttf");
+}
+
+@font-face {
+  font-family: "balinese";
+  src: url("font/Balinese Family.ttf");
+}
+
+@font-face {
+  font-family: "khatulistiwa";
+  src: url("font/Khatulistiwa Demo.ttf");
+}
+
+@font-face {
+  font-family: "merri";
+  src: url("font/Merriweather-Light.ttf");
+}
+
+@font-face {
+  font-family: "dayaknese";
+  src: url("font/Dayaknese.ttf");
+}
+
+@font-face {
+  font-family: "signika";
+  src: url("font/Signika.ttf");
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "merri", sans-serif;
   color: #444444;
 }
 
@@ -30,7 +60,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "signika", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -268,7 +298,8 @@ h6 {
   line-height: 0.8;
   font-weight: 700;
   letter-spacing: 1px;
-  font-family: "Poppins", sans-serif;
+  font-family: "dayaknese", sans-serif;
+  text-transform: uppercase;
 }
 
 #header .logo h1 a,
@@ -563,6 +594,7 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+  font-family: "dayaknese", sans-serif;
 }
 
 #hero h2 {
@@ -992,7 +1024,8 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(2, 2, 2, 0.7), rgba(0, 0, 0, 0.9)), url(../../../images/bg-view5.png);
+  height: 10vh;
   background-size: cover;
   padding: 60px 0;
 }
