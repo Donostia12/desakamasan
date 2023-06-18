@@ -15,7 +15,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('nama');
             $table->text('deskripsi');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->text('maps');
             $table->timestamps();
         });

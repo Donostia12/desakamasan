@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('Pengurus_desa', function (Blueprint $table) {
             $table->Increments('id');
             $table->string('nama');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('jabatan');
             $table->string('whatsapp');
             $table->string('email');

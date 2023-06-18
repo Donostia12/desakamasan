@@ -729,19 +729,23 @@
                                 <h4>Call:</h4>
                                 <p>(0366) 22938</p>
                             </div>
-
+                            
                         </div>
-
+                        
                     </div>
-
+                    
                     <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+                        <div id='review'></div>
 
                         <div class="section-title" data-aos="zoom-in" style="margin-bottom: -2%">
                             <h2>Komentar</h2>
                             <p>Berikan Komentar, pengalaman, dan pendapat kalian saat berwisata di Desa Kamasan!</p>
                         </div>
-
-                        <form action="#" method="post" role="form" class="php-email-form">
+                    
+                    <form action="{{ route('review.index') }}" method="post" target="_self" enctype="multipart/form-data"
+                    role="form" data-toggle="validator" novalidate>
+                    @csrf          
+                
                             {{-- <div class="row">
                             <div class="col-md-6 form-group">
                                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
@@ -761,18 +765,30 @@
                                     placeholder="Nama anda" required>
                             </div>
                             <div class="form-group mt-3">
-                                <textarea class="form-control" name="komentar" rows="5" placeholder="Komentar" required></textarea>
+                                <textarea class="ckeditor form-control" id="wysiwyg"  name="review" rows="5" placeholder="Komentar" required></textarea>
                             </div>
-                            <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Pesanmu berhasil dikirim! Terima kasih atas pendapatmu!</div>
-                            </div>
+                            <div class="form-group">
+                                <div class="captcha">
+                                    <span>{!! captcha_img('math') !!}</span>
+                                    <button type="button" class="btn btn-danger reload" id="reload">
+                                        &#x21bb;
+                                    </button>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="captcha" class="form-control" placeholder="Captcha" required>
+                                </div>
+                                @error('captcha')
+                                    <span class="text-danger">captcha tidak valid</span>
+                                @enderror
+                              </div>
                             <div class="text-center"><button type="submit">Kirim Komentar</button></div>
                         </form>
                     </div>
                 </div>
             </div>
+            @if(session('script'))
+        {!! session('script') !!}
+    @endif
         </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
@@ -801,4 +817,25 @@
 
         $('#k4').html(take);
     </script>
+    	<script>
+            $('#reload').click(function(){
+                $.ajax({
+                    type: 'GET',
+                    url: 'reload',
+                    success:function(data){
+                        $('.captcha span').html(data.captcha);
+                    }
+                })
+            }) 
+        </script>
+
+
+        <script>
+          function scrollToReview() {
+    const reviewElement = document.getElementById('review');
+    if (reviewElement) {
+        reviewElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+        </script>
 @endsection

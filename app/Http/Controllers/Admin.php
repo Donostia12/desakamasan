@@ -16,11 +16,14 @@ class Admin extends Controller
       return view('login');
     }
        
-public function actlogin(Request $request)
-{
+    public function actlogin(Request $request)
+    {
+   
     $request->validate([
         'username' => 'required',
         'password' => 'required',
+        'captcha'  =>'required|captcha'
+        
     ]);
 
     $madmin = Madmin::where('username', $request->username)->first();
@@ -34,6 +37,10 @@ public function actlogin(Request $request)
     }
 
     return redirect()->back()->with('salah', 'Username/password salah'); }
+
+    public function reload(){
+        return response()->json(['captcha'=>captcha_img('math')]);
+    }
 
     public function home(){
         return view('admin.layouts.layoutsadmin');

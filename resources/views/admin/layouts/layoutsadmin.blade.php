@@ -73,6 +73,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{route('menubuilder.index')}}">Menu builder</a>
                                     <a class="nav-link" href="{{route('profil.index')}}">Profil Desa</a>
+                                    <a class="nav-link" href="{{route('review.index')}}">review</a>
                                 </nav>
                             </div>
 
