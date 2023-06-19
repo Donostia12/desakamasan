@@ -17,7 +17,6 @@
   color: #b4821f;
 }
 
-
 @font-face {
   font-family: "willful";
   src: url("font/Willful.ttf");
@@ -1372,10 +1371,10 @@ section {
   border-radius: 50px;
   width: 36px;
   height: 36px;
-  background: rgba(143, 192, 78, 0.8);
+  background: #e5cc9dcc;
   display: inline-block;
   transition: ease-in-out 0.3s;
-  color: #fff;
+  color: #8a703f;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1776,15 +1775,11 @@ section {
   color: #fff;
 }
 
-.php-email-form {
-  background-color: #fbf3e6 !important;
-  border-radius: 20px;
-  padding: 20px 20px;
-}
-
 .contact .php-email-form {
   width: 100%;
-  background: #fff;
+  background: #fbf3e6;
+  border-radius: 20px;
+  padding: 20px 20px;
 }
 
 .contact .php-email-form .form-group {
@@ -1814,25 +1809,6 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #b4821f;
-  border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
-}
-
 .contact .php-email-form input,
 .contact .php-email-form textarea {
   border-radius: 8px;
@@ -1859,16 +1835,6 @@ section {
 
 .contact .php-email-form button[type=submit]:hover {
   background: #67532c;
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -2409,4 +2375,18 @@ h3 a:only-child {
 
 .captcha {
   padding-bottom: 1%;
+}
+
+.error-msg {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'merri' sans-serif;
+  border-radius: 24px;
+  font-weight: 600;
+  background-color: rgb(255, 81, 81);
+  color: #fff;
+  position: absolute;
+  float: left;
+  margin-top: 1%;
+  padding: 10px 15px;
 }

@@ -201,224 +201,228 @@
     <div id="k3"></div>
     <div id="k4"></div>
 
-    <!-- ======= Services Section ======= -->
-    <div style="display: none">
-        <div id="berita">
-            <section class="services" id="berita">
-                <div class="container">
-                    <div class="section-title" data-aos="zoom-in">
-                        <h2>Berita</h2>
-                        <h3><span>Berita</span> Desa Kamasan</h3>
-                        <p>Baca dan ketahui berbagai informasi terupdate yang ada di Desa Kamasan!</p>
-                    </div>
-                    <section>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-9" data-aos="fade-up">
+        <!-- ======= Services Section ======= -->
+        <div style="display: none">
+            <div id="berita">
+                <section class="services" id="berita">
+                    <div class="container">
+                        <div class="section-title" data-aos="zoom-in">
+                            <h2>Berita</h2>
+                            <h3><span>Berita</span> Desa Kamasan</h3>
+                            <p>Baca dan ketahui berbagai informasi terupdate yang ada di Desa Kamasan!</p>
+                        </div>
+                        <section>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-9" data-aos="fade-up">
 
-                                    @foreach ($berita as $item)
-                                    {{-- Gambar, Judul, tanggal, dan isi berita, --}}
-                                    <div class="d-md-flex post-entry-2 sect-news">
-                                        <a href="{{ url('detailberita/' . $item->id_berita) }}" class="me-4 thumbnail">
-                                            <img src="{{ asset('storage/images/' . $item->image) }}" alt=""
-                                                class="img-fluid">
-                                        </a>
-                                        <div>
-                                            <div class="post-meta"><span class="date"><span
-                                                        class="bx bx-calendar"></span>
-                                                    {{ date('d F Y', strtotime($item->created_at)) }}</span>
-                                            </div>
-                                            <h3><a
-                                                    href="{{ url('detailberita/' . $item->id_berita) }}">{{ $item->judul_berita }}</a>
-                                            </h3>
-                                            <p>{!! substr($item->isi_berita, 0, 350) !!}
-                                                <a href="{{ url('detailberita/' . $item->id_berita) }}"> . . .
-                                                    <p>Baca selengkapnya <span class="bx bx-right-arrow-alt"></span></p>
+                                        @foreach ($berita as $item)
+                                            {{-- Gambar, Judul, tanggal, dan isi berita, --}}
+                                            <div class="d-md-flex post-entry-2 sect-news">
+                                                <a href="{{ url('detailberita/' . $item->id_berita) }}"
+                                                    class="me-4 thumbnail">
+                                                    <img src="{{ asset('storage/images/' . $item->image) }}"
+                                                        alt="" class="img-fluid">
                                                 </a>
-                                            </p>
+                                                <div>
+                                                    <div class="post-meta"><span class="date"><span
+                                                                class="bx bx-calendar"></span>
+                                                            {{ date('d F Y', strtotime($item->created_at)) }}</span>
+                                                    </div>
+                                                    <h3><a
+                                                            href="{{ url('detailberita/' . $item->id_berita) }}">{{ $item->judul_berita }}</a>
+                                                    </h3>
+                                                    <p>{!! substr($item->isi_berita, 0, 350) !!}
+                                                        <a href="{{ url('detailberita/' . $item->id_berita) }}"> . . .
+                                                            <p>Baca selengkapnya <span
+                                                                    class="bx bx-right-arrow-alt"></span></p>
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        @endforeach
+                                        {{-- Ini untuk Pagination --}}
+                                        <div class="text-start py-4">
+                                            <div class="custom-pagination">
+                                                <a href="#" class="prev">Previous</a>
+                                                <a href="#" class="active">1</a>
+                                                <a href="#">2</a>
+                                                <a href="#">3</a>
+                                                <a href="#">4</a>
+                                                <a href="#">5</a>
+                                                <a href="#" class="next">Next</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <hr>
-                                    @endforeach
-                                    {{-- Ini untuk Pagination --}}
-                                    <div class="text-start py-4">
-                                        <div class="custom-pagination">
-                                            <a href="#" class="prev">Previous</a>
-                                            <a href="#" class="active">1</a>
-                                            <a href="#">2</a>
-                                            <a href="#">3</a>
-                                            <a href="#">4</a>
-                                            <a href="#">5</a>
-                                            <a href="#" class="next">Next</a>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="col-md-3">
-                                    <!-- ======= Sidebar ======= -->
-                                    <div class="aside-block">
-                                        <ul class="nav nav-pills custom-popular mb-4" id="pills-tab" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="pills-popular-tab"
-                                                    data-bs-toggle="pill" data-bs-target="#pills-popular" type="button"
-                                                    role="tab" aria-controls="pills-popular"
-                                                    aria-selected="true">Popular</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-trending-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#pills-trending" type="button" role="tab"
-                                                    aria-controls="pills-trending"
-                                                    aria-selected="false">Trending</button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-latest-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#pills-latest" type="button" role="tab"
-                                                    aria-controls="pills-latest" aria-selected="false">Terbaru</button>
-                                            </li>
-                                        </ul>
+                                    <div class="col-md-3">
+                                        <!-- ======= Sidebar ======= -->
+                                        <div class="aside-block">
+                                            <ul class="nav nav-pills custom-popular mb-4" id="pills-tab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="pills-popular-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-popular"
+                                                        type="button" role="tab" aria-controls="pills-popular"
+                                                        aria-selected="true">Popular</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-trending-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-trending"
+                                                        type="button" role="tab" aria-controls="pills-trending"
+                                                        aria-selected="false">Trending</button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-latest-tab" data-bs-toggle="pill"
+                                                        data-bs-target="#pills-latest" type="button" role="tab"
+                                                        aria-controls="pills-latest"
+                                                        aria-selected="false">Terbaru</button>
+                                                </li>
+                                            </ul>
 
-                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-content" id="pills-tabContent">
 
-                                            <!-- Popular -->
-                                            <div class="tab-pane fade show active" id="pills-popular" role="tabpanel"
-                                                aria-labelledby="pills-popular-tab">
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Sport</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                <!-- Popular -->
+                                                <div class="tab-pane fade show active" id="pills-popular" role="tabpanel"
+                                                    aria-labelledby="pills-popular-tab">
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Sport</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">111 How to Avoid Distraction
+                                                                and
+                                                                Stay Focused During Video Calls?</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">111 How to Avoid Distraction
-                                                            and
-                                                            Stay Focused During Video Calls?</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
 
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">17 Pictures of Medium Length
+                                                                Hair in Layers That Will Inspire Your New Haircut</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">17 Pictures of Medium Length
-                                                            Hair in Layers That Will Inspire Your New Haircut</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
 
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Culture</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Culture</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">9-up-down
+                                                                Hairstyles for Long and Medium Hair</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">9-up-down
-                                                            Hairstyles for Long and Medium Hair</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
 
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy:
+                                                                A Working Mom’s Guide</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy:
-                                                            A Working Mom’s Guide</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
 
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Business</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Business</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">The Best Homemade Masks for
+                                                                Face (keep the Pimples Away)</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">The Best Homemade Masks for
-                                                            Face (keep the Pimples Away)</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
 
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every
+                                                                Working Mom Should Know</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every
-                                                            Working Mom Should Know</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
-                                            </div> <!-- End Popular -->
+                                                </div> <!-- End Popular -->
 
-                                            <!-- Trending -->
-                                            <div class="tab-pane fade" id="pills-trending" role="tabpanel"
-                                                aria-labelledby="pills-trending-tab">
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                <!-- Trending -->
+                                                <div class="tab-pane fade" id="pills-trending" role="tabpanel"
+                                                    aria-labelledby="pills-trending-tab">
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">222 Pictures of Medium Length
+                                                                Hair in Layers That Will Inspire Your New Haircut</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">222 Pictures of Medium Length
-                                                            Hair in Layers That Will Inspire Your New Haircut</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
 
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Culture</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Culture</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">9-up-down
+                                                                Hairstyles for Long and Medium Hair</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">9-up-down
-                                                            Hairstyles for Long and Medium Hair</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
 
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy:
+                                                                A Working Mom’s Guide</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy:
-                                                            A Working Mom’s Guide</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
 
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Sport</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Sport</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">How to Avoid Distraction and
+                                                                Stay Focused During Video Calls?</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">How to Avoid Distraction and
-                                                            Stay Focused During Video Calls?</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Business</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Business</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">The Best Homemade Masks for
+                                                                Face (keep the Pimples Away)</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">The Best Homemade Masks for
-                                                            Face (keep the Pimples Away)</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
 
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                            class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    <div class="post-entry-1 border-bottom">
+                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
+                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                        </div>
+                                                        <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every
+                                                                Working Mom Should Know</a></h2>
+                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
                                                     </div>
-                                                    <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every
-                                                            Working Mom Should Know</a></h2>
-                                                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                </div>
-                                            </div> <!-- End Trending -->
+                                                </div> <!-- End Trending -->
 
-                                            <!-- Latest -->
-                                            <div class="tab-pane fade" id="pills-latest" role="tabpanel"
-                                                aria-labelledby="pills-latest-tab">
-                                                @foreach ($berita as $item)
-                                                <div class="post-entry-1 border-bottom">
-                                                    <div class="post-meta">
-                                                        <span>{{ date('d M Y H:i:s', strtotime($item->created_at)) }}</span>
-                                                    </div>
-                                                    <h2 class="mb-2"><a href="#">{{ $item->judul_berita }}</a>
-                                                    </h2>
-                                                    <span class="author mb-3 d-block">Admin</span>
-                                                </div>
-                                                @endforeach
-                                            </div> <!-- End Latest -->
+                                                <!-- Latest -->
+                                                <div class="tab-pane fade" id="pills-latest" role="tabpanel"
+                                                    aria-labelledby="pills-latest-tab">
+                                                    @foreach ($berita as $item)
+                                                        <div class="post-entry-1 border-bottom">
+                                                            <div class="post-meta">
+                                                                <span>{{ date('d M Y H:i:s', strtotime($item->created_at)) }}</span>
+                                                            </div>
+                                                            <h2 class="mb-2"><a
+                                                                    href="#">{{ $item->judul_berita }}</a>
+                                                            </h2>
+                                                            <span class="author mb-3 d-block">Admin</span>
+                                                        </div>
+                                                    @endforeach
+                                                </div> <!-- End Latest -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                </div>
-            </section><!-- End Services Section -->
+                        </section>
+                    </div>
+                </section><!-- End Services Section -->
+            </div>
         </div>
-    </div>
 
     <div style="display: none">
         <div id="desawisata">
@@ -465,12 +469,11 @@
             <section id="produk" class="portfolio">
                 <div class="container">
 
-                    <div class="section-title" data-aos="zoom-in">
-                        <h2>Produk Desa</h2>
-                        <h3>Cek <span>Produk</span> Desa Kamasan Disini!</h3>
-                        <p>Berikut terdapat berbagai Kuliner, Jasa, maupun Oleh-oleh khas yang bisa kalian dapatkan dan
-                            kunjungi di Desa Kamasan!</p>
-                    </div>
+                        <div class="section-title" data-aos="zoom-in">
+                            <h2>Produk Desa</h2>
+                            <h3>Cek <span>Produk</span> Desa Kamasan Disini!</h3>
+                            <p>Berikut terdapat berbagai Kuliner, Jasa, maupun Oleh-oleh khas yang bisa kalian dapatkan dan kunjungi di Desa Kamasan!</p>
+                        </div>
 
                     <div class="row">
                         <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up">
@@ -696,15 +699,15 @@
         </div>
     </section><!-- End F.A.Q Section -->
 
-    <!-- ======= Maps Section ======= -->
-    <section id="peta" class="contact">
-        <div class="container">
+        <!-- ======= Maps Section ======= -->
+        <section id="peta" class="contact">
+            <div class="container">
 
-            <div class="section-title" data-aos="zoom-in">
-                <h2>Peta Desa</h2>
-                <h3>Cek Detail <span>Lokasi</span> Desa</h3>
-                <p>Ini adalah peta yang menunjukkan lokasi Desa Wisata dan sekitarnya</p>
-            </div>
+                <div class="section-title" data-aos="zoom-in">
+                    <h2>Peta Desa</h2>
+                    <h3>Cek Detail <span>Lokasi</span> Desa</h3>
+                    <p>Ini adalah peta yang menunjukkan lokasi Desa Wisata dan sekitarnya</p>
+                </div>
 
             <div>
                 <iframe
@@ -730,30 +733,29 @@
                             <p>info@kamasan.desa.id</p>
                         </div>
 
-                        <div class="phone">
-                            <i class="bi bi-phone"></i>
-                            <h4>Call:</h4>
-                            <p>(0366) 22938</p>
+                            <div class="phone">
+                                <i class="bi bi-phone"></i>
+                                <h4>Call:</h4>
+                                <p>(0366) 22938</p>
+                            </div>
+
                         </div>
 
                     </div>
 
-                </div>
+                    <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+                        <div id='review'></div>
 
-                <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
-                    <div id='review'></div>
+                        <div class="section-title" data-aos="zoom-in" style="margin-bottom: -2%">
+                            <h2>Komentar</h2>
+                            <p>Berikan Komentar, pengalaman, dan pendapat kalian saat berwisata di Desa Kamasan!</p>
+                        </div>
 
-                    <div class="section-title" data-aos="zoom-in" style="margin-bottom: -2%">
-                        <h2>Komentar</h2>
-                        <p>Berikan Komentar, pengalaman, dan pendapat kalian saat berwisata di Desa Kamasan!</p>
-                    </div>
+                        <form action="{{ route('review.index') }}" method="post" target="_self"
+                            enctype="multipart/form-data" role="form" data-toggle="validator" novalidate class="php-email-form">
+                            @csrf
 
-                    <form action="{{ route('review.index') }}" method="post" target="_self"
-                        enctype="multipart/form-data" role="form" data-toggle="validator" novalidate
-                        class="php-email-form">
-                        @csrf
-
-                        {{-- <div class="row">
+                            {{-- <div class="row">
                             <div class="col-md-6 form-group">
                                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
                                     required>
@@ -767,47 +769,49 @@
                             <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
                                 required>
                         </div> --}}
+                        <div class="row">
 
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama anda"
-                                required>
                         </div>
-                        <div class="form-group mt-3">
-                            <textarea class="ckeditor form-control" id="wysiwyg" name="review" rows="5"
-                                placeholder="Komentar" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <div class="captcha">
-                                <span>{!! captcha_img('math') !!}</span>
-                                <button type="button" class="btn btn-secondary reload" id="reload">
-                                    &#x21bb;
-                                </button>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="nama" id="nama"
+                                    placeholder="Nama anda" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="ckeditor form-control" id="wysiwyg" name="review" rows="5" placeholder="Komentar"
+                                    required></textarea>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="captcha" class="form-control" placeholder="Hasil Captcha"
-                                    required>
+                                <div class="captcha">
+                                    <span>{!! captcha_img('math') !!}</span>
+                                    <button type="button" class="btn btn-secondary reload" id="reload">
+                                        &#x21bb;
+                                    </button>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="captcha" class="form-control"
+                                        placeholder="Hasil Captcha" required>
+                                </div>
+                                @error('captcha')
+                                    <span class="text-danger">Captcha tidak valid</span>
+                                @enderror
                             </div>
-                            @error('captcha')
-                            <span class="text-danger">Captcha tidak valid</span>
-                            @enderror
-                        </div>
-                        <div class="text-center">
-                            <button type="submit">Kirim Komentar</button>
-                        </div>
-                    </form>
+                            <div class="text-center" >
+                                <button type="submit">Kirim Komentar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        @if (session('script'))
-        {!! session('script') !!}
-        @endif
-    </section><!-- End Contact Section -->
+            @if (session('script'))
+                {!! session('script') !!}
+            @endif
+        </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
 
-<script>
-    var isi = document.getElementById("{{ $menubuilder->k1 }}");
-    var take = isi.innerHTML;
+    <script>
+        var isi = document.getElementById("{{ $menubuilder->k1 }}");
+        var take = isi.innerHTML;
 
     $('#k1').html(take);
 
@@ -847,16 +851,15 @@
 </script>
 
 
-<script>
-    function scrollToReview() {
-        const reviewElement = document.getElementById('review');
-        if (reviewElement) {
-            reviewElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+    <script>
+        function scrollToReview() {
+            const reviewElement = document.getElementById('review');
+            if (reviewElement) {
+                reviewElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
-    }
-
-</script>
+    </script>
 @endsection
