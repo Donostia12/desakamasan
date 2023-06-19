@@ -653,6 +653,8 @@
 
     </main><!-- End #main -->
 
+    @livewireScripts
+
     <script>
         var isi = document.getElementById("{{ $menubuilder->k1 }}");
         var take = isi.innerHTML;
@@ -701,5 +703,5 @@
             }
         }
     </script>
-    @livewireScripts
+    
 @endsection
