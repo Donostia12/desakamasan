@@ -43,7 +43,7 @@ class Admin extends Controller
     }
 
     public function home(){
-        return view('admin.layouts.layoutsadmin');
+        return view('admin.layouts.dashboard');
     }
 
     public function out()
