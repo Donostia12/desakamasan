@@ -172,7 +172,7 @@
     <script src="{{ asset('assets/js/slide.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="{{ asset('assets/js/plugins.js') }}"></script>
-
+    <script src="{{ asset('assets/ckeditor/ckeditor.js') }}"></script>
 </body>
 
 </html>
