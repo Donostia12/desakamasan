@@ -214,47 +214,8 @@
                         <section>
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-9" data-aos="fade-up">
 
-                                        @foreach ($berita as $item)
-                                            {{-- Gambar, Judul, tanggal, dan isi berita, --}}
-                                            <div class="d-md-flex post-entry-2 sect-news">
-                                                <a href="{{ url('detailberita/' . $item->id_berita) }}"
-                                                    class="me-4 thumbnail">
-                                                    <img src="{{ asset('storage/images/' . $item->image) }}"
-                                                        alt="" class="img-fluid">
-                                                </a>
-                                                <div>
-                                                    <div class="post-meta"><span class="date"><span
-                                                                class="bx bx-calendar"></span>
-                                                            {{ date('d F Y', strtotime($item->created_at)) }}</span>
-                                                    </div>
-                                                    <h3><a
-                                                            href="{{ url('detailberita/' . $item->id_berita) }}">{{ $item->judul_berita }}</a>
-                                                    </h3>
-                                                    <p>{!! substr($item->isi_berita, 0, 350) !!}
-                                                        <a href="{{ url('detailberita/' . $item->id_berita) }}"> . . .
-                                                            <p>Baca selengkapnya <span
-                                                                    class="bx bx-right-arrow-alt"></span></p>
-                                                        </a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                        @endforeach
-                                        {{-- Ini untuk Pagination --}}
-                                        <div class="text-start py-4">
-                                            <div class="custom-pagination">
-                                                <a href="#" class="prev">Previous</a>
-                                                <a href="#" class="active">1</a>
-                                                <a href="#">2</a>
-                                                <a href="#">3</a>
-                                                <a href="#">4</a>
-                                                <a href="#">5</a>
-                                                <a href="#" class="next">Next</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <livewire:berita-index>
 
                                     <div class="col-md-3">
                                         <!-- ======= Sidebar ======= -->
@@ -264,13 +225,7 @@
                                                     <button class="nav-link active" id="pills-popular-tab"
                                                         data-bs-toggle="pill" data-bs-target="#pills-popular"
                                                         type="button" role="tab" aria-controls="pills-popular"
-                                                        aria-selected="true">Popular</button>
-                                                </li>
-                                                <li class="nav-item" role="presentation">
-                                                    <button class="nav-link" id="pills-trending-tab"
-                                                        data-bs-toggle="pill" data-bs-target="#pills-trending"
-                                                        type="button" role="tab" aria-controls="pills-trending"
-                                                        aria-selected="false">Trending</button>
+                                                        aria-selected="true">Terlama</button>
                                                 </li>
                                                 <li class="nav-item" role="presentation">
                                                     <button class="nav-link" id="pills-latest-tab" data-bs-toggle="pill"
@@ -285,123 +240,28 @@
                                                 <!-- Popular -->
                                                 <div class="tab-pane fade show active" id="pills-popular" role="tabpanel"
                                                     aria-labelledby="pills-popular-tab">
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Sport</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">111 How to Avoid Distraction
-                                                                and
-                                                                Stay Focused During Video Calls?</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
 
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
+                                                    @foreach ($beritaold as $item)
+                                                        <div class="post-entry-1 border-bottom">
+                                                            <div class="post-meta">
+                                                                <span>{{ date('d M Y H:i:s', strtotime($item->created_at)) }}</span>
+                                                            </div>
+                                                            <h2 class="mb-2"><a
+                                                                    href="#">{{ $item->judul_berita }}</a>
+                                                            </h2>
+                                                            <span class="author mb-3 d-block">Admin</span>
                                                         </div>
-                                                        <h2 class="mb-2"><a href="#">17 Pictures of Medium Length
-                                                                Hair in Layers That Will Inspire Your New Haircut</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
+                                                    @endforeach
 
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Culture</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">9-up-down
-                                                                Hairstyles for Long and Medium Hair</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
-
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy:
-                                                                A Working Mom’s Guide</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
-
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Business</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">The Best Homemade Masks for
-                                                                Face (keep the Pimples Away)</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
-
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every
-                                                                Working Mom Should Know</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
+                                                    
                                                 </div> <!-- End Popular -->
 
-                                                <!-- Trending -->
-                                                <div class="tab-pane fade" id="pills-trending" role="tabpanel"
-                                                    aria-labelledby="pills-trending-tab">
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">222 Pictures of Medium Length
-                                                                Hair in Layers That Will Inspire Your New Haircut</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
-
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Culture</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">9-up-down
-                                                                Hairstyles for Long and Medium Hair</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
-
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy:
-                                                                A Working Mom’s Guide</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
-
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Sport</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">How to Avoid Distraction and
-                                                                Stay Focused During Video Calls?</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Business</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">The Best Homemade Masks for
-                                                                Face (keep the Pimples Away)</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
-
-                                                    <div class="post-entry-1 border-bottom">
-                                                        <div class="post-meta"><span class="date">Lifestyle</span> <span
-                                                                class="mx-1">&bullet;</span> <span>Jul 5th '22</span>
-                                                        </div>
-                                                        <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every
-                                                                Working Mom Should Know</a></h2>
-                                                        <span class="author mb-3 d-block">Jenny Wilson</span>
-                                                    </div>
-                                                </div> <!-- End Trending -->
+                                                
 
                                                 <!-- Latest -->
                                                 <div class="tab-pane fade" id="pills-latest" role="tabpanel"
                                                     aria-labelledby="pills-latest-tab">
-                                                    @foreach ($berita as $item)
+                                                    @foreach ($beritanew as $item)
                                                         <div class="post-entry-1 border-bottom">
                                                             <div class="post-meta">
                                                                 <span>{{ date('d M Y H:i:s', strtotime($item->created_at)) }}</span>

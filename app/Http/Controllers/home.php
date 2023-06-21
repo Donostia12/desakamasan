@@ -25,10 +25,10 @@ class home extends Controller
         $pengurus = pengurus::get();
         $daerahwisata = daerahwisata::all();
 
-        $beritalast = berita::orderBy('created_at','asc')->paginate(5);
+        $beritaold = berita::orderBy('created_at','asc')->paginate(5);
         $beritanew = berita::orderBy('created_at','desc')->paginate(5);
         
-       return view('Client.home', compact('produk','pengurus','profildesa','menubuilder','daerahwisata','beritalast','beritanew'));
+       return view('Client.home', compact('produk','pengurus','profildesa','menubuilder','daerahwisata','beritaold','beritanew'));
     }
 
     /**

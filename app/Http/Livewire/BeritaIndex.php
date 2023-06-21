@@ -13,7 +13,7 @@ class BeritaIndex extends Component
 
     public function render()
     {
-        $berita = berita::orderBy('created_at','desc')->paginate(3);
+        $berita = berita::orderBy('created_at','desc')->paginate(2);
         
         return view('livewire.berita-index',[
             'berita' => $berita,
