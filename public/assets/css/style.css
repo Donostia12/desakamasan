@@ -1344,7 +1344,6 @@ section {
 }
 
 .team .member {
-  margin-bottom: 10px;
   overflow: hidden;
   border-radius: 5px;
   background: #fff;
@@ -1357,7 +1356,6 @@ section {
 }
 
 .team .member:hover {
-  margin-bottom: 20px;
   overflow: hidden;
   border-radius: 5px;
   background: #fff;
