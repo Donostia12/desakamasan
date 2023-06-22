@@ -614,49 +614,33 @@
                         <form action="{{ route('review.index') }}" method="post" target="_self"
                             enctype="multipart/form-data" role="form" data-toggle="validator" novalidate class="php-email-form">
                             @csrf
-
-                            {{-- <div class="row">
-                            <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                                    required>
-                            </div>
-                            <div class="col-md-6 form-group mt-3 mt-md-0">
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                                required>
-                        </div> --}}
-                        <div class="row">
-
-                        </div>
-                            <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="nama" id="nama"
-                                    placeholder="Nama anda" required>
-                            </div>
-                            <div class="form-group mt-3">
-                                <textarea class="ckeditor form-control" id="wysiwyg" name="review" rows="5" placeholder="Komentar"
-                                    required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <div class="captcha">
-                                    <span>{!! captcha_img('math') !!}</span>
-                                    <button type="button" class="btn btn-secondary reload" id="reload">
-                                        &#x21bb;
-                                    </button>
+                            <div class="php-email-form">
+                                <div class="form-group mt-3">
+                                    <input type="text" class="form-control" name="nama" id="nama"
+                                        placeholder="Nama anda" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                    <textarea class="ckeditor form-control" id="wysiwyg" name="review" rows="5" placeholder="Komentar anda"
+                                        required></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="captcha" class="form-control"
-                                        placeholder="Hasil Captcha" required>
+                                    <div class="captcha">
+                                        <span>{!! captcha_img('math') !!}</span>
+                                        <button type="button" class="btn btn-secondary reload" id="reload">
+                                            &#x21bb;
+                                        </button>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="captcha" class="form-control"
+                                            placeholder="Hasil Captcha" required>
+                                    </div>
+                                    @error('captcha')
+                                        <script>alert('Captcha Salah');</script>
+                                    @enderror
                                 </div>
-                                @error('captcha')
-                                    <span class="text-danger">Captcha tidak valid</span>
-                                @enderror
-                            </div>
-                            <div class="text-center" >
-                                <button type="submit">Kirim Komentar</button>
+                                <div class="text-center">
+                                    <button type="submit">Kirim Komentar</button>
+                                </div>
                             </div>
                         </form>
                     </div>
