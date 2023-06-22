@@ -90,9 +90,9 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                <a href="#" class="dropdown-item"
+                                                {{-- <a href="#" class="dropdown-item"
                                                     onclick="getpop({{ $A->id }})"><i class="bi bi-search"></i>
-                                                    View</a>
+                                                    View</a> --}}
 
 
                                                 <a href="{{ route('Produk.edit', $A->id) }}" class="dropdown-item"><i

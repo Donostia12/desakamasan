@@ -183,7 +183,7 @@
 
 
     <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
+    {{-- <section id="cta" class="cta">
         <div class="container" data-aos="zoom-in">
 
             <div class="text-center">
@@ -193,7 +193,7 @@
             </div>
 
         </div>
-    </section><!-- End Cta Section -->
+    </section><!-- End Cta Section --> --}}
 
     <div id="konten"></div>
     <div id="k1"></div>
@@ -209,7 +209,7 @@
                         <div class="section-title" data-aos="zoom-in">
                             <h2>Berita</h2>
                             <h3><span>Berita</span> Desa Kamasan</h3>
-                            <p>Baca dan ketahui berbagai informasi terupdate yang ada di Desa Kamasan!</p>
+                            <p>Baca dan ketahui berbagai informasi terbaru yang ada di Desa Kamasan!</p>
                         </div>
                         <section>
                             <div class="container">
