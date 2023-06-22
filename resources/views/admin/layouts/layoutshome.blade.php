@@ -27,7 +27,7 @@
     <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- Template Main CSS File -->
-    
+
     <link href="{{ asset('assets/css/slideshow.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/owl-carousel.css') }}" rel="stylesheet">
@@ -104,53 +104,62 @@
     @yield('content')
 
     <!-- ======= Footer ======= -->
-    <footer id="footer">
+    <footer id="footer" class="footer">
 
-        <div class="footer-top">
-
+        <div class="footer-content">
             <div class="container">
-
-                <div class="row  justify-content-center">
-                    <div class="col-lg-6">
-                        <h3>Desa Wisata Kamasan</h3>
-                        <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe
-                            commodi placeat.</p>
+                <div class="row g-5 text-md-center">
+                    <div class="col-lg-7 isi-footer">
+                        <img src="{{ asset('images/logoKamasan1.png') }}" alt="Logo Desa" class="logo-desa-f">
+                        <h3 class="footer-heading">Desa Kamasan</h3>
+                        <p><span class="span-hl">Desa Kamasan</span> merupakan salah satu dari 53 Desa yang ada di Kabupaten Klungkung, terletak di
+                            Kecamatan Klungkung, Kabupaten Klungkung, Provinsi Bali. Desa Kamasan memiliki berbagai
+                            potensi desa dan yang paling terkenal yaitu seni Lukis Kamasan, selain itu desa ini juga
+                            memiliki potensi dalam pengembangan seni ukiran, seperti seni ukir pada mas, perak, tembaga
+                            atau kuningan, serta peluru (selongsong peluru), yang tidak kalah menarik adalah kerajinan
+                            uang kepeng (pis bolong). Kerajinan tangan ini dijual sebagai souvenir kepada wisatawan atau
+                            dipasarkan secara online untuk mencapai pasar yang lebih luas.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 yt-footer">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/02UI9vHRoKY?start=1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
-
-                <div class="row footer-newsletter justify-content-center">
-                    <div class="col-lg-6">
-                        <form action="" method="post">
-                            <input type="email" name="email" placeholder="Enter your Email"><input type="submit"
-                                value="Subscribe">
-                        </form>
-                    </div>
-                </div>
-
-                <div class="social-links">
-                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                </div>
-
             </div>
         </div>
 
-        <div class="container footer-bottom clearfix">
-            <div class="copyright">
-                &copy; Copyright <strong><span>Desa Kamasan</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/remember-free-multipurpose-bootstrap-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">PBL - Kelompok 1</a>
+        <div class="footer-legal">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <div class="copyright">
+                            ©Copyright <b><span>Desa Kamasan</span></b>. All Rights Reserved
+                        </div>
+                        <div class="credits">
+                            <!-- All the links in the footer should remain intact. -->
+                            <!-- You can delete the links only if you purchased the pro version. -->
+                            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+                            Developed by <a href="#footer"><i><b>PBL Kelompok 1</b></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
+                            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer><!-- End Footer -->
+    </footer>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>

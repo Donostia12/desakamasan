@@ -128,24 +128,6 @@
     </section>
 </main>
 
-{{-- <section id="hero">
-        <div class="parallax-content baner-content">
-            <div class="hero-container" data-aos="fade-up">
-                <h1>Selamat Datang di Website Desa Wisata Kamasan</h1>
-                <h3 style="width: 50%">{{ $profildesa->welcome }}.</h3>
-<a href="#about">
-    <button class="learn-more scrollto">
-        <span class="circle" aria-hidden="true">
-            <span class="icon arrow"></span>
-        </span>
-        <span class="button-text">Mulai Jelajah</span>
-    </button>
-</a>
-</div>
-</div>
-</section><!-- End Hero --> --}}
-
-
 <main id="main">
     <!-- ======= Profile Desa Section ======= -->
     <section id="about" class="about">
@@ -204,7 +186,7 @@
         <!-- ======= Services Section ======= -->
         <div style="display: none">
             <div id="berita">
-                <section class="services" id="berita">
+                <section class="parallax-content services" id="berita">
                     <div class="container">
                         <div class="section-title" data-aos="zoom-in">
                             <h2>Berita</h2>
@@ -349,7 +331,7 @@
                     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
                         @foreach ($produk as $data)
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-{{ $data->kategori }}">
+                        <div class="col-lg-3 col-md-6 portfolio-item filter-{{ $data->kategori }}">
                             <img src="/storage/images/{{ $data->image }}" class="img-fluid" alt="">
                             <div class="portfolio-info">
                                 <h4>{{ $data->nama_produk }}</h4>
@@ -377,7 +359,7 @@
                 <div class="container">
 
                     <div class="section-title" data-aos="zoom-in">
-                        <h2>Team</h2>
+                        <h2>Pengurus Desa</h2>
                         <h3>Pengurus <span>Desa Kamasan</span></h3>
                         <p>Posisi dan Pengurus Desa Kamasan</p>
                     </div>

@@ -9,6 +9,9 @@ https://templatemo.com/tm-526-vanilla
 .parallax-content {
     width: 100%;
     min-height: 90vh;
+    overflow-x: hidden;
+
+    /* max-height: 80vh; */
     background-size: cover;
     background-repeat: repeat;
     /* background-repeat: ; */
