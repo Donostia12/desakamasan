@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\Mreview;
 
@@ -30,7 +30,7 @@ class reviewcontroller extends Controller
     public function store(Request $request)
     {
 
-    $javascript = '<script>scrollToReview();</script>';
+    $javascript = "<script> alert('Terimakasih Atas Masukannya');</script>";
     $request->validate([
         'captcha'  =>'required|captcha'
     ]);
@@ -38,7 +38,7 @@ class reviewcontroller extends Controller
             "nama" => $request->nama,
             "review" => $request->review,
             ]);
-        return redirect()->route('index')->with('script', $javascript);
+        return redirect()->route('index')->with('success', $javascript);
     }
 
 
@@ -63,7 +63,21 @@ class reviewcontroller extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+       
+    }
+    public function perbarui(Request $request) {
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'review' => 'required',
+            'status' => 'required',
+        ]);
+
+        $id = $request->id ;
+        $review = Mreview::find($id);
+        $review->status = $request->status;
+        $review->save();
+           
+    return redirect()->route('review.index')->with('success', ' berhasil diedit!');
     }
 
     /**
@@ -71,6 +85,12 @@ class reviewcontroller extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $produk = Mreview::where('id',$id)->first();
+        Mreview::where('id',$id)->delete();
+        return redirect('/review');
+    }
+    public function detail($id){
+        $data = Mreview::where('id',$id)->first();
+        return response()->json($data);
     }
 }

@@ -8,6 +8,8 @@ use App\Models\produk;
 use App\Models\profildesa;
 use App\Models\pengurus;
 use App\Models\menubuilder;
+use App\Models\Mreview;
+use App\Models\Mslide;
 use Illuminate\Http\Request;
 
 
@@ -24,11 +26,13 @@ class home extends Controller
         $produk = produk::get();
         $pengurus = pengurus::get();
         $daerahwisata = daerahwisata::all();
+        $review= Mreview::all();
+        $slide= Mslide::all();
 
         $beritaold = berita::orderBy('created_at','asc')->paginate(5);
         $beritanew = berita::orderBy('created_at','desc')->paginate(5);
         
-       return view('Client.home', compact('produk','pengurus','profildesa','menubuilder','daerahwisata','beritaold','beritanew'));
+       return view('Client.home', compact('produk','pengurus','profildesa','menubuilder','daerahwisata','beritaold','beritanew','review','slide'));
     }
 
     /**

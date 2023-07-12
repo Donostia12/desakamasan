@@ -14,6 +14,7 @@ use App\Http\controllers\daerahwisatacontroller;
 use App\Http\controllers\profildesacontroller;
 use App\Http\controllers\menubuildercontroller;
 use App\Http\controllers\reviewcontroller;
+use App\Http\controllers\slide;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,10 +28,14 @@ use App\Http\controllers\reviewcontroller;
 */
 
 Route::resource('/', home::class);
+Route::resource('/slide',slide::class);
 Route::get('home/{id}', [home::class, 'detail']);
 Route::get('/galeri',[home::class, 'galari']);
 
 Route::resource('review',reviewcontroller::class);
+Route::get('review-detail/{id}', [reviewcontroller::class, 'detail']);
+Route::post('status', [reviewcontroller::class,'perbarui'])->name('status');
+
 
 Route::get('detailberita/{id}', [home::class, 'detailberita']);
 Route::get('detaildaerahwisata/{id}', [home::class, 'detaildaerahwisata']);

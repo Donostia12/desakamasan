@@ -200,7 +200,7 @@
             success: function (data) {
                 $('#nama-produk').val(data.nama_produk);
                 $('#image').attr('src', '/storage/images/' + data.image);
-                $('#informasi-produk').val($(data.informasi_produk).text());
+                $('#informasi-produk').val(data.informasi_produk);
                 $('#harga-produk').val(data.harga_produk);
                 $('#kategori').val(data.kategori);
                 $('#map').attr('src', data.map);

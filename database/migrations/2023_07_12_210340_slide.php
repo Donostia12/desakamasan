@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('profildesa', function (Blueprint $table) {
-            $table->Increments('id_profildesa');
-            $table->text('isi_profil');
-            $table->text('welcome');
-            $table->string('video');
+        Schema::create('mainslide', function (Blueprint $table) {
+            $table->Increments('id');
+            $table->text('page');
+            $table->text('isi');
+            $table->text('img');
             $table->timestamps();
         });
-       
     }
 
     /**
@@ -26,7 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('profildesa');
-     
+        Schema::dropIfExists('mainslide');
     }
 };

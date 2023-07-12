@@ -8,37 +8,17 @@
         <div class="slideshow-inner">
             <div class="slides">
                 {{-- foreach --}}
-                <div class="slide is-active ">
-                    <div class="slide-content">
-                        <div class="caption">
-                            <div class="title2">
-                                <h1>Selamat Datang!</h1>
-                                <h3>di Website <span>Desa Wisata Kamasan</span></h3>
-                            </div>
-                            <div class="text2">
-                                <p>{{ $profildesa->welcome }}</p>
-                            </div>
-                            <a href="#about" class="btn2">
-                                <span class="btn-inner">Ayo Jelajahi</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="image-container">
-                        <img src="{{ asset('images/bg-view.png') }}" alt="" class="image2" />
-                    </div>
-                </div>
+              
+                @foreach ($slide as $item)
+                    
                 <div class="slide">
                     <div class="slide-content">
                         <div class="caption">
                             <div class="title2">
-                                <h1>Berbagai Lukisan Khas Desa Kamasan</h1>
+                                <h1>{{$item->page}}</h1>
                             </div>
                             <div class="text2">
-                                <p>Lukisan khas Desa Kamasan merupakan seni lukis tradisional yang berasal dari Bali,
-                                    Indonesia. Desa Kamasan terletak di Kabupaten Klungkung, Bali, dan dikenal sebagai
-                                    pusat pengembangan seni lukis Kamasan. Lukisan-lukisan ini memiliki ciri khas yang
-                                    unik dan mendalam dalam mengekspresikan nilai-nilai dan cerita dari mitologi Hindu
-                                    serta epik Ramayana dan Mahabharata.
+                                <p>{{$item->isi}}
                                 </p>
                             </div>
                             <a href="#about" class="btn2">
@@ -47,58 +27,11 @@
                         </div>
                     </div>
                     <div class="image-container">
-                        <img src="{{ asset('images/lukisan1.png') }}" alt="" class="image2" />
+                        <img src="{{ asset('storage/images/' . $item->img) }}" alt="" class="image2" />
                     </div>
                 </div>
-                <div class="slide">
-                    <div class="slide-content">
-                        <div class="caption">
-                            <div class="title2">
-                                <h1>Kerajinan Topeng Kayu</h1>
-                            </div>
-                            <div class="text2">
-                                <p>Desa Kamasan juga terkenal dengan pembuatan topeng kayu yang indah. Topeng-topeng ini
-                                    digunakan dalam berbagai pertunjukan tari dan upacara adat di Bali. Mereka diukir
-                                    secara teliti dengan detail yang rumit dan dicat dengan warna-warna cerah.
-                                </p>
-                            </div>
-                            <a href="#about" class="btn2">
-                                <span class="btn-inner">Ayo Jelajahi</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="image-container">
-                        <img src="{{ asset('images/pelukis1.png') }}" alt="" class="image2" />
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="slide-content">
-                        <div class="caption">
-                            <div class="title2">
-                                <h1>Perkembangan Terkini Desa Kamasan</h1>
-                            </div>
-                            <div class="text2">
-                                <p>Desa Kamasan terus melestarikan seni dan budaya Bali, termasuk seni lukis Kamasan.
-                                    Lukisan-lukisan Kamasan yang menggambarkan cerita-cerita epik Hindu seperti Ramayana
-                                    dan Mahabharata masih diproduksi oleh seniman-seniman lokal di desa ini.
-                                    Lukisan-lukisan ini menjadi bagian penting dari warisan budaya Bali dan menjadi daya
-                                    tarik wisatawan yang tertarik dengan seni tradisional Bali.
-
-                                    Desa Kamasan juga terus mengembangkan kerajinan tangan lainnya, seperti ukiran kayu,
-                                    anyaman, tenun, dan keramik. Pengrajin di desa ini menjaga kualitas seni dan
-                                    kerajinan Bali, sambil menciptakan karya-karya yang sesuai dengan kebutuhan pasar
-                                    modern.
-                                </p>
-                            </div>
-                            <a href="#about" class="btn2">
-                                <span class="btn-inner">Ayo Jelajahi</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="image-container">
-                        <img src="{{ asset('images/pelukis2.png') }}" alt="" class="image2" />
-                    </div>
-                </div>
+                
+                @endforeach
             </div>
             <div class="arrows2">
                 <div class="arrow2 prev">
@@ -391,84 +324,38 @@
             </section><!-- End Team Section -->
         </div>
     </div>
+
+
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="parallax-content testimonials">
         <div class="container">
 
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                 <div class="swiper-wrapper">
-
+                   
+                    @foreach ($review as $item)
+                        
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <h3>Saul Goodman</h3>
-                            <h4>Ceo &amp; Founder</h4>
+                            @if ($item->status !=='yes')
+                                
+                            @else
+                                
+                            <h3>{{$item->nama}}</h3>
+                            
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                risus at semper.
+                                {!! $item->review !!}
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
+                            @endif
                         </div>
                     </div><!-- End testimonial item -->
 
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <h3>Sara Wilsson</h3>
-                            <h4>Designer</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                legam anim culpa.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <h3>Jena Karlis</h3>
-                            <h4>Store Owner</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                minim.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <h3>Matt Brandon</h3>
-                            <h4>Freelancer</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                dolore labore illum veniam.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-item">
-                            <h3>John Larson</h3>
-                            <h4>Entrepreneur</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                culpa fore nisi cillum quid.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div><!-- End testimonial item -->
+                    @endforeach
+                   
                 </div>
-                <div class="swiper-pagination"></div>
+                
             </div>
         </div>
     </section><!-- End Testimonials Section -->
@@ -594,7 +481,7 @@
                         </div>
 
                         <form action="{{ route('review.index') }}" method="post" target="_self"
-                            enctype="multipart/form-data" role="form" data-toggle="validator" novalidate class="php-email-form">
+                            enctype="multipart/form-data" role="form">
                             @csrf
                             <div class="php-email-form">
                                 <div class="form-group mt-3">
@@ -602,7 +489,7 @@
                                         placeholder="Nama anda" required>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <textarea class="ckeditor form-control" id="wysiwyg" name="review" rows="5" placeholder="Komentar anda"
+                                    <textarea class="ckeditor form-control" name="review" rows="5" placeholder="Komentar anda"
                                         required></textarea>
                                 </div>
                                 <div class="form-group">
@@ -628,8 +515,8 @@
                     </div>
                 </div>
             </div>
-            @if (session('script'))
-                {!! session('script') !!}
+            @if (session('success'))
+                {!! session('success') !!}
             @endif
         </section><!-- End Contact Section -->
 

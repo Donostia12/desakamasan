@@ -3,18 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\profildesa;
 use App\Models\Mslide;
-class profildesacontroller extends Controller
+
+class slide extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = profildesa::where('id_profildesa',1)->first();
-        $slide = Mslide::all();
-        return view('admin.Menu.profildesa', compact('data','slide'));
+   
     }
 
     /**
@@ -22,21 +20,20 @@ class profildesacontroller extends Controller
      */
     public function create()
     {
-    
+  
     }
-    
+
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
-        profildesa::where('id_profildesa',1)->update([
-            "welcome" => $request->welcome,
-            "isi_profil" => $request->isi_profil,
-            "video" => $request->video
-        ]);
-        return redirect('/profil');
+    {   $image = md5(time()).'Pengurus'.$request->file('image')->getClientOriginalName();
+        $path= $request->file('image')->storeAs('public/images', $image);
+            Mslide::create([
+                "page" => $request->page,
+                "isi" => $request->isi,
+                "img" =>$image]);
+                return redirect('/profil');   
     }
 
     /**
@@ -58,8 +55,9 @@ class profildesacontroller extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request,string $id )
+    public function update(Request $request, string $id)
     {
+        //
     }
 
     /**
@@ -67,6 +65,9 @@ class profildesacontroller extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $slide = Mslide::where('id',$id)->first();
+        unlink(storage_path('app/public/images/'.$slide->img));
+        Mslide::where('id',$id)->delete();
+        return redirect()->route('profil.index')->with('success', 'Berita berhasil dihapus!');
     }
 }
