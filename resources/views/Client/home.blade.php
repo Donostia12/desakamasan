@@ -159,7 +159,7 @@
                                                     @foreach ($beritaold as $item)
                                                         <div class="post-entry-1 border-bottom">
                                                             <div class="post-meta">
-                                                                <span>{{ date('d M Y H:i:s', strtotime($item->created_at)) }}</span>
+                                                                <span>{{ date('d M Y -- H:i', strtotime($item->created_at)) }}</span>
                                                             </div>
                                                             <h2 class="mb-2"><a
                                                                     href="#">{{ $item->judul_berita }}</a>
